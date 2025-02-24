@@ -1,0 +1,249 @@
+[2025-02-24T08:28:00.599+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2025-02-24T08:28:00.600+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2025-02-24T08:28:00.601+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-02-24T08:28:00.602+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-02-24T08:28:00.651+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-02-24T08:28:00.915+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/crawl_daily_tgdd.py     49  0.13s             0           0
+/opt/airflow/dags/crawl_full_tgdd.py      48  0.14s             0           0
+================================================================================
+[2025-02-24T08:28:28.748+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.20s           2025-02-24T08:28:00
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.20s           2025-02-24T08:28:00
+================================================================================
+[2025-02-24T08:28:56.577+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.38s           2025-02-24T08:28:32
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.37s           2025-02-24T08:28:32
+================================================================================
+[2025-02-24T08:29:24.368+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.15s           2025-02-24T08:29:02
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.15s           2025-02-24T08:29:02
+================================================================================
+[2025-02-24T08:29:52.244+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.14s           2025-02-24T08:29:33
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.13s           2025-02-24T08:29:33
+================================================================================
+[2025-02-24T08:30:20.326+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.18s           2025-02-24T08:30:04
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.18s           2025-02-24T08:30:04
+================================================================================
+[2025-02-24T08:30:48.066+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.23s           2025-02-24T08:30:35
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.22s           2025-02-24T08:30:35
+================================================================================
+[2025-02-24T08:31:15.886+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.12s           2025-02-24T08:31:06
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.12s           2025-02-24T08:31:06
+================================================================================
+[2025-02-24T08:31:46.339+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.16s           2025-02-24T08:31:37
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.16s           2025-02-24T08:31:37
+================================================================================
+[2025-02-24T08:32:14.372+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.17s           2025-02-24T08:32:08
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.17s           2025-02-24T08:32:08
+================================================================================
+[2025-02-24T08:32:42.322+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.17s           2025-02-24T08:32:39
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.17s           2025-02-24T08:32:39
+================================================================================
+[2025-02-24T08:33:00.988+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-02-24T08:33:01.054+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-02-24T08:33:10.172+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py     134  0.01s             1           0  0.17s           2025-02-24T08:32:39
+/opt/airflow/dags/crawl_daily_tgdd.py    135  0.00s             1           0  0.17s           2025-02-24T08:32:39
+================================================================================
+[2025-02-24T08:33:38.023+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.13s           2025-02-24T08:33:10
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.13s           2025-02-24T08:33:10
+================================================================================
+[2025-02-24T08:34:05.931+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.14s           2025-02-24T08:33:41
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.13s           2025-02-24T08:33:41
+================================================================================
+[2025-02-24T08:34:36.679+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.34s           2025-02-24T08:34:12
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.33s           2025-02-24T08:34:12
+================================================================================
+[2025-02-24T08:35:12.793+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py     158  29.04s            1           0  0.34s           2025-02-24T08:34:12
+/opt/airflow/dags/crawl_daily_tgdd.py    159  29.01s            1           0  0.33s           2025-02-24T08:34:12
+================================================================================
+[2025-02-24T08:35:41.611+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  36.89s          2025-02-24T08:35:19
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  36.84s          2025-02-24T08:35:19
+================================================================================
+[2025-02-24T08:36:16.730+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py     173  20.78s            1           0  36.89s          2025-02-24T08:35:19
+/opt/airflow/dags/crawl_daily_tgdd.py    174  20.69s            1           0  36.84s          2025-02-24T08:35:19
+================================================================================
+[2025-02-24T08:36:44.595+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  23.07s          2025-02-24T08:36:16
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  22.90s          2025-02-24T08:36:16
+================================================================================
+[2025-02-24T08:38:16.270+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-02-24T08:40:54.120+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-02-24T08:41:00.453+0000] {manager.py:1203} ERROR - Processor for /opt/airflow/dags/crawl_full_tgdd.py with PID 181 started at 2025-02-24T08:36:44.770681+00:00 has timed out, killing it.
+[2025-02-24T08:41:00.614+0000] {manager.py:1203} ERROR - Processor for /opt/airflow/dags/crawl_daily_tgdd.py with PID 182 started at 2025-02-24T08:36:45.050866+00:00 has timed out, killing it.
+[2025-02-24T08:41:00.643+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            0           1  255.68s         2025-02-24T08:41:00
+/opt/airflow/dags/crawl_daily_tgdd.py                           0           1  255.40s         2025-02-24T08:41:00
+================================================================================
+[2025-02-24T08:41:44.730+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py     183  0.73s             0           1  255.68s         2025-02-24T08:41:00
+/opt/airflow/dags/crawl_daily_tgdd.py    184  0.11s             0           1  255.40s         2025-02-24T08:41:00
+================================================================================
+[2025-02-24T08:42:48.023+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py     183  45.44s            0           1  255.68s         2025-02-24T08:41:00
+/opt/airflow/dags/crawl_daily_tgdd.py    184  44.83s            0           1  255.40s         2025-02-24T08:41:00
+================================================================================
+[2025-02-24T08:43:07.315+0000] {manager.py:1203} ERROR - Processor for /opt/airflow/dags/crawl_full_tgdd.py with PID 183 started at 2025-02-24T08:41:43.987101+00:00 has timed out, killing it.
+[2025-02-24T08:43:07.447+0000] {manager.py:1203} ERROR - Processor for /opt/airflow/dags/crawl_daily_tgdd.py with PID 184 started at 2025-02-24T08:41:44.606599+00:00 has timed out, killing it.
+[2025-02-24T08:43:14.609+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-02-24T08:43:14.671+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-02-24T08:43:28.553+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            0           1  83.33s          2025-02-24T08:43:07
+/opt/airflow/dags/crawl_daily_tgdd.py                           0           1  82.71s          2025-02-24T08:43:07
+================================================================================
+[2025-02-24T08:43:58.853+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.54s           2025-02-24T08:43:38
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.53s           2025-02-24T08:43:38
+================================================================================
+[2025-02-24T08:44:26.867+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.14s           2025-02-24T08:44:08
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.14s           2025-02-24T08:44:08
+================================================================================
+[2025-02-24T08:44:54.867+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crawl_full_tgdd.py                            1           0  0.12s           2025-02-24T08:44:39
+/opt/airflow/dags/crawl_daily_tgdd.py                           1           0  0.12s           2025-02-24T08:44:39
+================================================================================

@@ -7,6 +7,7 @@ import json
 import os
 from scrapy.signals import spider_closed
 from scrapy.signalmanager import dispatcher
+from tgdd_crawler.spiders.convert_text import convert_text
 cnt = 0
 categories = []
 class MySpider(scrapy.Spider):
@@ -57,17 +58,18 @@ class MySpider(scrapy.Spider):
         data['url'] = response.url
         data['updated_at'] = lastmod
         data['crawled_at'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        product_name = response.xpath('/html/body/section/div[1]/h1/text()').get()
-        data['product_name'] = product_name
         url_parts = response.url.replace('https://www.thegioididong.com/', '').split('/')
         data['category'], data['product_id'] = url_parts[0], url_parts[1]
         productld = json.loads(response.xpath('//*[@id="productld"]/text()').get())
+        data['product_name'] = productld.get('name', None)
         data['price_origin'] = response.xpath('//*[@id="PriceOriginGTM"]/@value').get()
         data['price_present'] = response.xpath('//*[@id="DisPriceGTM"]/@value').get()
         data['price'] = productld.get('offers', {}).get('price', None)
         data['image'] = productld.get('image', None)
         data['description'] = productld.get('description', None)
         data['brand'] = productld.get('brand', {}).get('name', [])
+        data['review'] = productld.get('review', None)
+        data['price_valid_ultil'] = productld.get('offers', {}).get('priceValidUntil', None)
         specification_boxes = response.xpath('//div[@class="box-specifi"]')
         # Get product specification
         for box_specifi in specification_boxes:
@@ -82,11 +84,11 @@ class MySpider(scrapy.Spider):
                 if value:
                     value = value.strip('.').strip() 
                 if key and value:
-                    spec_dict[key] = value
+                    spec_dict[convert_text(key)] = value
                 else:
                     logging.info(f"Missing data for feature: key={key}, value={value}")
             
-            data[name_specifi] = spec_dict
+            data[convert_text(name_specifi)] = spec_dict
         self.data_buffer.append(data)
         cnt += 1
         logging.info(f"cnt: {cnt}")
@@ -105,7 +107,7 @@ class MySpider(scrapy.Spider):
 
 def save_data(data, chunk_index):
     today = datetime.now().strftime('%Y%m%d')
-    output_dir = os.path.join('output_data', today)
+    output_dir = os.path.join('../../warehouse', 'daily', 'tgdd', today)
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     file_name = f"{chunk_index}.json"
