@@ -19,7 +19,7 @@ class MySpider(scrapy.Spider):
         self.start_urls = ['https://www.thegioididong.com/newsitemap/sitemap-product']
         self.ns = {'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
         self.data_buffer = []
-        self.chunk_size = 100
+        self.chunk_size = 1000
         self.chunk_index = 0
         self.daily = daily
         if self.daily and os.path.exists('metadata.json'):

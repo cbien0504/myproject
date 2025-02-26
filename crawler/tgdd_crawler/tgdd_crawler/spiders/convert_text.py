@@ -14,5 +14,8 @@ def convert_text(text):
     text = re.sub(r'\u0300|\u0301|\u0303|\u0309|\u0323', '', text)
     text = re.sub(r'\u02C6|\u0306|\u031B', '', text)
 
-    text = re.sub(r' ', '_', text)
+    text = re.sub(r'\(.*?\)|&|,|-| |__+', '_', text).strip('_')
+    while('__' in text):
+        text = re.sub(r'__', '_', text)
+    text = text.strip('_')
     return text
