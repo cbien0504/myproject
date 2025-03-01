@@ -11,10 +11,9 @@ from tgdd_crawler.spiders.convert_text import convert_text
 cnt = 0
 categories = []
 class MySpider(scrapy.Spider):
-    name = 'my_spider'
+    name = 'tgdd_crawler'
     allowed_domains = ['thegioididong.com']
     def __init__(self, daily=None, *args, **kwargs):
-        logging.info(f"envihihi: {os.environ}")
         super(MySpider, self).__init__(*args, **kwargs)
         self.start_urls = ['https://www.thegioididong.com/newsitemap/sitemap-product']
         self.ns = {'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
@@ -22,8 +21,14 @@ class MySpider(scrapy.Spider):
         self.chunk_size = 1000
         self.chunk_index = 0
         self.daily = daily
-        if self.daily and os.path.exists('metadata.json'):
-            with open('metadata.json', 'r') as f:
+        self.ingest_id = datetime.now().strftime('%Y%m%d')
+        self.output_dir = os.path.join('../../warehouse', 'daily', 'tgdd', self.ingest_id)
+        self.metadata_path = os.path.join(os.getcwd(), 'metadata.json')
+        logging.info(self.metadata_path)
+        if not os.path.exists(self.output_dir):
+            os.makedirs(self.output_dir)
+        if self.daily and os.path.exists(self.metadata_path):
+            with open(self.metadata_path, 'r') as f:
                 metadata = json.load(f)
                 self.last_mod = metadata.get('last_mod', None)
         else:
@@ -48,6 +53,8 @@ class MySpider(scrapy.Spider):
                 url_text = url.find('.//ns:loc', self.ns).text
                 lastmod = url.find('.//ns:lastmod', self.ns).text
                 if self.last_mod is None or self.last_mod and datetime.strptime(lastmod, "%Y-%m-%d") > datetime.strptime(self.last_mod, "%Y-%m-%d"):
+                    logging.info(f"metadata:{self.last_mod}")
+                    logging.info(f"lastmod: {lastmod}")
                     yield scrapy.Request(url_text, callback=self.parse_detail_product, meta = {'lastmod': lastmod})
 
     def parse_detail_product(self, response):
@@ -94,22 +101,18 @@ class MySpider(scrapy.Spider):
         logging.info(f"cnt: {cnt}")
 
         if len(self.data_buffer) >= self.chunk_size:
-            save_data(self.data_buffer, self.chunk_index)
+            save_data(self.output_dir, self.data_buffer, self.chunk_index)
             self.data_buffer.clear()
             self.chunk_index += 1
 
     def spider_closed_handler(self, spider, reason):
         logging.info(f"Spider closed: {reason}")
-        save_data(self.data_buffer, self.chunk_index)
+        save_data(self.output_dir, self.data_buffer, self.chunk_index)
         metadata = {"last_mod": datetime.now().strftime('%Y-%m-%d')}
-        with open('metadata.json', 'w', encoding='utf-8') as f:
+        with open(self.metadata_path, 'w', encoding='utf-8') as f:
             json.dump(metadata, f, ensure_ascii=False, indent=4)
 
-def save_data(data, chunk_index):
-    today = datetime.now().strftime('%Y%m%d')
-    output_dir = os.path.join('../../warehouse', 'daily', 'tgdd', today)
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+def save_data(output_dir, data, chunk_index):
     file_name = f"{chunk_index}.json"
     file_path = os.path.join(output_dir, file_name)
     with open(file_path, 'a', encoding='utf-8') as json_file:

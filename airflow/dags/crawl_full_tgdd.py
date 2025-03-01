@@ -19,7 +19,7 @@ run_spider_task = BashOperator(
     task_id='run_spider_task',
     bash_command=(
         'cd /opt/airflow/crawler/tgdd_crawler/tgdd_crawler; '
-        'scrapy crawl my_spider; '
+        'scrapy crawl tgdd_crawler; '
     ),
     dag=dag,
 )

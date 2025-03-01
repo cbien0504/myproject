@@ -1,0 +1,39 @@
+[2025-02-27T04:02:43.734+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-02-27T04:02:43.769+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.run_spider_task scheduled__2025-02-26T00:00:00+00:00 [queued]>
+[2025-02-27T04:02:43.780+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.run_spider_task scheduled__2025-02-26T00:00:00+00:00 [queued]>
+[2025-02-27T04:02:43.781+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-02-27T04:02:43.802+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): run_spider_task> on 2025-02-26 00:00:00+00:00
+[2025-02-27T04:02:43.810+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'crawl_thegioididong_daily', 'run_spider_task', 'scheduled__2025-02-26T00:00:00+00:00', '--job-id', '60', '--raw', '--subdir', 'DAGS_FOLDER/crawl_daily_tgdd.py', '--cfg-path', '/tmp/tmpe71us7v6']
+[2025-02-27T04:02:43.809+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=65) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-27T04:02:43.812+0000] {standard_task_runner.py:91} INFO - Job 60: Subtask run_spider_task
+[2025-02-27T04:02:43.812+0000] {standard_task_runner.py:64} INFO - Started process 66 to run task
+[2025-02-27T04:02:43.880+0000] {task_command.py:426} INFO - Running <TaskInstance: crawl_thegioididong_daily.run_spider_task scheduled__2025-02-26T00:00:00+00:00 [running]> on host f1bdf8914988
+[2025-02-27T04:02:44.019+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crawl_thegioididong_daily' AIRFLOW_CTX_TASK_ID='run_spider_task' AIRFLOW_CTX_EXECUTION_DATE='2025-02-26T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-26T00:00:00+00:00'
+[2025-02-27T04:02:44.021+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-02-27T04:02:44.049+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-02-27T04:02:44.050+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/crawler/tgdd_crawler/tgdd_crawler; scrapy crawl my_spider -a daily=true; ']
+[2025-02-27T04:02:44.061+0000] {subprocess.py:86} INFO - Output:
+[2025-02-27T04:02:44.066+0000] {subprocess.py:93} INFO - /usr/bin/bash: line 1: scrapy: command not found
+[2025-02-27T04:02:44.067+0000] {subprocess.py:97} INFO - Command exited with return code 127
+[2025-02-27T04:02:44.068+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-02-27T04:02:44.081+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2025-02-27T04:02:44.087+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=crawl_thegioididong_daily, task_id=run_spider_task, run_id=scheduled__2025-02-26T00:00:00+00:00, execution_date=20250226T000000, start_date=20250227T040243, end_date=20250227T040244
+[2025-02-27T04:02:44.103+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 60 for task run_spider_task (Bash command failed. The command returned a non-zero exit code 127.; 66)
+[2025-02-27T04:02:44.148+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-02-27T04:02:44.168+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-27T04:02:44.171+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

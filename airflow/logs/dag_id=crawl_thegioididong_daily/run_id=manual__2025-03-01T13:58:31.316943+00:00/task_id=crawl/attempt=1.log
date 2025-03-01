@@ -1,0 +1,767 @@
+[2025-03-01T13:58:32.561+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-01T13:58:32.585+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.crawl manual__2025-03-01T13:58:31.316943+00:00 [queued]>
+[2025-03-01T13:58:32.596+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.crawl manual__2025-03-01T13:58:31.316943+00:00 [queued]>
+[2025-03-01T13:58:32.597+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-03-01T13:58:32.610+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): crawl> on 2025-03-01 13:58:31.316943+00:00
+[2025-03-01T13:58:32.619+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=554) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-01T13:58:32.621+0000] {standard_task_runner.py:64} INFO - Started process 555 to run task
+[2025-03-01T13:58:32.621+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'crawl_thegioididong_daily', 'crawl', 'manual__2025-03-01T13:58:31.316943+00:00', '--job-id', '110', '--raw', '--subdir', 'DAGS_FOLDER/crawl_daily_tgdd.py', '--cfg-path', '/tmp/tmpkaq3_8d9']
+[2025-03-01T13:58:32.622+0000] {standard_task_runner.py:91} INFO - Job 110: Subtask crawl
+[2025-03-01T13:58:32.672+0000] {task_command.py:426} INFO - Running <TaskInstance: crawl_thegioididong_daily.crawl manual__2025-03-01T13:58:31.316943+00:00 [running]> on host 934a1bc80592
+[2025-03-01T13:58:32.762+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crawl_thegioididong_daily' AIRFLOW_CTX_TASK_ID='crawl' AIRFLOW_CTX_EXECUTION_DATE='2025-03-01T13:58:31.316943+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-01T13:58:31.316943+00:00'
+[2025-03-01T13:58:32.764+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-01T13:58:32.777+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-01T13:58:32.779+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/crawler/tgdd_crawler/tgdd_crawler; scrapy crawl tgdd_crawler -a daily=true; ']
+[2025-03-01T13:58:32.792+0000] {subprocess.py:86} INFO - Output:
+[2025-03-01T13:58:34.009+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:34 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: scrapybot)
+[2025-03-01T13:58:34.011+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:34 [scrapy.utils.log] INFO: Versions: lxml 5.2.2.0, libxml2 2.12.6, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.12.4 (main, Jul 23 2024, 07:23:20) [GCC 12.2.0], pyOpenSSL 24.1.0 (OpenSSL 3.1.4 24 Oct 2023), cryptography 41.0.7, Platform Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2025-03-01T13:58:34.013+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:34 [root] INFO: /opt/***/crawler/tgdd_crawler/tgdd_crawler/tgdd_crawler/metadata.json
+[2025-03-01T13:58:34.016+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:34 [scrapy.addons] INFO: Enabled addons:
+[2025-03-01T13:58:34.016+0000] {subprocess.py:93} INFO - []
+[2025-03-01T13:58:34.018+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:34 [scrapy.extensions.telnet] INFO: Telnet Password: a602a27981d8e931
+[2025-03-01T13:58:34.050+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:34 [scrapy.middleware] INFO: Enabled extensions:
+[2025-03-01T13:58:34.051+0000] {subprocess.py:93} INFO - ['scrapy.extensions.corestats.CoreStats',
+[2025-03-01T13:58:34.052+0000] {subprocess.py:93} INFO -  'scrapy.extensions.telnet.TelnetConsole',
+[2025-03-01T13:58:34.053+0000] {subprocess.py:93} INFO -  'scrapy.extensions.memusage.MemoryUsage',
+[2025-03-01T13:58:34.053+0000] {subprocess.py:93} INFO -  'scrapy.extensions.logstats.LogStats']
+[2025-03-01T13:58:34.054+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:34 [scrapy.crawler] INFO: Overridden settings:
+[2025-03-01T13:58:34.055+0000] {subprocess.py:93} INFO - {'DOWNLOAD_DELAY': 0.2,
+[2025-03-01T13:58:34.055+0000] {subprocess.py:93} INFO -  'FEED_EXPORT_ENCODING': 'utf-8',
+[2025-03-01T13:58:34.056+0000] {subprocess.py:93} INFO -  'LOG_LEVEL': 'INFO',
+[2025-03-01T13:58:34.057+0000] {subprocess.py:93} INFO -  'NEWSPIDER_MODULE': 'tgdd_crawler.spiders',
+[2025-03-01T13:58:34.057+0000] {subprocess.py:93} INFO -  'SPIDER_MODULES': ['tgdd_crawler.spiders'],
+[2025-03-01T13:58:34.058+0000] {subprocess.py:93} INFO -  'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+[2025-03-01T13:58:34.059+0000] {subprocess.py:93} INFO -  'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+[2025-03-01T13:58:34.059+0000] {subprocess.py:93} INFO -                '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'}
+[2025-03-01T13:58:34.175+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:34 [scrapy.middleware] INFO: Enabled downloader middlewares:
+[2025-03-01T13:58:34.175+0000] {subprocess.py:93} INFO - ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+[2025-03-01T13:58:34.176+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+[2025-03-01T13:58:34.177+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+[2025-03-01T13:58:34.177+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+[2025-03-01T13:58:34.178+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+[2025-03-01T13:58:34.179+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+[2025-03-01T13:58:34.179+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+[2025-03-01T13:58:34.180+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+[2025-03-01T13:58:34.180+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+[2025-03-01T13:58:34.181+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+[2025-03-01T13:58:34.181+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+[2025-03-01T13:58:34.182+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2025-03-01T13:58:34.183+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:34 [scrapy.middleware] INFO: Enabled spider middlewares:
+[2025-03-01T13:58:34.183+0000] {subprocess.py:93} INFO - ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+[2025-03-01T13:58:34.184+0000] {subprocess.py:93} INFO -  'scrapy.spidermiddlewares.referer.RefererMiddleware',
+[2025-03-01T13:58:34.184+0000] {subprocess.py:93} INFO -  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+[2025-03-01T13:58:34.185+0000] {subprocess.py:93} INFO -  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2025-03-01T13:58:34.186+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:34 [scrapy.middleware] INFO: Enabled item pipelines:
+[2025-03-01T13:58:34.186+0000] {subprocess.py:93} INFO - []
+[2025-03-01T13:58:34.187+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:34 [scrapy.core.engine] INFO: Spider opened
+[2025-03-01T13:58:34.187+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:34 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2025-03-01T13:58:34.188+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:34 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2025-03-01T13:58:39.312+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:39 [root] INFO: URL: https://www.thegioididong.com/cap-dien-thoai/cap-micro-1m-evalu-ltm-01-do-den
+[2025-03-01T13:58:39.324+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:39 [root] INFO: cnt: 1
+[2025-03-01T13:58:39.626+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:39 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/q-q-m154j002y-unisex
+[2025-03-01T13:58:39.639+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:39 [root] INFO: cnt: 2
+[2025-03-01T13:58:39.754+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:39 [root] INFO: URL: https://www.thegioididong.com/op-lung-flipcover/op-lung-iphone-11-cung-vien-deo-srtg270-meo-trang
+[2025-03-01T13:58:39.766+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:39 [root] INFO: cnt: 3
+[2025-03-01T13:58:40.033+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:40 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/elio-es002-01-nu
+[2025-03-01T13:58:40.047+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:40 [root] INFO: cnt: 4
+[2025-03-01T13:58:40.184+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:40 [root] INFO: URL: https://www.thegioididong.com/thiet-bi-mang/bo-mo-rong-song-wifi-ac220v-totolink-ex200-trang
+[2025-03-01T13:58:40.192+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:40 [root] INFO: cnt: 5
+[2025-03-01T13:58:40.379+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:40 [root] INFO: URL: https://www.thegioididong.com/cap-dien-thoai/cap-type-c-lightning-mfi-1m-mbest-ds640-wb-den
+[2025-03-01T13:58:40.388+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:40 [root] INFO: cnt: 6
+[2025-03-01T13:58:40.465+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:40 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//dao-thai-chong-dinh-van-da-315cm-bhx-ld-ks125cf-xa>: HTTP status code is not handled or not allowed
+[2025-03-01T13:58:40.822+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:40 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-eu6073-53a-vang
+[2025-03-01T13:58:40.835+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:40 [root] INFO: cnt: 7
+[2025-03-01T13:58:40.856+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:40 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//chao-tu-van-da-supor-24cm-f23a24ih>: HTTP status code is not handled or not allowed
+[2025-03-01T13:58:41.274+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:41 [root] INFO: URL: https://www.thegioididong.com/tui-chong-soc/tui-chong-soc-laptop-15-wiwu-bo-goc
+[2025-03-01T13:58:41.283+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:41 [root] INFO: cnt: 8
+[2025-03-01T13:58:41.579+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:41 [root] INFO: URL: https://www.thegioididong.com/micro/zenbos-mz328
+[2025-03-01T13:58:41.592+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:41 [root] INFO: cnt: 9
+[2025-03-01T13:58:41.799+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:41 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/skmei-sk-1478-hong-xanh
+[2025-03-01T13:58:41.812+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:41 [root] INFO: cnt: 10
+[2025-03-01T13:58:41.992+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:41 [root] INFO: URL: https://www.thegioididong.com/pin/pin-aaa-4-vien-alkaline-philips-lr03p4b
+[2025-03-01T13:58:42.000+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:41 [root] INFO: cnt: 11
+[2025-03-01T13:58:42.113+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:42 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//panasonic-mj-m176pwtc>: HTTP status code is not handled or not allowed
+[2025-03-01T13:58:42.376+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:42 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//ariston-an2-rs-30>: HTTP status code is not handled or not allowed
+[2025-03-01T13:58:42.950+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:42 [root] INFO: URL: https://www.thegioididong.com/laptop/msi-stealth-18-hx-ai-a2xwig-ultra-9-017vn
+[2025-03-01T13:58:42.963+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:42 [root] INFO: cnt: 12
+[2025-03-01T13:58:43.135+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:43 [root] INFO: URL: https://www.thegioididong.com/laptop/msi-raider-18-hx-ai-a2xwig-ultra-9-033vn
+[2025-03-01T13:58:43.147+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:43 [root] INFO: cnt: 13
+[2025-03-01T13:58:43.499+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:43 [root] INFO: URL: https://www.thegioididong.com/laptop/msi-vector-16-hx-ai-a2xwig-ultra-9-062vn
+[2025-03-01T13:58:43.511+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:43 [root] INFO: cnt: 14
+[2025-03-01T13:58:43.523+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:43 [root] INFO: URL: https://www.thegioididong.com/loa-laptop/loa-thanh-soundbar-sony-ht-s100f
+[2025-03-01T13:58:43.532+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:43 [root] INFO: cnt: 15
+[2025-03-01T13:58:43.652+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:43 [root] INFO: URL: https://www.thegioididong.com/laptop/msi-titan-18-hx-ai-a2xwig-ultra-9-090vn
+[2025-03-01T13:58:43.666+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:43 [root] INFO: cnt: 16
+[2025-03-01T13:58:43.917+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:43 [root] INFO: URL: https://www.thegioididong.com/laptop/msi-titan-18-hx-ai-a2xwjg-ultra-9-035vn
+[2025-03-01T13:58:43.928+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:43 [root] INFO: cnt: 17
+[2025-03-01T13:58:44.079+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:44 [root] INFO: URL: https://www.thegioididong.com/laptop/acer-aspire-lite-al14-52m-54cj-i5-nxj39sv002
+[2025-03-01T13:58:44.092+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:44 [root] INFO: cnt: 18
+[2025-03-01T13:58:44.291+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:44 [root] INFO: URL: https://www.thegioididong.com/may-tinh-bang/lenovo-tab-wifi
+[2025-03-01T13:58:44.303+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:44 [root] INFO: cnt: 19
+[2025-03-01T13:58:44.524+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:44 [root] INFO: URL: https://www.thegioididong.com/may-tinh-bang/lenovo-tab-4g
+[2025-03-01T13:58:44.534+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:44 [root] INFO: cnt: 20
+[2025-03-01T13:58:44.760+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:44 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/garmin-instinct-e-45mm
+[2025-03-01T13:58:44.774+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:44 [root] INFO: cnt: 21
+[2025-03-01T13:58:45.033+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:45 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/garmin-instinct-3-50mm
+[2025-03-01T13:58:45.050+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:45 [root] INFO: cnt: 22
+[2025-03-01T13:58:45.316+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:45 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/garmin-instinct-3-45mm
+[2025-03-01T13:58:45.330+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:45 [root] INFO: cnt: 23
+[2025-03-01T13:58:45.566+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:45 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/garmin-instinct-3-solar-50mm
+[2025-03-01T13:58:45.579+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:45 [root] INFO: cnt: 24
+[2025-03-01T13:58:45.749+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:45 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/garmin-instinct-3-solar-45mm
+[2025-03-01T13:58:45.761+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:45 [root] INFO: cnt: 25
+[2025-03-01T13:58:46.129+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:46 [root] INFO: URL: https://www.thegioididong.com/dtdd/iphone-16e-256gb
+[2025-03-01T13:58:46.142+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:46 [root] INFO: cnt: 26
+[2025-03-01T13:58:46.146+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:46 [root] INFO: URL: https://www.thegioididong.com/dtdd/iphone-16e-512gb
+[2025-03-01T13:58:46.162+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:46 [root] INFO: cnt: 27
+[2025-03-01T13:58:46.384+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:46 [root] INFO: URL: https://www.thegioididong.com/dtdd/iphone-16e
+[2025-03-01T13:58:46.406+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:46 [root] INFO: cnt: 28
+[2025-03-01T13:58:46.588+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:46 [root] INFO: URL: https://www.thegioididong.com/dtdd/xiaomi-15-ultra-trang
+[2025-03-01T13:58:46.597+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:46 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.thegioididong.com/dtdd/xiaomi-15-ultra-trang> (referer: https://www.thegioididong.com/newsitemap/sitemap-product-2025-2?page=1)
+[2025-03-01T13:58:46.597+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T13:58:46.598+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 1088, in _runCallbacks
+[2025-03-01T13:58:46.600+0000] {subprocess.py:93} INFO -     current.result = callback(  # type: ignore[misc]
+[2025-03-01T13:58:46.600+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:58:46.601+0000] {subprocess.py:93} INFO -   File "/opt/***/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 68, in parse_detail_product
+[2025-03-01T13:58:46.601+0000] {subprocess.py:93} INFO -     productld = json.loads(response.xpath('//*[@id="productld"]/text()').get())
+[2025-03-01T13:58:46.602+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:58:46.603+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/json/__init__.py", line 339, in loads
+[2025-03-01T13:58:46.604+0000] {subprocess.py:93} INFO -     raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+[2025-03-01T13:58:46.604+0000] {subprocess.py:93} INFO - TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[2025-03-01T13:58:46.822+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:46 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-zenbook-a14-ux3407qa-x1-26-100-qd299ws
+[2025-03-01T13:58:46.832+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:46 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.thegioididong.com/laptop/asus-zenbook-a14-ux3407qa-x1-26-100-qd299ws> (referer: https://www.thegioididong.com/newsitemap/sitemap-product-2025-2?page=1)
+[2025-03-01T13:58:46.833+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T13:58:46.834+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 1088, in _runCallbacks
+[2025-03-01T13:58:46.834+0000] {subprocess.py:93} INFO -     current.result = callback(  # type: ignore[misc]
+[2025-03-01T13:58:46.835+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:58:46.836+0000] {subprocess.py:93} INFO -   File "/opt/***/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 68, in parse_detail_product
+[2025-03-01T13:58:46.836+0000] {subprocess.py:93} INFO -     productld = json.loads(response.xpath('//*[@id="productld"]/text()').get())
+[2025-03-01T13:58:46.837+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:58:46.838+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/json/__init__.py", line 339, in loads
+[2025-03-01T13:58:46.838+0000] {subprocess.py:93} INFO -     raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+[2025-03-01T13:58:46.839+0000] {subprocess.py:93} INFO - TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[2025-03-01T13:58:47.110+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:47 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-vivobook-16-m1607ka-r7-ai-350-mb091ws
+[2025-03-01T13:58:47.124+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:47 [root] INFO: cnt: 29
+[2025-03-01T13:58:47.356+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:47 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-zenbook-duo-ux8406ca-ultra-9-pz109ws
+[2025-03-01T13:58:47.367+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:47 [root] INFO: cnt: 30
+[2025-03-01T13:58:47.544+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:47 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-zenbook-14-ux3405ca-ultra-7-pz368ws
+[2025-03-01T13:58:47.557+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:47 [root] INFO: cnt: 31
+[2025-03-01T13:58:47.784+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:47 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-zenbook-14-ux3405ca-ultra-5-pz187ws
+[2025-03-01T13:58:47.796+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:47 [root] INFO: cnt: 32
+[2025-03-01T13:58:48.088+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:48 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-vivobook-16-x1605va-i7-mb1875ws
+[2025-03-01T13:58:48.101+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:48 [root] INFO: cnt: 33
+[2025-03-01T13:58:48.356+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:48 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-vivobook-16-x1605va-i5-mb1876ws
+[2025-03-01T13:58:48.381+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:48 [root] INFO: cnt: 34
+[2025-03-01T13:58:48.545+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:48 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-vivobook-15-x1504va-i3-nj1634w
+[2025-03-01T13:58:48.562+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:48 [root] INFO: cnt: 35
+[2025-03-01T13:58:48.773+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:48 [root] INFO: URL: https://www.thegioididong.com/laptop/macbook-air-13-inch-m2-16gb-512gb-70w
+[2025-03-01T13:58:48.799+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:48 [root] INFO: cnt: 36
+[2025-03-01T13:58:48.975+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:48 [root] INFO: URL: https://www.thegioididong.com/sac-dtdd/pin-sac-du-phong-20000mah-type-c-pd-22-5w-baseus-lipow-ppjp312
+[2025-03-01T13:58:48.996+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:48 [root] INFO: cnt: 37
+[2025-03-01T13:58:49.199+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:49 [root] INFO: URL: https://www.thegioididong.com/laptop/gigabyte-aorus-16x-x6lag-i7-9rx6lasgddjixdvn010
+[2025-03-01T13:58:49.211+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:49 [root] INFO: cnt: 38
+[2025-03-01T13:58:49.458+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:49 [root] INFO: URL: https://www.thegioididong.com/laptop/gigabyte-g6-kf-rc56-i7-9rc56kf0hjjanivn000
+[2025-03-01T13:58:49.468+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:49 [root] INFO: cnt: 39
+[2025-03-01T13:58:49.709+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:49 [root] INFO: URL: https://www.thegioididong.com/laptop/gigabyte-g5-mf5-rc555-i7-9rc55mf5fjiinivn000
+[2025-03-01T13:58:49.721+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:49 [root] INFO: cnt: 40
+[2025-03-01T13:58:49.948+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:49 [root] INFO: URL: https://www.thegioididong.com/laptop/gigabyte-g5-mf5-rc555-i5-9rc55mf5feiaa1vn0c0
+[2025-03-01T13:58:49.962+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:49 [root] INFO: cnt: 41
+[2025-03-01T13:58:50.049+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:50 [root] INFO: URL: https://www.thegioididong.com/phan-mem/esim-du-lich-bluecom-thailand-4gb-7-ngay
+[2025-03-01T13:58:50.058+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:50 [root] INFO: cnt: 42
+[2025-03-01T13:58:50.349+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:50 [root] INFO: URL: https://www.thegioididong.com/phan-mem/esim-du-lich-bluecom-south-korea-8gb-15-ngay
+[2025-03-01T13:58:50.359+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:50 [root] INFO: cnt: 43
+[2025-03-01T13:58:50.574+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:50 [root] INFO: URL: https://www.thegioididong.com/phan-mem/esim-du-lich-bluecom-china-1gb-ngay-3-ngay
+[2025-03-01T13:58:50.585+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:50 [root] INFO: cnt: 44
+[2025-03-01T13:58:50.759+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:50 [root] INFO: URL: https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7-8gb-256gb
+[2025-03-01T13:58:50.766+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:50 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7-8gb-256gb> (referer: https://www.thegioididong.com/newsitemap/sitemap-product-2025-2?page=1)
+[2025-03-01T13:58:50.767+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T13:58:50.767+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 1088, in _runCallbacks
+[2025-03-01T13:58:50.768+0000] {subprocess.py:93} INFO -     current.result = callback(  # type: ignore[misc]
+[2025-03-01T13:58:50.768+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:58:50.769+0000] {subprocess.py:93} INFO -   File "/opt/***/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 68, in parse_detail_product
+[2025-03-01T13:58:50.769+0000] {subprocess.py:93} INFO -     productld = json.loads(response.xpath('//*[@id="productld"]/text()').get())
+[2025-03-01T13:58:50.769+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:58:50.770+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/json/__init__.py", line 339, in loads
+[2025-03-01T13:58:50.770+0000] {subprocess.py:93} INFO -     raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+[2025-03-01T13:58:50.771+0000] {subprocess.py:93} INFO - TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[2025-03-01T13:58:51.338+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:51 [root] INFO: URL: https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7
+[2025-03-01T13:58:51.349+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:51 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7> (referer: https://www.thegioididong.com/newsitemap/sitemap-product-2025-2?page=1)
+[2025-03-01T13:58:51.349+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T13:58:51.350+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 1088, in _runCallbacks
+[2025-03-01T13:58:51.350+0000] {subprocess.py:93} INFO -     current.result = callback(  # type: ignore[misc]
+[2025-03-01T13:58:51.351+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:58:51.351+0000] {subprocess.py:93} INFO -   File "/opt/***/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 68, in parse_detail_product
+[2025-03-01T13:58:51.352+0000] {subprocess.py:93} INFO -     productld = json.loads(response.xpath('//*[@id="productld"]/text()').get())
+[2025-03-01T13:58:51.353+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:58:51.353+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/json/__init__.py", line 339, in loads
+[2025-03-01T13:58:51.354+0000] {subprocess.py:93} INFO -     raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+[2025-03-01T13:58:51.355+0000] {subprocess.py:93} INFO - TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[2025-03-01T13:58:51.454+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:51 [root] INFO: URL: https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7-pro
+[2025-03-01T13:58:51.461+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:51 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7-pro> (referer: https://www.thegioididong.com/newsitemap/sitemap-product-2025-2?page=1)
+[2025-03-01T13:58:51.462+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T13:58:51.463+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 1088, in _runCallbacks
+[2025-03-01T13:58:51.463+0000] {subprocess.py:93} INFO -     current.result = callback(  # type: ignore[misc]
+[2025-03-01T13:58:51.463+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:58:51.464+0000] {subprocess.py:93} INFO -   File "/opt/***/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 68, in parse_detail_product
+[2025-03-01T13:58:51.464+0000] {subprocess.py:93} INFO -     productld = json.loads(response.xpath('//*[@id="productld"]/text()').get())
+[2025-03-01T13:58:51.465+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:58:51.465+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/json/__init__.py", line 339, in loads
+[2025-03-01T13:58:51.466+0000] {subprocess.py:93} INFO -     raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+[2025-03-01T13:58:51.466+0000] {subprocess.py:93} INFO - TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[2025-03-01T13:58:51.667+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:51 [root] INFO: URL: https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7-pro-12gb-512gb
+[2025-03-01T13:58:51.677+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:51 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7-pro-12gb-512gb> (referer: https://www.thegioididong.com/newsitemap/sitemap-product-2025-2?page=1)
+[2025-03-01T13:58:51.678+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T13:58:51.679+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 1088, in _runCallbacks
+[2025-03-01T13:58:51.679+0000] {subprocess.py:93} INFO -     current.result = callback(  # type: ignore[misc]
+[2025-03-01T13:58:51.680+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:58:51.681+0000] {subprocess.py:93} INFO -   File "/opt/***/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 68, in parse_detail_product
+[2025-03-01T13:58:51.681+0000] {subprocess.py:93} INFO -     productld = json.loads(response.xpath('//*[@id="productld"]/text()').get())
+[2025-03-01T13:58:51.682+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:58:51.683+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/json/__init__.py", line 339, in loads
+[2025-03-01T13:58:51.683+0000] {subprocess.py:93} INFO -     raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+[2025-03-01T13:58:51.684+0000] {subprocess.py:93} INFO - TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[2025-03-01T13:58:51.891+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:51 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-yoga-7-2in1-14iml9-ultra-7-83dj001fvn
+[2025-03-01T13:58:51.903+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:51 [root] INFO: cnt: 45
+[2025-03-01T13:58:52.066+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:52 [root] INFO: URL: https://www.thegioididong.com/loa-laptop/mobell-mk-6790a-800w
+[2025-03-01T13:58:52.080+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:52 [root] INFO: cnt: 46
+[2025-03-01T13:58:52.380+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:52 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-thinkpad-x13-ultra-7-21lu004tvn
+[2025-03-01T13:58:52.391+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:52 [root] INFO: cnt: 47
+[2025-03-01T13:58:52.710+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:52 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-thinkpad-t14s-ultra-5-21ls005rvn
+[2025-03-01T13:58:52.725+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:52 [root] INFO: cnt: 48
+[2025-03-01T13:58:52.975+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:52 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-legion-slim-5-16ahp9-r7-83dh003avn
+[2025-03-01T13:58:52.994+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:52 [root] INFO: cnt: 49
+[2025-03-01T13:58:53.232+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:53 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-legion-pro-7-16irx9h-i9-83de001nvn
+[2025-03-01T13:58:53.242+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:53 [root] INFO: cnt: 50
+[2025-03-01T13:58:53.421+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:53 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-loq-15iax9-i5-83gs000rvn
+[2025-03-01T13:58:53.434+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:53 [root] INFO: cnt: 51
+[2025-03-01T13:58:53.869+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:53 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-loq-15iax9-i5-83gs001qvn
+[2025-03-01T13:58:53.881+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:53 [root] INFO: cnt: 52
+[2025-03-01T13:58:53.935+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:53 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-loq-15arp9-r7-83jc003vvn
+[2025-03-01T13:58:53.946+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:53 [root] INFO: cnt: 53
+[2025-03-01T13:58:54.214+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:54 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-loq-15arp9-r5-83jc007hvn
+[2025-03-01T13:58:54.226+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:54 [root] INFO: cnt: 54
+[2025-03-01T13:58:54.681+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:54 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-ideapad-slim-3-15irh10-i7-83k1000fvn
+[2025-03-01T13:58:54.691+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:54 [root] INFO: cnt: 55
+[2025-03-01T13:58:54.929+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:54 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-ideapad-slim-3-15irh10-i7-83k1000jvn
+[2025-03-01T13:58:54.942+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:54 [root] INFO: cnt: 56
+[2025-03-01T13:58:55.091+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:55 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-ideapad-slim-3-16irh10-i5-83k20003vn
+[2025-03-01T13:58:55.104+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:55 [root] INFO: cnt: 57
+[2025-03-01T13:58:55.209+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:55 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-ideapad-slim-3-15irh10-i5-83k1000hvn
+[2025-03-01T13:58:55.221+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:55 [root] INFO: cnt: 58
+[2025-03-01T13:58:55.512+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:55 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-ideapad-5-2in1-14irh9-i7-83kx003xvn
+[2025-03-01T13:58:55.528+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:55 [root] INFO: cnt: 59
+[2025-03-01T13:58:55.791+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:55 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-ideapad-5-2in1-14irh9-i5-83kx003wvn
+[2025-03-01T13:58:55.805+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:55 [root] INFO: cnt: 60
+[2025-03-01T13:58:56.015+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:56 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/xiaomi-watch-s4
+[2025-03-01T13:58:56.030+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:56 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.thegioididong.com/dong-ho-thong-minh/xiaomi-watch-s4> (referer: https://www.thegioididong.com/newsitemap/sitemap-product-2025-2?page=1)
+[2025-03-01T13:58:56.030+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T13:58:56.031+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 1088, in _runCallbacks
+[2025-03-01T13:58:56.032+0000] {subprocess.py:93} INFO -     current.result = callback(  # type: ignore[misc]
+[2025-03-01T13:58:56.034+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:58:56.035+0000] {subprocess.py:93} INFO -   File "/opt/***/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 68, in parse_detail_product
+[2025-03-01T13:58:56.036+0000] {subprocess.py:93} INFO -     productld = json.loads(response.xpath('//*[@id="productld"]/text()').get())
+[2025-03-01T13:58:56.037+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:58:56.038+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/json/__init__.py", line 339, in loads
+[2025-03-01T13:58:56.038+0000] {subprocess.py:93} INFO -     raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+[2025-03-01T13:58:56.039+0000] {subprocess.py:93} INFO - TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[2025-03-01T13:58:56.321+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:56 [root] INFO: URL: https://www.thegioididong.com/ban-phim/ban-phim-co-khong-day-akko-3108-rf-dragon-ball-z-goku-cream-yellow
+[2025-03-01T13:58:56.332+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:56 [root] INFO: cnt: 61
+[2025-03-01T13:58:56.572+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:56 [root] INFO: URL: https://www.thegioididong.com/ban-phim/ban-phim-co-khong-day-akko-3108-rf-dragon-ball-z-cream-blue
+[2025-03-01T13:58:56.588+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:56 [root] INFO: cnt: 62
+[2025-03-01T13:58:56.842+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:56 [root] INFO: URL: https://www.thegioididong.com/ban-phim/ban-phim-co-khong-day-akko-3087-rf-dragon-ball-z-goku-cream-yellow
+[2025-03-01T13:58:56.852+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:56 [root] INFO: cnt: 63
+[2025-03-01T13:58:57.419+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:57 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-ipad-air-13-inch-2024-jcpal
+[2025-03-01T13:58:57.428+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:57 [root] INFO: cnt: 64
+[2025-03-01T13:58:57.706+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:57 [root] INFO: URL: https://www.thegioididong.com/op-lung-flipcover/op-lung-iphone-15-nhua-cung-vien-deo-jincase-jcs1601-trong
+[2025-03-01T13:58:57.712+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:57 [root] INFO: cnt: 65
+[2025-03-01T13:58:57.732+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:57 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-ipad-air-11-inch-2024-jcpal-iclara
+[2025-03-01T13:58:57.739+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:57 [root] INFO: cnt: 66
+[2025-03-01T13:58:57.863+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:57 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-ipad-pro-13-inch-2024-jcpal-iclara
+[2025-03-01T13:58:57.869+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:57 [root] INFO: cnt: 67
+[2025-03-01T13:58:58.161+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:58 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-ipad-pro-11-inch-2024-jcpal-iclara
+[2025-03-01T13:58:58.171+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:58 [root] INFO: cnt: 68
+[2025-03-01T13:58:58.459+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:58 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-iphone-16-pro-max-mipow-bj604-cr
+[2025-03-01T13:58:58.468+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:58 [root] INFO: cnt: 69
+[2025-03-01T13:58:58.671+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:58 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-chong-nhin-trom-samsung-galaxy-s25-ultra-uniq
+[2025-03-01T13:58:58.679+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:58 [root] INFO: cnt: 70
+[2025-03-01T13:58:58.943+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:58 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-samsung-galaxy-s25-ultra-uniq
+[2025-03-01T13:58:58.950+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:58 [root] INFO: cnt: 71
+[2025-03-01T13:58:59.200+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:59 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-samsung-galaxy-s25-plus-uniq
+[2025-03-01T13:58:59.207+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:59 [root] INFO: cnt: 72
+[2025-03-01T13:58:59.486+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:59 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-samsung-galaxy-s25-uniq
+[2025-03-01T13:58:59.494+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:59 [root] INFO: cnt: 73
+[2025-03-01T13:58:59.702+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:59 [root] INFO: URL: https://www.thegioididong.com/op-lung-flipcover/op-lung-galaxy-s25-nhua-pc-tpu-samsung-x-otterbox-react-magnet-trong
+[2025-03-01T13:58:59.710+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:59 [root] INFO: cnt: 74
+[2025-03-01T13:58:59.985+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:59 [root] INFO: URL: https://www.thegioididong.com/op-lung-flipcover/op-lung-magsafe-galaxy-s25-ultra-nhua-deo-tpu-samsung-x-spigen-enzo-aramid-den
+[2025-03-01T13:58:59.994+0000] {subprocess.py:93} INFO - 2025-03-01 13:58:59 [root] INFO: cnt: 75
+[2025-03-01T13:59:00.123+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:00 [root] INFO: URL: https://www.thegioididong.com/op-lung-flipcover/op-lung-magsafe-galaxy-s25-plus-nhua-deo-tpu-samsung-x-spigen-enzo-aramid-den
+[2025-03-01T13:59:00.133+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:00 [root] INFO: cnt: 76
+[2025-03-01T13:59:00.355+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:00 [root] INFO: URL: https://www.thegioididong.com/op-lung-flipcover/op-lung-magsafe-galaxy-s25-nhua-deo-tpu-samsung-x-spigen-enzo-aramid-den
+[2025-03-01T13:59:00.366+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:00 [root] INFO: cnt: 77
+[2025-03-01T13:59:00.564+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:00 [root] INFO: URL: https://www.thegioididong.com/op-lung-flipcover/op-lung-magsafe-galaxy-s25-ultra-nhua-pc-tpu-samsung-trong
+[2025-03-01T13:59:00.573+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:00 [root] INFO: cnt: 78
+[2025-03-01T13:59:00.850+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:00 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-sa272u-e-27-inch-2k-ips-100hz-4ms-trang
+[2025-03-01T13:59:00.863+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:00 [root] INFO: cnt: 79
+[2025-03-01T13:59:01.154+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:01 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/xiaomi-a27qi-27-inch-2k-ips-100hz-6ms
+[2025-03-01T13:59:01.168+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:01 [root] INFO: cnt: 80
+[2025-03-01T13:59:01.306+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:01 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-ed320q-x-31-5-inch-fhd-va-240hz-5ms
+[2025-03-01T13:59:01.319+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:01 [root] INFO: cnt: 81
+[2025-03-01T13:59:01.589+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:01 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-sa272u-e-27-inch-2k-ips-100hz-4ms
+[2025-03-01T13:59:01.599+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:01 [root] INFO: cnt: 82
+[2025-03-01T13:59:01.983+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:01 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-ek241y-g-23-8-inch-fhd-ips-120hz-4ms
+[2025-03-01T13:59:01.995+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:01 [root] INFO: cnt: 83
+[2025-03-01T13:59:02.019+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:02 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-ek251q-g-24-5-inch-fhd-ips-120hz-4ms
+[2025-03-01T13:59:02.028+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:02 [root] INFO: cnt: 84
+[2025-03-01T13:59:02.256+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:02 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-ek221q-e3-21-5-inch-fhd-ips-100hz-5ms
+[2025-03-01T13:59:02.267+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:02 [root] INFO: cnt: 85
+[2025-03-01T13:59:02.495+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:02 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-nitro-kg270-x1-27-inch-fhd-ips-200hz-4ms
+[2025-03-01T13:59:02.506+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:02 [root] INFO: cnt: 86
+[2025-03-01T13:59:02.764+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:02 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-nitro-kg240y-x1-23-8-inch-fhd-ips-200hz-4ms
+[2025-03-01T13:59:02.777+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:02 [root] INFO: cnt: 87
+[2025-03-01T13:59:02.981+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:02 [root] INFO: URL: https://www.thegioididong.com/may-tinh-de-ban/asus-aio-a3402wvak-i5-1335u-23-8-inch-wpc104w
+[2025-03-01T13:59:02.993+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:02 [root] INFO: cnt: 88
+[2025-03-01T13:59:03.238+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:03 [root] INFO: URL: https://www.thegioididong.com/may-tinh-de-ban/asus-s500se-i3-13100-8gb-512gb-s500se-313100070w
+[2025-03-01T13:59:03.249+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:03 [root] INFO: cnt: 89
+[2025-03-01T13:59:03.803+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:03 [root] INFO: URL: https://www.thegioididong.com/may-tinh-de-ban/minipc-singpc-i12450h682-w-i5-12450h
+[2025-03-01T13:59:03.811+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:03 [root] INFO: cnt: 90
+[2025-03-01T13:59:04.118+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:04 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/huawei-watch-gt-5-41mm-vien-thep-day-milanese
+[2025-03-01T13:59:04.129+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:04 [root] INFO: cnt: 91
+[2025-03-01T13:59:04.217+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//ariston-an2-rs-15>: HTTP status code is not handled or not allowed
+[2025-03-01T13:59:04.246+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:04 [root] INFO: URL: https://www.thegioididong.com/may-tinh-de-ban/asus-s500se-i3-13100-8gb-256gb-s500se-313100069w
+[2025-03-01T13:59:04.257+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:04 [root] INFO: cnt: 92
+[2025-03-01T13:59:04.460+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//panasonic-mx-ac400wra>: HTTP status code is not handled or not allowed
+[2025-03-01T13:59:04.651+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//happycook-hc-200-2-lit>: HTTP status code is not handled or not allowed
+[2025-03-01T13:59:04.942+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//happycook-hc-180-18-lit>: HTTP status code is not handled or not allowed
+[2025-03-01T13:59:05.235+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:05 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//nap-gai-cuckoo-cr-1413>: HTTP status code is not handled or not allowed
+[2025-03-01T13:59:05.597+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:05 [root] INFO: URL: https://www.thegioididong.com/pin/pin-aa-4-vien-zinc-carbon-philips-r6l4b
+[2025-03-01T13:59:05.607+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:05 [root] INFO: cnt: 93
+[2025-03-01T13:59:06.226+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:06 [root] INFO: URL: https://www.thegioididong.com/chuot-may-tinh/chuot-khong-day-logitech-m170-den
+[2025-03-01T13:59:06.241+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:06 [root] INFO: cnt: 94
+[2025-03-01T13:59:06.413+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:06 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/skmei-sk-1239-do
+[2025-03-01T13:59:06.424+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:06 [root] INFO: cnt: 95
+[2025-03-01T13:59:06.842+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:06 [root] INFO: URL: https://www.thegioididong.com/pin/pin-aa-4-vien-alkaline-philips-lr6p4b
+[2025-03-01T13:59:06.852+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:06 [root] INFO: cnt: 96
+[2025-03-01T13:59:06.918+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:06 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/skmei-sk-1455-hong-xanh
+[2025-03-01T13:59:06.928+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:06 [root] INFO: cnt: 97
+[2025-03-01T13:59:06.981+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:06 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//chao-nhom-chong-dinh-day-tu-dmx-cte-24-cm>: HTTP status code is not handled or not allowed
+[2025-03-01T13:59:07.002+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:07 [root] INFO: URL: https://www.thegioididong.com/tui-dung-airpods/tui-dung-airpod-silicone-kem-moc-jm-pdc013-xam
+[2025-03-01T13:59:07.013+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:07 [root] INFO: cnt: 98
+[2025-03-01T13:59:07.203+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:07 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//chao-nhom-chong-dinh-day-tu-delites-dmx-28-cm>: HTTP status code is not handled or not allowed
+[2025-03-01T13:59:07.821+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:07 [root] INFO: URL: https://www.thegioididong.com/loa-laptop/birici-mx-700
+[2025-03-01T13:59:07.837+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:07 [root] INFO: cnt: 99
+[2025-03-01T13:59:07.987+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:07 [root] INFO: URL: https://www.thegioididong.com/tai-nghe/tai-nghe-ep-sony-mdr-ex15aplize
+[2025-03-01T13:59:07.997+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:07 [root] INFO: cnt: 100
+[2025-03-01T13:59:08.125+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:08 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/g-shock-dw-6900mma-2dr-den
+[2025-03-01T13:59:08.138+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:08 [root] INFO: cnt: 101
+[2025-03-01T13:59:08.281+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:08 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/g-shock-ga-710gb-1adr-den
+[2025-03-01T13:59:08.291+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:08 [root] INFO: cnt: 102
+[2025-03-01T13:59:08.489+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:08 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/g-shock-ga-700-1adr-den
+[2025-03-01T13:59:08.500+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:08 [root] INFO: cnt: 103
+[2025-03-01T13:59:08.801+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:08 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/g-shock-ga-400hr-1adr-den
+[2025-03-01T13:59:08.812+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:08 [root] INFO: cnt: 104
+[2025-03-01T13:59:09.044+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:09 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/g-shock-ga-400gb-1a4dr-den
+[2025-03-01T13:59:09.055+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:09 [root] INFO: cnt: 105
+[2025-03-01T13:59:09.361+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:09 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/g-shock-ga-100cf-1a9dr-den
+[2025-03-01T13:59:09.377+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:09 [root] INFO: cnt: 106
+[2025-03-01T13:59:09.739+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:09 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/edifice-casio-efr-526d-7avudf-bac
+[2025-03-01T13:59:09.755+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:09 [root] INFO: cnt: 107
+[2025-03-01T13:59:09.935+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:09 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/edifice-casio-efr-526l-7avudf-nau
+[2025-03-01T13:59:09.958+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:09 [root] INFO: cnt: 108
+[2025-03-01T13:59:10.159+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:10 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/edifice-casio-efv-570d-1avudf-bac
+[2025-03-01T13:59:10.186+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:10 [root] INFO: cnt: 109
+[2025-03-01T13:59:10.227+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:10 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-la680wga-1bdf-vang
+[2025-03-01T13:59:10.251+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:10 [root] INFO: cnt: 110
+[2025-03-01T13:59:10.522+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:10 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-la680wa-7df-bac
+[2025-03-01T13:59:10.545+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:10 [root] INFO: cnt: 111
+[2025-03-01T13:59:10.699+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:10 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-b650wd-1adf-bac
+[2025-03-01T13:59:10.718+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:10 [root] INFO: cnt: 112
+[2025-03-01T13:59:10.975+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:10 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-a168wg-9wdf-vang
+[2025-03-01T13:59:10.988+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:10 [root] INFO: cnt: 113
+[2025-03-01T13:59:11.133+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:11 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-a159wa-n1df-bac
+[2025-03-01T13:59:11.144+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:11 [root] INFO: cnt: 114
+[2025-03-01T13:59:11.542+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:11 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ae-1400wh-1avdf-den
+[2025-03-01T13:59:11.551+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:11 [root] INFO: cnt: 115
+[2025-03-01T13:59:11.769+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:11 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-a158wa-1df-bac
+[2025-03-01T13:59:11.781+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:11 [root] INFO: cnt: 116
+[2025-03-01T13:59:11.847+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:11 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ae-1300wh-8avdf-den
+[2025-03-01T13:59:11.858+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:11 [root] INFO: cnt: 117
+[2025-03-01T13:59:12.736+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:12 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ae-1200wh-1avdf-den
+[2025-03-01T13:59:12.746+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:12 [root] INFO: cnt: 118
+[2025-03-01T13:59:13.110+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:13 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ae-1200whd-1avdf-bac
+[2025-03-01T13:59:13.134+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:13 [root] INFO: cnt: 119
+[2025-03-01T13:59:13.393+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:13 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ae-1000w-4bvdf-cam
+[2025-03-01T13:59:13.412+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:13 [root] INFO: cnt: 120
+[2025-03-01T13:59:13.572+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:13 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ae-1000w-3avdf-xanh-bo-doi
+[2025-03-01T13:59:13.585+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:13 [root] INFO: cnt: 121
+[2025-03-01T13:59:14.164+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:14 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lrw-200h-4e2vdr-trang
+[2025-03-01T13:59:14.176+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:14 [root] INFO: cnt: 122
+[2025-03-01T13:59:14.364+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:14 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lx-500h-4e4vdf-hong
+[2025-03-01T13:59:14.376+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:14 [root] INFO: cnt: 123
+[2025-03-01T13:59:14.677+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:14 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lrw-200h-4evdr-den
+[2025-03-01T13:59:14.688+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:14 [root] INFO: cnt: 124
+[2025-03-01T13:59:15.045+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:15 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ae-1000w-2avdf-xanh-duong
+[2025-03-01T13:59:15.056+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:15 [root] INFO: cnt: 125
+[2025-03-01T13:59:15.799+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:15 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lrw-200h-2evdr-den
+[2025-03-01T13:59:15.809+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:15 [root] INFO: cnt: 126
+[2025-03-01T13:59:15.932+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:15 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lrw-200h-4bvdf-trang
+[2025-03-01T13:59:15.944+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:15 [root] INFO: cnt: 127
+[2025-03-01T13:59:16.073+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:16 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lrw-200h-7bvdf-trang
+[2025-03-01T13:59:16.085+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:16 [root] INFO: cnt: 128
+[2025-03-01T13:59:16.440+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:16 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lrw-200h-4cvdf-trang
+[2025-03-01T13:59:16.453+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:16 [root] INFO: cnt: 129
+[2025-03-01T13:59:16.493+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:16 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lrw-200h-4b2vdf-hong
+[2025-03-01T13:59:16.503+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:16 [root] INFO: cnt: 130
+[2025-03-01T13:59:16.519+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:16 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lrw-200h-2e2vdr-trang
+[2025-03-01T13:59:16.529+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:16 [root] INFO: cnt: 131
+[2025-03-01T13:59:16.664+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:16 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lrw-200h-2bvdf-trang
+[2025-03-01T13:59:16.673+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:16 [root] INFO: cnt: 132
+[2025-03-01T13:59:16.711+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:16 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lq-142e-2adf-den
+[2025-03-01T13:59:16.722+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:16 [root] INFO: cnt: 133
+[2025-03-01T13:59:16.988+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:16 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lrw-200h-1bvdf-den
+[2025-03-01T13:59:17.004+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:17 [root] INFO: cnt: 134
+[2025-03-01T13:59:17.144+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:17 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lq-142-1bdf-den
+[2025-03-01T13:59:17.154+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:17 [root] INFO: cnt: 135
+[2025-03-01T13:59:17.328+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:17 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lq-139l-4b2df-hong
+[2025-03-01T13:59:17.337+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:17 [root] INFO: cnt: 136
+[2025-03-01T13:59:17.349+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:17 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lq-142e-9adf-den
+[2025-03-01T13:59:17.358+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:17 [root] INFO: cnt: 137
+[2025-03-01T13:59:17.603+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:17 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v007d-7eudf-bac
+[2025-03-01T13:59:17.613+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:17 [root] INFO: cnt: 138
+[2025-03-01T13:59:17.668+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:17 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lq-142e-1adf-den
+[2025-03-01T13:59:17.678+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:17 [root] INFO: cnt: 139
+[2025-03-01T13:59:17.784+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:17 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-lrw-200h-1evdf-trang
+[2025-03-01T13:59:17.794+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:17 [root] INFO: cnt: 140
+[2025-03-01T13:59:18.031+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:18 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v005d-7budf-bac
+[2025-03-01T13:59:18.041+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:18 [root] INFO: cnt: 141
+[2025-03-01T13:59:18.685+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:18 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v004g-7budf-vang
+[2025-03-01T13:59:18.696+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:18 [root] INFO: cnt: 142
+[2025-03-01T13:59:18.943+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:18 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v005sg-7audf-bac
+[2025-03-01T13:59:18.953+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:18 [root] INFO: cnt: 143
+[2025-03-01T13:59:19.401+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:19 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v005d-2budf-bac
+[2025-03-01T13:59:19.410+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:19 [root] INFO: cnt: 144
+[2025-03-01T13:59:19.553+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:19 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v004d-7budf-bac
+[2025-03-01T13:59:19.566+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:19 [root] INFO: cnt: 145
+[2025-03-01T13:59:19.605+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:19 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v004d-1budf-bac
+[2025-03-01T13:59:19.614+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:19 [root] INFO: cnt: 146
+[2025-03-01T13:59:20.179+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:20 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v001d-7budf-bac
+[2025-03-01T13:59:20.192+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:20 [root] INFO: cnt: 147
+[2025-03-01T13:59:20.588+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:20 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v002d-1audf-bac
+[2025-03-01T13:59:20.599+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:20 [root] INFO: cnt: 148
+[2025-03-01T13:59:20.706+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:20 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v002g-7b2udf-vang
+[2025-03-01T13:59:20.719+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:20 [root] INFO: cnt: 149
+[2025-03-01T13:59:20.891+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:20 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1303d-4avdf-bac
+[2025-03-01T13:59:20.904+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:20 [root] INFO: cnt: 150
+[2025-03-01T13:59:20.905+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:20 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v002g-9audf-vang
+[2025-03-01T13:59:20.917+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:20 [root] INFO: cnt: 151
+[2025-03-01T13:59:21.829+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:21 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1314l-7avdf
+[2025-03-01T13:59:21.856+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:21 [root] INFO: cnt: 152
+[2025-03-01T13:59:21.895+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:21 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1275sg-9adf-bac
+[2025-03-01T13:59:21.922+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:21 [root] INFO: cnt: 153
+[2025-03-01T13:59:21.928+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:21 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1303d-1avdf-bac
+[2025-03-01T13:59:21.955+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:21 [root] INFO: cnt: 154
+[2025-03-01T13:59:22.087+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:22 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v001d-1budf-bac
+[2025-03-01T13:59:22.098+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:22 [root] INFO: cnt: 155
+[2025-03-01T13:59:22.105+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:22 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1302d-1a1vdf-bac
+[2025-03-01T13:59:22.122+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:22 [root] INFO: cnt: 156
+[2025-03-01T13:59:22.165+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:22 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1302d-7a2vdf-bac
+[2025-03-01T13:59:22.181+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:22 [root] INFO: cnt: 157
+[2025-03-01T13:59:23.033+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:23 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1274d-7bdf-bac
+[2025-03-01T13:59:23.049+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:23 [root] INFO: cnt: 158
+[2025-03-01T13:59:23.313+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:23 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1241d-4adf-bac
+[2025-03-01T13:59:23.343+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:23 [root] INFO: cnt: 159
+[2025-03-01T13:59:23.344+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:23 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1275d-1adf-bac
+[2025-03-01T13:59:23.361+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:23 [root] INFO: cnt: 160
+[2025-03-01T13:59:23.471+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:23 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1275sg-7bdf-bac
+[2025-03-01T13:59:23.483+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:23 [root] INFO: cnt: 161
+[2025-03-01T13:59:23.773+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:23 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1242sg-1cdf-bac
+[2025-03-01T13:59:23.784+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:23 [root] INFO: cnt: 162
+[2025-03-01T13:59:24.249+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:24 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1241d-2a2df-bac
+[2025-03-01T13:59:24.259+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:24 [root] INFO: cnt: 163
+[2025-03-01T13:59:24.312+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:24 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1183a-7adf-bac
+[2025-03-01T13:59:24.322+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:24 [root] INFO: cnt: 164
+[2025-03-01T13:59:24.629+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:24 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1215a-1adf-bac
+[2025-03-01T13:59:24.639+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:24 [root] INFO: cnt: 165
+[2025-03-01T13:59:24.651+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:24 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1183g-7adf-bac
+[2025-03-01T13:59:24.663+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:24 [root] INFO: cnt: 166
+[2025-03-01T13:59:24.706+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:24 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1230d-7cdf-bac
+[2025-03-01T13:59:24.716+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:24 [root] INFO: cnt: 167
+[2025-03-01T13:59:25.028+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:25 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1177a-2adf-bac
+[2025-03-01T13:59:25.038+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:25 [root] INFO: cnt: 168
+[2025-03-01T13:59:25.375+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:25 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1169n-7ardf-vang
+[2025-03-01T13:59:25.386+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:25 [root] INFO: cnt: 169
+[2025-03-01T13:59:25.546+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:25 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1169d-7ardf-bac
+[2025-03-01T13:59:25.563+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:25 [root] INFO: cnt: 170
+[2025-03-01T13:59:26.126+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:26 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1170g-7ardf-bac
+[2025-03-01T13:59:26.142+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:26 [root] INFO: cnt: 171
+[2025-03-01T13:59:26.849+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:26 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1165a-4cdf-bac
+[2025-03-01T13:59:26.859+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:26 [root] INFO: cnt: 172
+[2025-03-01T13:59:26.888+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:26 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1170a-7ardf-bac
+[2025-03-01T13:59:26.900+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:26 [root] INFO: cnt: 173
+[2025-03-01T13:59:27.369+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:27 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1129g-7brdf-vang
+[2025-03-01T13:59:27.377+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:27 [root] INFO: cnt: 174
+[2025-03-01T13:59:27.665+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:27 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1129g-7ardf-vang
+[2025-03-01T13:59:27.676+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:27 [root] INFO: cnt: 175
+[2025-03-01T13:59:27.884+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:27 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1130n-7brdf-vang
+[2025-03-01T13:59:27.893+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:27 [root] INFO: cnt: 176
+[2025-03-01T13:59:28.000+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:27 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v006gl-7budf-nau
+[2025-03-01T13:59:28.010+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:28 [root] INFO: cnt: 177
+[2025-03-01T13:59:28.393+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:28 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1128g-9ardf-vang
+[2025-03-01T13:59:28.404+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:28 [root] INFO: cnt: 178
+[2025-03-01T13:59:28.491+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:28 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1129a-7brdf-bac
+[2025-03-01T13:59:28.502+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:28 [root] INFO: cnt: 179
+[2025-03-01T13:59:28.760+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:28 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1128g-7brdf-vang
+[2025-03-01T13:59:28.771+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:28 [root] INFO: cnt: 180
+[2025-03-01T13:59:28.910+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:28 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v005l-7budf-den
+[2025-03-01T13:59:28.920+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:28 [root] INFO: cnt: 181
+[2025-03-01T13:59:29.079+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:29 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v005gl-1budf-nau
+[2025-03-01T13:59:29.089+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:29 [root] INFO: cnt: 182
+[2025-03-01T13:59:29.583+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:29 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1129a-7ardf-bac
+[2025-03-01T13:59:29.594+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:29 [root] INFO: cnt: 183
+[2025-03-01T13:59:29.808+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:29 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v005gl-9audf-nau
+[2025-03-01T13:59:29.817+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:29 [root] INFO: cnt: 184
+[2025-03-01T13:59:29.923+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:29 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v005gl-7audf-nau
+[2025-03-01T13:59:29.934+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:29 [root] INFO: cnt: 185
+[2025-03-01T13:59:30.042+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:30 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v005l-1budf-den
+[2025-03-01T13:59:30.053+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:30 [root] INFO: cnt: 186
+[2025-03-01T13:59:30.134+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:30 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v004gl-7audf-nau
+[2025-03-01T13:59:30.147+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:30 [root] INFO: cnt: 187
+[2025-03-01T13:59:30.410+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:30 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v004l-7audf-den
+[2025-03-01T13:59:30.424+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:30 [root] INFO: cnt: 188
+[2025-03-01T13:59:30.466+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:30 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v002gl-1budf-nau
+[2025-03-01T13:59:30.477+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:30 [root] INFO: cnt: 189
+[2025-03-01T13:59:30.969+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:30 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v002l-1budf-den
+[2025-03-01T13:59:30.980+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:30 [root] INFO: cnt: 190
+[2025-03-01T13:59:31.389+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:31 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1094q-7b6rdf-nau
+[2025-03-01T13:59:31.400+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:31 [root] INFO: cnt: 191
+[2025-03-01T13:59:31.587+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:31 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v001l-7budf-den
+[2025-03-01T13:59:31.597+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:31 [root] INFO: cnt: 192
+[2025-03-01T13:59:31.778+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:31 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1094q-7b4rdf-nau
+[2025-03-01T13:59:31.788+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:31 [root] INFO: cnt: 193
+[2025-03-01T13:59:32.098+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:32 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1094q-9brdf-nau
+[2025-03-01T13:59:32.109+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:32 [root] INFO: cnt: 194
+[2025-03-01T13:59:32.314+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:32 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-v002l-7b2udf-nau
+[2025-03-01T13:59:32.324+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:32 [root] INFO: cnt: 195
+[2025-03-01T13:59:32.726+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:32 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1094e-7ardf-den
+[2025-03-01T13:59:32.736+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:32 [root] INFO: cnt: 196
+[2025-03-01T13:59:33.488+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:33 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1094q-1ardf-den
+[2025-03-01T13:59:33.499+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:33 [root] INFO: cnt: 197
+[2025-03-01T13:59:33.834+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:33 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-mrw-200h-9bvdf-den
+[2025-03-01T13:59:33.848+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:33 [root] INFO: cnt: 198
+[2025-03-01T13:59:33.850+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:33 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1094q-7ardf-den
+[2025-03-01T13:59:33.869+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:33 [root] INFO: cnt: 199
+[2025-03-01T13:59:33.902+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:33 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-ltp-1094e-7brdf-den
+[2025-03-01T13:59:33.920+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:33 [root] INFO: cnt: 200
+[2025-03-01T13:59:34.186+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:34 [scrapy.extensions.logstats] INFO: Crawled 237 pages (at 237 pages/min), scraped 0 items (at 0 items/min)
+[2025-03-01T13:59:34.211+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:34 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-hdc-700-9avdf-den
+[2025-03-01T13:59:34.225+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:34 [root] INFO: cnt: 201
+[2025-03-01T13:59:35.267+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:35 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-mrw-200h-1b3vdf-den
+[2025-03-01T13:59:35.281+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:35 [root] INFO: cnt: 202
+[2025-03-01T13:59:35.282+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:35 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-aw-48he-1avdf-den
+[2025-03-01T13:59:35.294+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:35 [root] INFO: cnt: 203
+[2025-03-01T13:59:35.330+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:35 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-hda-600b-7bvdf-den
+[2025-03-01T13:59:35.342+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:35 [root] INFO: cnt: 204
+[2025-03-01T13:59:35.406+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:35 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-aeq-110w-2avdf-den
+[2025-03-01T13:59:35.417+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:35 [root] INFO: cnt: 205
+[2025-03-01T13:59:35.525+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:35 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-hdc-700-1avdf-den
+[2025-03-01T13:59:35.535+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:35 [root] INFO: cnt: 206
+[2025-03-01T13:59:35.883+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:35 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/baby-g-bg-169g-7bdr-trang
+[2025-03-01T13:59:35.894+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:35 [root] INFO: cnt: 207
+[2025-03-01T13:59:36.024+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:36 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-aeq-110w-1bvdf-den
+[2025-03-01T13:59:36.035+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:36 [root] INFO: cnt: 208
+[2025-03-01T13:59:36.152+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:36 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-aeq-110w-1avdf-den
+[2025-03-01T13:59:36.163+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:36 [root] INFO: cnt: 209
+[2025-03-01T13:59:36.217+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:36 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/casio-hda-600b-1bvdf-den
+[2025-03-01T13:59:36.228+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:36 [root] INFO: cnt: 210
+[2025-03-01T13:59:36.282+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:36 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/baby-g-bgd-560sk-4dr-do
+[2025-03-01T13:59:36.294+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:36 [root] INFO: cnt: 211
+[2025-03-01T13:59:36.788+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:36 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/baby-g-bga-255-4adr-cam
+[2025-03-01T13:59:36.798+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:36 [root] INFO: cnt: 212
+[2025-03-01T13:59:37.057+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:37 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/baby-g-bga-250-7a2dr-trang
+[2025-03-01T13:59:37.070+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:37 [root] INFO: cnt: 213
+[2025-03-01T13:59:37.328+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:37 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/baby-g-bga-240l-2a1dr-xanh-duong
+[2025-03-01T13:59:37.342+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:37 [root] INFO: cnt: 214
+[2025-03-01T13:59:38.510+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:38 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/baby-g-bga-150fl-4adr-hong
+[2025-03-01T13:59:38.520+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:38 [root] INFO: cnt: 215
+[2025-03-01T13:59:38.548+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:38 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/baby-g-bga-230sc-4bdr-hong
+[2025-03-01T13:59:38.563+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:38 [root] INFO: cnt: 216
+[2025-03-01T13:59:38.564+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:38 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/baby-g-bga-150fl-7adr-trang
+[2025-03-01T13:59:38.576+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:38 [root] INFO: cnt: 217
+[2025-03-01T13:59:38.686+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:38 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/baby-g-bga-100st-4adr-hong
+[2025-03-01T13:59:38.700+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:38 [root] INFO: cnt: 218
+[2025-03-01T13:59:38.863+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:38 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/baby-g-ba-110ga-7a1dr-trang
+[2025-03-01T13:59:38.881+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:38 [root] INFO: cnt: 219
+[2025-03-01T13:59:38.949+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:38 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/baby-g-ba-110nr-8adr-trang
+[2025-03-01T13:59:38.965+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:38 [root] INFO: cnt: 220
+[2025-03-01T13:59:39.014+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:39 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/baby-g-ba-110ch-3adr-xanh-ngoc
+[2025-03-01T13:59:39.025+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:39 [root] INFO: cnt: 221
+[2025-03-01T13:59:39.449+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:39 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-eu6070-51d-trang
+[2025-03-01T13:59:39.479+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:39 [root] INFO: cnt: 222
+[2025-03-01T13:59:39.791+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:39 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-nam-citizen-nh8360-80j
+[2025-03-01T13:59:39.801+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:39 [root] INFO: cnt: 223
+[2025-03-01T13:59:40.056+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:40 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-nam-citizen-bi5006-81p-vang
+[2025-03-01T13:59:40.065+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:40 [root] INFO: cnt: 224
+[2025-03-01T13:59:40.260+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:40 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-nam-citizen-bi5006-81l-xanh
+[2025-03-01T13:59:40.271+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:40 [root] INFO: cnt: 225
+[2025-03-01T13:59:40.346+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:40 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-nam-citizen-be9173-07x-vang
+[2025-03-01T13:59:40.357+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:40 [root] INFO: cnt: 226
+[2025-03-01T13:59:40.493+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:40 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-nu-citizen-eu6080-58d-xa-cu
+[2025-03-01T13:59:40.504+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:40 [root] INFO: cnt: 227
+[2025-03-01T13:59:40.565+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:40 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-nam-citizen-bi5000-87l-trang
+[2025-03-01T13:59:40.576+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:40 [root] INFO: cnt: 228
+[2025-03-01T13:59:40.633+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:40 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-nam-citizen-bi5000-87e
+[2025-03-01T13:59:40.646+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:40 [root] INFO: cnt: 229
+[2025-03-01T13:59:40.779+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:40 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-nam-citizen-bi5000-87a-trang
+[2025-03-01T13:59:40.790+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:40 [root] INFO: cnt: 230
+[2025-03-01T13:59:41.883+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:41 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-kim-nu-day-kim-loai-citizen-eu6074-51d-xa
+[2025-03-01T13:59:41.896+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:41 [root] INFO: cnt: 231
+[2025-03-01T13:59:42.181+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:42 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-kim-nu-day-kim-loai-citizen-eu6012-58p-van
+[2025-03-01T13:59:42.194+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:42 [root] INFO: cnt: 232
+[2025-03-01T13:59:42.585+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:42 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-kim-nu-day-kim-loai-citizen-be9174-55l-xan
+[2025-03-01T13:59:42.596+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:42 [root] INFO: cnt: 233
+[2025-03-01T13:59:42.763+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:42 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-kim-nam-day-kim-loai-citizen-bi5074-56a-tr
+[2025-03-01T13:59:42.773+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:42 [root] INFO: cnt: 234
+[2025-03-01T13:59:42.912+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:42 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-kim-nam-day-kim-loai-citizen-bi5056-58a
+[2025-03-01T13:59:42.922+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:42 [root] INFO: cnt: 235
+[2025-03-01T13:59:42.999+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:42 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-kim-nu-day-kim-loai-citizen-er0205-80x-hon
+[2025-03-01T13:59:43.024+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:43 [root] INFO: cnt: 236
+[2025-03-01T13:59:43.331+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:43 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-kim-nam-day-kim-loai-citizen-bi1050-81e-de
+[2025-03-01T13:59:43.342+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:43 [root] INFO: cnt: 237
+[2025-03-01T13:59:43.359+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:43 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-kim-nam-day-kim-loai-citizen-bi5070-57h-xa
+[2025-03-01T13:59:43.373+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:43 [root] INFO: cnt: 238
+[2025-03-01T13:59:43.447+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:43 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-kim-nam-day-kim-loai-citizen-bf2020-51e-de
+[2025-03-01T13:59:43.457+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:43 [root] INFO: cnt: 239
+[2025-03-01T13:59:43.496+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:43 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-kim-nam-day-da-citizen-bi5002-14a-trang
+[2025-03-01T13:59:43.507+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:43 [root] INFO: cnt: 240
+[2025-03-01T13:59:43.692+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:43 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-fe6088-87a
+[2025-03-01T13:59:43.703+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:43 [root] INFO: cnt: 241
+[2025-03-01T13:59:44.115+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:44 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-em0597-80a
+[2025-03-01T13:59:44.133+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:44 [root] INFO: cnt: 242
+[2025-03-01T13:59:44.650+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:44 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-em0504-81a-trang
+[2025-03-01T13:59:44.659+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:44 [root] INFO: cnt: 243
+[2025-03-01T13:59:45.255+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:45 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-kim-eco-drive-nu-day-kim-loai-citizen-em05
+[2025-03-01T13:59:45.274+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:45 [root] INFO: cnt: 244
+[2025-03-01T13:59:45.383+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:45 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-kim-eco-drive-nam-day-kim-loai-citizen-bm6
+[2025-03-01T13:59:45.398+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:45 [root] INFO: cnt: 245
+[2025-03-01T13:59:45.719+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:45 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-kim-eco-drive-nu-day-da-citizen-ew2533-11x
+[2025-03-01T13:59:45.747+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:45 [root] INFO: cnt: 246
+[2025-03-01T13:59:45.779+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:45 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-kim-eco-drive-nam-day-da-citizen-aw1232-12
+[2025-03-01T13:59:45.798+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:45 [root] INFO: cnt: 247
+[2025-03-01T13:59:45.799+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:45 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-aw1370-51f-trang-nam
+[2025-03-01T13:59:45.809+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:45 [root] INFO: cnt: 248
+[2025-03-01T13:59:46.732+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:46 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-eco-drive-nu-day-kim-loai-citizen-fe6089-8
+[2025-03-01T13:59:46.749+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:46 [root] INFO: cnt: 249
+[2025-03-01T13:59:46.763+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:46 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-eco-drive-nu-day-kim-loai-citizen-ga1050-5
+[2025-03-01T13:59:46.773+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:46 [root] INFO: cnt: 250
+[2025-03-01T13:59:46.800+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:46 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-kim-eco-drive-nam-day-da-citizen-ar1113-12
+[2025-03-01T13:59:46.813+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:46 [root] INFO: cnt: 251
+[2025-03-01T13:59:47.086+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:47 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-eco-drive-nu-day-kim-loai-citizen-fe6024-5
+[2025-03-01T13:59:47.096+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:47 [root] INFO: cnt: 252
+[2025-03-01T13:59:47.371+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:47 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-eco-drive-nam-day-kim-loai-citizen-bm7400
+[2025-03-01T13:59:47.383+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:47 [root] INFO: cnt: 253
+[2025-03-01T13:59:47.553+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:47 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-eco-drive-nam-day-kim-loai-citizen-bm6770
+[2025-03-01T13:59:47.566+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:47 [root] INFO: cnt: 254
+[2025-03-01T13:59:47.648+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:47 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-eco-drive-nu-day-kim-loai-citizen-em0639-8
+[2025-03-01T13:59:47.658+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:47 [root] INFO: cnt: 255
+[2025-03-01T13:59:48.021+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:48 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-eco-drive-nam-day-kim-loai-citizen-aw1211
+[2025-03-01T13:59:48.032+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:48 [root] INFO: cnt: 256
+[2025-03-01T13:59:48.037+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:48 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-automatic-nam-day-kim-loai-citizen-nh8365
+[2025-03-01T13:59:48.048+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:48 [root] INFO: cnt: 257
+[2025-03-01T13:59:48.154+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:48 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-eco-drive-nam-day-kim-loai-citizen-bm7332
+[2025-03-01T13:59:48.165+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:48 [root] INFO: cnt: 258
+[2025-03-01T13:59:48.307+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//chao-chong-dinh-day-tu-elmich-colosseum-y1-el-3720>: HTTP status code is not handled or not allowed
+[2025-03-01T13:59:48.491+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//chao-chong-dinh-van-da-day-tu-elmich-colosseum-y1>: HTTP status code is not handled or not allowed
+[2025-03-01T13:59:48.623+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:48 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/dong-ho-automatic-nam-day-kim-loai-citizen-nh8356-87a
+[2025-03-01T13:59:48.638+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:48 [root] INFO: cnt: 259
+[2025-03-01T13:59:48.704+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:48 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nh8350-83e-den
+[2025-03-01T13:59:48.719+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:48 [root] INFO: cnt: 260
+[2025-03-01T13:59:48.776+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//chao-chong-dinh-van-da-day-tu-elmich-coloseum-y1-e>: HTTP status code is not handled or not allowed
+[2025-03-01T13:59:49.233+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:49 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nh8350-59l-xanh
+[2025-03-01T13:59:49.243+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:49 [root] INFO: cnt: 261
+[2025-03-01T13:59:49.316+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:49 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nh8360-12a-trang
+[2025-03-01T13:59:49.329+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:49 [root] INFO: cnt: 262
+[2025-03-01T13:59:49.997+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:49 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nj0080-50a-trang
+[2025-03-01T13:59:50.014+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:50 [root] INFO: cnt: 263
+[2025-03-01T13:59:50.448+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:50 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nh8373-88a-trang
+[2025-03-01T13:59:50.463+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:50 [root] INFO: cnt: 264
+[2025-03-01T13:59:50.576+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:50 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nh8363-14h-xam
+[2025-03-01T13:59:50.588+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:50 [root] INFO: cnt: 265
+[2025-03-01T13:59:50.633+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:50 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nh8365-19f-den
+[2025-03-01T13:59:50.643+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:50 [root] INFO: cnt: 266
+[2025-03-01T13:59:51.026+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:51 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nh8353-18a-trang
+[2025-03-01T13:59:51.038+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:51 [root] INFO: cnt: 267
+[2025-03-01T13:59:51.113+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:51 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nh8350-83l-xanh
+[2025-03-01T13:59:51.123+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:51 [root] INFO: cnt: 268
+[2025-03-01T13:59:51.364+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:51 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nh8350-83a-trang
+[2025-03-01T13:59:51.374+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:51 [root] INFO: cnt: 269
+[2025-03-01T13:59:51.568+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:51 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nh8350-59e-den
+[2025-03-01T13:59:51.578+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:51 [root] INFO: cnt: 270
+[2025-03-01T13:59:51.687+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:51 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nh8350-59b-trang
+[2025-03-01T13:59:51.698+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:51 [root] INFO: cnt: 271
+[2025-03-01T13:59:51.808+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:51 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nh8350-59a-trang
+[2025-03-01T13:59:51.831+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:51 [root] INFO: cnt: 272
+[2025-03-01T13:59:52.283+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:52 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nh8350-08a-trang
+[2025-03-01T13:59:52.298+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:52 [root] INFO: cnt: 273
+[2025-03-01T13:59:52.344+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:52 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nh8350-08e-den
+[2025-03-01T13:59:52.357+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:52 [root] INFO: cnt: 274
+[2025-03-01T13:59:52.537+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:52 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-fe6016-88a
+[2025-03-01T13:59:52.560+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:52 [root] INFO: cnt: 275
+[2025-03-01T13:59:52.684+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:52 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-fe6080-71x-hong
+[2025-03-01T13:59:52.696+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:52 [root] INFO: cnt: 276
+[2025-03-01T13:59:53.204+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:53 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-fe6020-56f-den
+[2025-03-01T13:59:53.216+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:53 [root] INFO: cnt: 277
+[2025-03-01T13:59:54.093+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:54 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-eu6092-59e
+[2025-03-01T13:59:54.112+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:54 [root] INFO: cnt: 278
+[2025-03-01T13:59:54.344+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:54 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-eq0593-26a-trang
+[2025-03-01T13:59:54.357+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:54 [root] INFO: cnt: 279
+[2025-03-01T13:59:54.422+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:54 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-ew2524-55n
+[2025-03-01T13:59:54.437+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:54 [root] INFO: cnt: 280
+[2025-03-01T13:59:54.438+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:54 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-eu6094-53a-trang
+[2025-03-01T13:59:54.452+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:54 [root] INFO: cnt: 281
+[2025-03-01T13:59:54.576+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:54 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-ew3250-53e
+[2025-03-01T13:59:54.595+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:54 [root] INFO: cnt: 282
+[2025-03-01T13:59:54.806+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:54 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-ex1493-13a
+[2025-03-01T13:59:54.820+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:54 [root] INFO: cnt: 283
+[2025-03-01T13:59:54.878+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:54 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-eu6039-86a-trang
+[2025-03-01T13:59:54.890+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:54 [root] INFO: cnt: 284
+[2025-03-01T13:59:55.622+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:55 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-eq0591-81e-den
+[2025-03-01T13:59:55.633+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:55 [root] INFO: cnt: 285
+[2025-03-01T13:59:55.842+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:55 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-em0530-81d-xa-cu
+[2025-03-01T13:59:55.851+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:55 [root] INFO: cnt: 286
+[2025-03-01T13:59:56.083+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:56 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-eq0596-87a-trang
+[2025-03-01T13:59:56.094+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:56 [root] INFO: cnt: 287
+[2025-03-01T13:59:56.163+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:56 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-eq0593-85p-vang
+[2025-03-01T13:59:56.174+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:56 [root] INFO: cnt: 288
+[2025-03-01T13:59:56.579+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:56 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-bi1054-55a
+[2025-03-01T13:59:56.589+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:56 [root] INFO: cnt: 289
+[2025-03-01T13:59:56.668+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:56 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-bi5072-51e-den
+[2025-03-01T13:59:56.678+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:56 [root] INFO: cnt: 290
+[2025-03-01T13:59:56.819+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:56 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-bi1050-56l-xanh
+[2025-03-01T13:59:56.828+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:56 [root] INFO: cnt: 291
+[2025-03-01T13:59:57.030+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-ca0690-88l
+[2025-03-01T13:59:57.040+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: cnt: 292
+[2025-03-01T13:59:57.041+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-bh3003-51a
+[2025-03-01T13:59:57.048+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: cnt: 293
+[2025-03-01T13:59:57.494+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-au1060-51e
+[2025-03-01T13:59:57.509+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: cnt: 294
+[2025-03-01T13:59:57.549+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-be9170-05l-xanh
+[2025-03-01T13:59:57.560+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: cnt: 295
+[2025-03-01T13:59:57.564+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-au1060-51a
+[2025-03-01T13:59:57.574+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: cnt: 296
+[2025-03-01T13:59:57.770+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-bf2001-12a-trang
+[2025-03-01T13:59:57.781+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: cnt: 297
+[2025-03-01T13:59:57.971+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-au1083-13a-trang
+[2025-03-01T13:59:57.981+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: cnt: 298
+[2025-03-01T13:59:57.982+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-bf2001-80e
+[2025-03-01T13:59:57.996+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:57 [root] INFO: cnt: 299
+[2025-03-01T13:59:58.199+0000] {subprocess.py:93} INFO - 2025-03-01 13:59:58 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//dao-got-chong-dinh-van-da-23cm-bhx-ld-ks125ut-xam>: HTTP status code is not handled or not allowed
+[2025-03-01T13:59:58.293+0000] {local_task_job_runner.py:313} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-03-01T13:59:58.294+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-03-01T13:59:58.296+0000] {process_utils.py:132} INFO - Sending 15 to group 555. PIDs of all processes in the group: [556, 555]
+[2025-03-01T13:59:58.297+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 555
+[2025-03-01T13:59:58.297+0000] {taskinstance.py:2611} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-03-01T13:59:58.299+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2025-03-01T13:59:58.300+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-01T13:59:58.832+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=555, status='terminated', exitcode=0, started='13:58:31') (555) terminated with exit code 0
+[2025-03-01T14:00:03.401+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=556, status='terminated', started='13:58:31') (556) terminated with exit code None

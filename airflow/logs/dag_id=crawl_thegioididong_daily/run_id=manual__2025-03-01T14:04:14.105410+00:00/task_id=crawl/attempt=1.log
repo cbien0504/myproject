@@ -1,0 +1,1470 @@
+[2025-03-01T14:04:15.602+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-01T14:04:15.627+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.crawl manual__2025-03-01T14:04:14.105410+00:00 [queued]>
+[2025-03-01T14:04:15.638+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.crawl manual__2025-03-01T14:04:14.105410+00:00 [queued]>
+[2025-03-01T14:04:15.639+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-03-01T14:04:15.654+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): crawl> on 2025-03-01 14:04:14.105410+00:00
+[2025-03-01T14:04:15.660+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=640) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-01T14:04:15.662+0000] {standard_task_runner.py:64} INFO - Started process 641 to run task
+[2025-03-01T14:04:15.662+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'crawl_thegioididong_daily', 'crawl', 'manual__2025-03-01T14:04:14.105410+00:00', '--job-id', '113', '--raw', '--subdir', 'DAGS_FOLDER/crawl_daily_tgdd.py', '--cfg-path', '/tmp/tmpfqu_i7mj']
+[2025-03-01T14:04:15.663+0000] {standard_task_runner.py:91} INFO - Job 113: Subtask crawl
+[2025-03-01T14:04:15.710+0000] {task_command.py:426} INFO - Running <TaskInstance: crawl_thegioididong_daily.crawl manual__2025-03-01T14:04:14.105410+00:00 [running]> on host 934a1bc80592
+[2025-03-01T14:04:15.806+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crawl_thegioididong_daily' AIRFLOW_CTX_TASK_ID='crawl' AIRFLOW_CTX_EXECUTION_DATE='2025-03-01T14:04:14.105410+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-01T14:04:14.105410+00:00'
+[2025-03-01T14:04:15.808+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-01T14:04:15.824+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-01T14:04:15.826+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/crawler/tgdd_crawler/tgdd_crawler; scrapy crawl tgdd_crawler -a daily=true; ']
+[2025-03-01T14:04:15.842+0000] {subprocess.py:86} INFO - Output:
+[2025-03-01T14:04:17.081+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: scrapybot)
+[2025-03-01T14:04:17.083+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [scrapy.utils.log] INFO: Versions: lxml 5.2.2.0, libxml2 2.12.6, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.12.4 (main, Jul 23 2024, 07:23:20) [GCC 12.2.0], pyOpenSSL 24.1.0 (OpenSSL 3.1.4 24 Oct 2023), cryptography 41.0.7, Platform Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2025-03-01T14:04:17.085+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: /opt/***/crawler/tgdd_crawler/tgdd_crawler/tgdd_crawler/metadata.json
+[2025-03-01T14:04:17.089+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [scrapy.addons] INFO: Enabled addons:
+[2025-03-01T14:04:17.090+0000] {subprocess.py:93} INFO - []
+[2025-03-01T14:04:17.091+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [scrapy.extensions.telnet] INFO: Telnet Password: c477457a2e670682
+[2025-03-01T14:04:17.132+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [scrapy.middleware] INFO: Enabled extensions:
+[2025-03-01T14:04:17.133+0000] {subprocess.py:93} INFO - ['scrapy.extensions.corestats.CoreStats',
+[2025-03-01T14:04:17.134+0000] {subprocess.py:93} INFO -  'scrapy.extensions.telnet.TelnetConsole',
+[2025-03-01T14:04:17.134+0000] {subprocess.py:93} INFO -  'scrapy.extensions.memusage.MemoryUsage',
+[2025-03-01T14:04:17.135+0000] {subprocess.py:93} INFO -  'scrapy.extensions.logstats.LogStats']
+[2025-03-01T14:04:17.136+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [scrapy.crawler] INFO: Overridden settings:
+[2025-03-01T14:04:17.136+0000] {subprocess.py:93} INFO - {'DOWNLOAD_DELAY': 0.2,
+[2025-03-01T14:04:17.137+0000] {subprocess.py:93} INFO -  'FEED_EXPORT_ENCODING': 'utf-8',
+[2025-03-01T14:04:17.138+0000] {subprocess.py:93} INFO -  'LOG_LEVEL': 'INFO',
+[2025-03-01T14:04:17.139+0000] {subprocess.py:93} INFO -  'NEWSPIDER_MODULE': 'tgdd_crawler.spiders',
+[2025-03-01T14:04:17.140+0000] {subprocess.py:93} INFO -  'SPIDER_MODULES': ['tgdd_crawler.spiders'],
+[2025-03-01T14:04:17.140+0000] {subprocess.py:93} INFO -  'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+[2025-03-01T14:04:17.141+0000] {subprocess.py:93} INFO -  'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+[2025-03-01T14:04:17.141+0000] {subprocess.py:93} INFO -                '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'}
+[2025-03-01T14:04:17.235+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [scrapy.middleware] INFO: Enabled downloader middlewares:
+[2025-03-01T14:04:17.236+0000] {subprocess.py:93} INFO - ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+[2025-03-01T14:04:17.237+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+[2025-03-01T14:04:17.237+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+[2025-03-01T14:04:17.238+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+[2025-03-01T14:04:17.238+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+[2025-03-01T14:04:17.240+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+[2025-03-01T14:04:17.240+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+[2025-03-01T14:04:17.241+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+[2025-03-01T14:04:17.242+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+[2025-03-01T14:04:17.242+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+[2025-03-01T14:04:17.243+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+[2025-03-01T14:04:17.244+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2025-03-01T14:04:17.244+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [scrapy.middleware] INFO: Enabled spider middlewares:
+[2025-03-01T14:04:17.245+0000] {subprocess.py:93} INFO - ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+[2025-03-01T14:04:17.246+0000] {subprocess.py:93} INFO -  'scrapy.spidermiddlewares.referer.RefererMiddleware',
+[2025-03-01T14:04:17.246+0000] {subprocess.py:93} INFO -  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+[2025-03-01T14:04:17.247+0000] {subprocess.py:93} INFO -  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2025-03-01T14:04:17.247+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [scrapy.middleware] INFO: Enabled item pipelines:
+[2025-03-01T14:04:17.248+0000] {subprocess.py:93} INFO - []
+[2025-03-01T14:04:17.249+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [scrapy.core.engine] INFO: Spider opened
+[2025-03-01T14:04:17.249+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2025-03-01T14:04:17.250+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2025-03-01T14:04:17.677+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.678+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-03
+[2025-03-01T14:04:17.678+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.679+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-03
+[2025-03-01T14:04:17.680+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.680+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.681+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.682+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.682+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.683+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.684+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.684+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.685+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.686+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.686+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.687+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.688+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.688+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.689+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.689+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.690+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.691+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.691+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.692+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.692+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.693+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.694+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.694+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.695+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.695+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.696+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.697+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.698+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.698+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.699+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.699+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.700+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.700+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.701+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.701+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.702+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.702+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.702+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.703+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.704+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.704+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.705+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.705+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-05
+[2025-03-01T14:04:17.706+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.706+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-06
+[2025-03-01T14:04:17.707+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.707+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-06
+[2025-03-01T14:04:17.708+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.708+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-06
+[2025-03-01T14:04:17.709+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.709+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-06
+[2025-03-01T14:04:17.710+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.710+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-11
+[2025-03-01T14:04:17.711+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.712+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-11
+[2025-03-01T14:04:17.712+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.712+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-13
+[2025-03-01T14:04:17.713+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.713+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-13
+[2025-03-01T14:04:17.714+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.714+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-13
+[2025-03-01T14:04:17.715+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.715+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-13
+[2025-03-01T14:04:17.716+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.717+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-13
+[2025-03-01T14:04:17.717+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.718+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-13
+[2025-03-01T14:04:17.718+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.719+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-13
+[2025-03-01T14:04:17.719+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.720+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-13
+[2025-03-01T14:04:17.720+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.721+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-13
+[2025-03-01T14:04:17.721+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.722+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-13
+[2025-03-01T14:04:17.723+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.723+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-18
+[2025-03-01T14:04:17.724+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.724+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-20
+[2025-03-01T14:04:17.725+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.725+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-20
+[2025-03-01T14:04:17.726+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.726+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-20
+[2025-03-01T14:04:17.726+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.727+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-21
+[2025-03-01T14:04:17.727+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.727+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-21
+[2025-03-01T14:04:17.728+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.728+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-21
+[2025-03-01T14:04:17.728+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.729+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-21
+[2025-03-01T14:04:17.729+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.730+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-21
+[2025-03-01T14:04:17.730+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.731+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-21
+[2025-03-01T14:04:17.732+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.732+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-21
+[2025-03-01T14:04:17.733+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.733+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-25
+[2025-03-01T14:04:17.733+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.734+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-26
+[2025-03-01T14:04:17.734+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.735+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-29
+[2025-03-01T14:04:17.735+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.735+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-29
+[2025-03-01T14:04:17.735+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.736+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-29
+[2025-03-01T14:04:17.736+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.736+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-29
+[2025-03-01T14:04:17.737+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.737+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-05-30
+[2025-03-01T14:04:17.950+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.951+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-05
+[2025-03-01T14:04:17.951+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.952+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-05
+[2025-03-01T14:04:17.953+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.953+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-05
+[2025-03-01T14:04:17.954+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.955+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-05
+[2025-03-01T14:04:17.955+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.956+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-05
+[2025-03-01T14:04:17.957+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.957+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-16
+[2025-03-01T14:04:17.958+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.958+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-16
+[2025-03-01T14:04:17.959+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.959+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-16
+[2025-03-01T14:04:17.960+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.961+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-16
+[2025-03-01T14:04:17.961+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.962+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-16
+[2025-03-01T14:04:17.962+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.963+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-16
+[2025-03-01T14:04:17.963+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.964+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-17
+[2025-03-01T14:04:17.964+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.965+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-17
+[2025-03-01T14:04:17.965+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.965+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-23
+[2025-03-01T14:04:17.966+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.966+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-24
+[2025-03-01T14:04:17.966+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.967+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.968+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.968+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.969+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.969+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.969+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.970+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.971+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.971+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.972+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.972+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.973+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.973+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.974+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.974+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.974+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.975+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.975+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.976+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.976+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.977+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.977+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.977+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.978+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.978+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.979+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.979+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.979+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.980+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.980+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.981+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.981+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.981+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.982+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.982+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.982+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.983+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-27
+[2025-03-01T14:04:17.983+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: metadata:None
+[2025-03-01T14:04:17.983+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:17 [root] INFO: lastmod: 2021-04-29
+[2025-03-01T14:04:18.105+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.105+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-03-02
+[2025-03-01T14:04:18.106+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.107+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-03-02
+[2025-03-01T14:04:18.107+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.108+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-03-02
+[2025-03-01T14:04:18.109+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.109+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-03-04
+[2025-03-01T14:04:18.110+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.110+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-03-04
+[2025-03-01T14:04:18.111+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.112+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-03-08
+[2025-03-01T14:04:18.113+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.114+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-03-10
+[2025-03-01T14:04:18.114+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.115+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-03-10
+[2025-03-01T14:04:18.115+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.116+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-03-10
+[2025-03-01T14:04:18.117+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.117+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-03-10
+[2025-03-01T14:04:18.118+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.119+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-03-10
+[2025-03-01T14:04:18.119+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.120+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-03-18
+[2025-03-01T14:04:18.120+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.121+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-03-25
+[2025-03-01T14:04:18.121+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.122+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-03-27
+[2025-03-01T14:04:18.300+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.301+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-02-17
+[2025-03-01T14:04:18.301+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.302+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-02-23
+[2025-03-01T14:04:18.303+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.303+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-02-23
+[2025-03-01T14:04:18.304+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.305+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-02-24
+[2025-03-01T14:04:18.305+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.306+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-02-25
+[2025-03-01T14:04:18.306+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.307+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-02-25
+[2025-03-01T14:04:18.308+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.308+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-02-25
+[2025-03-01T14:04:18.309+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.310+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-02-25
+[2025-03-01T14:04:18.310+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.311+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-02-25
+[2025-03-01T14:04:18.311+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.312+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-02-26
+[2025-03-01T14:04:18.594+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.595+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-04
+[2025-03-01T14:04:18.596+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.596+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-04
+[2025-03-01T14:04:18.597+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.598+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-04
+[2025-03-01T14:04:18.598+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.599+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-04
+[2025-03-01T14:04:18.600+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.600+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-04
+[2025-03-01T14:04:18.601+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.602+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-05
+[2025-03-01T14:04:18.603+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.603+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-05
+[2025-03-01T14:04:18.604+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.604+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-05
+[2025-03-01T14:04:18.605+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.606+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-06
+[2025-03-01T14:04:18.606+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.607+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-06
+[2025-03-01T14:04:18.607+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.608+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-06
+[2025-03-01T14:04:18.609+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.609+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-06
+[2025-03-01T14:04:18.610+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.610+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-06
+[2025-03-01T14:04:18.611+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.612+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-06
+[2025-03-01T14:04:18.612+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.613+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-06
+[2025-03-01T14:04:18.613+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.614+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-06
+[2025-03-01T14:04:18.614+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.615+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-07
+[2025-03-01T14:04:18.615+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.616+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-07
+[2025-03-01T14:04:18.616+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.617+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-07
+[2025-03-01T14:04:18.617+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.618+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-07
+[2025-03-01T14:04:18.619+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.619+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-07
+[2025-03-01T14:04:18.620+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.620+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-07
+[2025-03-01T14:04:18.621+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.621+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-07
+[2025-03-01T14:04:18.622+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.622+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-08
+[2025-03-01T14:04:18.622+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.623+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-08
+[2025-03-01T14:04:18.623+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.623+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-08
+[2025-03-01T14:04:18.624+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.624+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-08
+[2025-03-01T14:04:18.624+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.624+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-11
+[2025-03-01T14:04:18.625+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.625+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-11
+[2025-03-01T14:04:18.626+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.626+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-12
+[2025-03-01T14:04:18.627+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.627+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-12
+[2025-03-01T14:04:18.627+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.628+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-14
+[2025-03-01T14:04:18.628+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.629+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-14
+[2025-03-01T14:04:18.629+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.629+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-14
+[2025-03-01T14:04:18.630+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.630+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-14
+[2025-03-01T14:04:18.631+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.631+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-14
+[2025-03-01T14:04:18.631+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.632+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-15
+[2025-03-01T14:04:18.632+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.632+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-15
+[2025-03-01T14:04:18.633+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.633+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-15
+[2025-03-01T14:04:18.634+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.634+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-15
+[2025-03-01T14:04:18.635+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.635+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-15
+[2025-03-01T14:04:18.636+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.636+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-15
+[2025-03-01T14:04:18.636+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.637+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-15
+[2025-03-01T14:04:18.637+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.637+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-18
+[2025-03-01T14:04:18.638+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.638+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-22
+[2025-03-01T14:04:18.638+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.639+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-25
+[2025-03-01T14:04:18.639+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.640+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-25
+[2025-03-01T14:04:18.640+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.641+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-25
+[2025-03-01T14:04:18.641+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.642+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-25
+[2025-03-01T14:04:18.642+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.642+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-25
+[2025-03-01T14:04:18.643+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.643+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2021-01-25
+[2025-03-01T14:04:18.900+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.900+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.902+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.902+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.903+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.903+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.904+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.905+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.905+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.906+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.906+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.907+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.908+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.908+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.909+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.909+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.910+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.911+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.912+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.913+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.913+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.914+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.915+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.915+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.916+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.916+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.917+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.917+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.918+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.919+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.920+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.920+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.921+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.921+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.922+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.922+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.923+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.923+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.924+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.924+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.925+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.926+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.926+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.927+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.927+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.928+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.928+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.929+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.929+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.929+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.930+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.930+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.931+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.931+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.932+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.933+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.933+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.934+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.934+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.934+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.935+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.935+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.936+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.936+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.936+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.937+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.937+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.938+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.938+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.939+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.940+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.940+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.940+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.941+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.941+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.942+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.942+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.942+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.943+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.943+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.943+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.943+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.944+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.944+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.944+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.945+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.946+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.946+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.947+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.947+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.948+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.948+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.949+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.949+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.949+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.950+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.950+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.950+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.951+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.951+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.951+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.952+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.953+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.954+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.954+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.955+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.955+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.956+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.956+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.956+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.957+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.957+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.957+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.958+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.958+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.958+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.959+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.960+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.961+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.961+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.962+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.962+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.963+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.963+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.964+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.964+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.964+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.965+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.965+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.965+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-01
+[2025-03-01T14:04:18.966+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.967+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-02
+[2025-03-01T14:04:18.967+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.968+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-02
+[2025-03-01T14:04:18.968+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.969+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-02
+[2025-03-01T14:04:18.969+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.970+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-06
+[2025-03-01T14:04:18.970+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.970+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-06
+[2025-03-01T14:04:18.971+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.971+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-14
+[2025-03-01T14:04:18.971+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.972+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-14
+[2025-03-01T14:04:18.972+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.973+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-14
+[2025-03-01T14:04:18.973+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.974+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-14
+[2025-03-01T14:04:18.974+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.975+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-14
+[2025-03-01T14:04:18.975+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.976+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-14
+[2025-03-01T14:04:18.976+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.977+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-21
+[2025-03-01T14:04:18.977+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.977+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-21
+[2025-03-01T14:04:18.977+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.978+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-21
+[2025-03-01T14:04:18.978+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.978+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-24
+[2025-03-01T14:04:18.979+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.979+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-24
+[2025-03-01T14:04:18.980+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.980+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-24
+[2025-03-01T14:04:18.981+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.982+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-24
+[2025-03-01T14:04:18.982+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.982+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-24
+[2025-03-01T14:04:18.983+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.983+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-24
+[2025-03-01T14:04:18.984+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.984+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-24
+[2025-03-01T14:04:18.984+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: metadata:None
+[2025-03-01T14:04:18.985+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:18 [root] INFO: lastmod: 2020-12-24
+[2025-03-01T14:04:19.156+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.157+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-05
+[2025-03-01T14:04:19.157+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.158+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-05
+[2025-03-01T14:04:19.158+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.159+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-05
+[2025-03-01T14:04:19.159+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.159+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-09
+[2025-03-01T14:04:19.160+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.160+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-09
+[2025-03-01T14:04:19.161+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.161+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-09
+[2025-03-01T14:04:19.162+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.162+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-09
+[2025-03-01T14:04:19.163+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.163+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-09
+[2025-03-01T14:04:19.164+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.164+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-09
+[2025-03-01T14:04:19.165+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.165+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-12
+[2025-03-01T14:04:19.166+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.166+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-13
+[2025-03-01T14:04:19.167+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.167+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-13
+[2025-03-01T14:04:19.168+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.169+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-13
+[2025-03-01T14:04:19.169+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.170+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-13
+[2025-03-01T14:04:19.170+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.171+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-13
+[2025-03-01T14:04:19.171+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.171+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-13
+[2025-03-01T14:04:19.172+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.172+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-13
+[2025-03-01T14:04:19.173+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.173+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-13
+[2025-03-01T14:04:19.173+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.174+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-13
+[2025-03-01T14:04:19.175+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.175+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-13
+[2025-03-01T14:04:19.176+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.176+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-13
+[2025-03-01T14:04:19.176+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.177+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-13
+[2025-03-01T14:04:19.177+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.178+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-13
+[2025-03-01T14:04:19.178+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.179+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-13
+[2025-03-01T14:04:19.179+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.180+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-16
+[2025-03-01T14:04:19.180+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.181+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-23
+[2025-03-01T14:04:19.181+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.182+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-11-23
+[2025-03-01T14:04:19.450+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.450+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-02
+[2025-03-01T14:04:19.452+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.453+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-02
+[2025-03-01T14:04:19.454+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.454+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-02
+[2025-03-01T14:04:19.455+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.455+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-02
+[2025-03-01T14:04:19.456+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.456+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-02
+[2025-03-01T14:04:19.457+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.458+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-15
+[2025-03-01T14:04:19.460+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.460+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-15
+[2025-03-01T14:04:19.461+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.461+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-15
+[2025-03-01T14:04:19.462+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.462+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-19
+[2025-03-01T14:04:19.463+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.463+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-21
+[2025-03-01T14:04:19.463+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.464+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-21
+[2025-03-01T14:04:19.465+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.465+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-21
+[2025-03-01T14:04:19.466+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.467+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-23
+[2025-03-01T14:04:19.467+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.468+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-23
+[2025-03-01T14:04:19.468+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.468+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-23
+[2025-03-01T14:04:19.469+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.469+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-23
+[2025-03-01T14:04:19.470+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.471+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-26
+[2025-03-01T14:04:19.471+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.472+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-27
+[2025-03-01T14:04:19.473+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.473+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-10-30
+[2025-03-01T14:04:19.690+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.691+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-06
+[2025-03-01T14:04:19.692+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.692+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-06
+[2025-03-01T14:04:19.693+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.717+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-06
+[2025-03-01T14:04:19.718+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.719+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-06
+[2025-03-01T14:04:19.719+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.720+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-06
+[2025-03-01T14:04:19.720+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.721+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-06
+[2025-03-01T14:04:19.721+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.722+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-10
+[2025-03-01T14:04:19.724+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.729+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.730+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.730+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.731+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.732+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.733+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.733+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.734+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.734+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.735+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.735+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.736+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.737+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.737+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.738+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.738+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.739+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.739+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.740+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.740+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.741+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.741+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.741+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.742+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.743+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.743+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.744+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.744+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.745+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.745+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.746+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-14
+[2025-03-01T14:04:19.746+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.747+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.747+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.747+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.748+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.749+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.749+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.749+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.750+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.751+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.751+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.751+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.752+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.752+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.753+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.753+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.754+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.755+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.755+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.756+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.756+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.757+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.757+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.758+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.759+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.759+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.759+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.760+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.760+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.761+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.761+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.761+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-16
+[2025-03-01T14:04:19.762+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.762+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-17
+[2025-03-01T14:04:19.763+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.763+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-09-18
+[2025-03-01T14:04:19.947+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.948+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-08-03
+[2025-03-01T14:04:19.948+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.949+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-08-10
+[2025-03-01T14:04:19.950+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.950+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-08-10
+[2025-03-01T14:04:19.951+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.952+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-08-10
+[2025-03-01T14:04:19.953+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.954+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-08-10
+[2025-03-01T14:04:19.955+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.955+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-08-21
+[2025-03-01T14:04:19.956+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.956+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-08-24
+[2025-03-01T14:04:19.957+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: metadata:None
+[2025-03-01T14:04:19.957+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:19 [root] INFO: lastmod: 2020-08-28
+[2025-03-01T14:04:20.098+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.099+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-06
+[2025-03-01T14:04:20.099+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.100+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-06
+[2025-03-01T14:04:20.101+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.101+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-09
+[2025-03-01T14:04:20.102+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.102+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-09
+[2025-03-01T14:04:20.103+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.103+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-09
+[2025-03-01T14:04:20.104+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.104+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-10
+[2025-03-01T14:04:20.105+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.105+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-15
+[2025-03-01T14:04:20.106+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.107+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-17
+[2025-03-01T14:04:20.107+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.108+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-17
+[2025-03-01T14:04:20.108+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.109+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-17
+[2025-03-01T14:04:20.109+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.110+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-17
+[2025-03-01T14:04:20.111+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.111+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-17
+[2025-03-01T14:04:20.112+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.112+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-17
+[2025-03-01T14:04:20.113+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.113+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-17
+[2025-03-01T14:04:20.114+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.114+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-18
+[2025-03-01T14:04:20.115+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.115+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-18
+[2025-03-01T14:04:20.116+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.116+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-18
+[2025-03-01T14:04:20.117+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.118+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-18
+[2025-03-01T14:04:20.118+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.118+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-18
+[2025-03-01T14:04:20.119+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.119+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-18
+[2025-03-01T14:04:20.119+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.120+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-18
+[2025-03-01T14:04:20.120+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.121+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-18
+[2025-03-01T14:04:20.121+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.122+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-18
+[2025-03-01T14:04:20.122+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.123+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-18
+[2025-03-01T14:04:20.123+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.123+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-20
+[2025-03-01T14:04:20.124+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.124+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-27
+[2025-03-01T14:04:20.125+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.125+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-30
+[2025-03-01T14:04:20.126+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.126+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-07-30
+[2025-03-01T14:04:20.257+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.258+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-06-01
+[2025-03-01T14:04:20.259+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.260+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-06-09
+[2025-03-01T14:04:20.260+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.261+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-06-11
+[2025-03-01T14:04:20.261+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.262+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-06-20
+[2025-03-01T14:04:20.262+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.263+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-06-20
+[2025-03-01T14:04:20.264+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.264+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-06-24
+[2025-03-01T14:04:20.514+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.514+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-05-04
+[2025-03-01T14:04:20.515+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.516+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-05-04
+[2025-03-01T14:04:20.516+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.517+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-05-06
+[2025-03-01T14:04:20.517+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.518+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-05-06
+[2025-03-01T14:04:20.518+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.519+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-05-19
+[2025-03-01T14:04:20.519+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.520+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-05-29
+[2025-03-01T14:04:20.521+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.521+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-05-29
+[2025-03-01T14:04:20.775+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.776+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-04-09
+[2025-03-01T14:04:20.777+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.778+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-04-10
+[2025-03-01T14:04:20.778+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.779+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-04-10
+[2025-03-01T14:04:20.779+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.780+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-04-10
+[2025-03-01T14:04:20.780+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.781+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-04-10
+[2025-03-01T14:04:20.781+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.782+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-04-10
+[2025-03-01T14:04:20.782+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.783+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-04-10
+[2025-03-01T14:04:20.784+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.784+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-04-10
+[2025-03-01T14:04:20.785+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.785+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-04-10
+[2025-03-01T14:04:20.786+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.787+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-04-10
+[2025-03-01T14:04:20.788+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.788+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-04-10
+[2025-03-01T14:04:20.789+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.790+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-04-20
+[2025-03-01T14:04:20.790+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.791+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-04-20
+[2025-03-01T14:04:20.791+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: metadata:None
+[2025-03-01T14:04:20.792+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:20 [root] INFO: lastmod: 2020-04-24
+[2025-03-01T14:04:21.043+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.044+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.044+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.045+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.045+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.046+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.046+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.047+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.047+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.048+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.048+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.049+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.049+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.050+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.050+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.050+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.051+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.051+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.052+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.052+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.052+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.053+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.053+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.054+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.054+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.055+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.055+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.056+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.056+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.057+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.057+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.057+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.058+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.058+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.059+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.059+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.060+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.060+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.061+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.061+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.062+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.062+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.063+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.063+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.064+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.064+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.065+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.065+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.066+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.066+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.066+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.067+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.067+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.068+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.068+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.069+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.069+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.070+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.070+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.070+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.071+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.071+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.072+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.072+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.072+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.073+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.073+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.074+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.074+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.075+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-10
+[2025-03-01T14:04:21.075+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.076+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-11
+[2025-03-01T14:04:21.076+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.077+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-11
+[2025-03-01T14:04:21.077+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.078+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-11
+[2025-03-01T14:04:21.078+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.078+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-11
+[2025-03-01T14:04:21.079+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.079+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-11
+[2025-03-01T14:04:21.080+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.080+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-17
+[2025-03-01T14:04:21.080+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.080+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.081+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.081+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.081+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.082+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.082+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.083+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.083+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.084+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.084+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.085+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.085+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.086+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.086+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.086+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.087+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.087+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.087+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.088+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.088+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.089+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.089+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.090+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.090+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.090+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.091+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.091+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.091+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.092+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.092+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.092+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.093+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.093+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.093+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.094+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.094+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.094+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.095+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.095+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.096+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.096+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.096+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.097+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.097+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.098+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.098+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.098+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.099+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.099+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-19
+[2025-03-01T14:04:21.100+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.100+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-24
+[2025-03-01T14:04:21.100+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.101+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-25
+[2025-03-01T14:04:21.101+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.101+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-03-27
+[2025-03-01T14:04:21.242+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.243+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-02-07
+[2025-03-01T14:04:21.243+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.244+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-02-07
+[2025-03-01T14:04:21.245+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.245+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-02-18
+[2025-03-01T14:04:21.246+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.246+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-02-18
+[2025-03-01T14:04:21.247+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.247+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-02-18
+[2025-03-01T14:04:21.248+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.248+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2020-02-18
+[2025-03-01T14:04:21.473+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.474+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-04
+[2025-03-01T14:04:21.475+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.475+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-06
+[2025-03-01T14:04:21.476+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.476+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-07
+[2025-03-01T14:04:21.477+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.478+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-07
+[2025-03-01T14:04:21.478+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.479+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-07
+[2025-03-01T14:04:21.479+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.480+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-07
+[2025-03-01T14:04:21.481+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.481+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-07
+[2025-03-01T14:04:21.482+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.482+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-07
+[2025-03-01T14:04:21.483+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.483+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-07
+[2025-03-01T14:04:21.484+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.484+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-07
+[2025-03-01T14:04:21.485+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.485+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-07
+[2025-03-01T14:04:21.486+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.487+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-07
+[2025-03-01T14:04:21.487+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.488+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-07
+[2025-03-01T14:04:21.488+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.489+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-07
+[2025-03-01T14:04:21.489+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.490+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-07
+[2025-03-01T14:04:21.491+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.491+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-07
+[2025-03-01T14:04:21.492+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.492+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-08
+[2025-03-01T14:04:21.493+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.493+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-08
+[2025-03-01T14:04:21.494+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.495+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-08
+[2025-03-01T14:04:21.495+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.496+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-08
+[2025-03-01T14:04:21.497+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.498+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-08
+[2025-03-01T14:04:21.498+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.499+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-08
+[2025-03-01T14:04:21.500+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.500+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-08
+[2025-03-01T14:04:21.501+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.502+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-08
+[2025-03-01T14:04:21.502+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.503+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-08
+[2025-03-01T14:04:21.504+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.504+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-08
+[2025-03-01T14:04:21.505+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.505+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-08
+[2025-03-01T14:04:21.506+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.506+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-08
+[2025-03-01T14:04:21.507+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.508+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-08
+[2025-03-01T14:04:21.508+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.509+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-10
+[2025-03-01T14:04:21.509+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.510+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-10
+[2025-03-01T14:04:21.510+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.511+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-10
+[2025-03-01T14:04:21.511+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.512+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-10
+[2025-03-01T14:04:21.512+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.513+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.513+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.514+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.514+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.515+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.515+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.516+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.516+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.517+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.517+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.517+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.518+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.518+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.519+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.519+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.520+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.520+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.520+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.521+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.521+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.521+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.522+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.522+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.522+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.523+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.523+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.523+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.524+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.524+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.525+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.525+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-11
+[2025-03-01T14:04:21.525+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.526+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-12
+[2025-03-01T14:04:21.526+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.526+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-12
+[2025-03-01T14:04:21.527+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.527+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-12
+[2025-03-01T14:04:21.528+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.528+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-12
+[2025-03-01T14:04:21.528+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.529+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-14
+[2025-03-01T14:04:21.529+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.530+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-14
+[2025-03-01T14:04:21.530+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.530+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-14
+[2025-03-01T14:04:21.531+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.531+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-17
+[2025-03-01T14:04:21.531+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.532+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-17
+[2025-03-01T14:04:21.532+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.533+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-17
+[2025-03-01T14:04:21.533+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.534+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-17
+[2025-03-01T14:04:21.534+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.534+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-17
+[2025-03-01T14:04:21.535+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.535+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-19
+[2025-03-01T14:04:21.535+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.536+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-19
+[2025-03-01T14:04:21.536+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.537+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-19
+[2025-03-01T14:04:21.537+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.538+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-19
+[2025-03-01T14:04:21.538+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.538+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-19
+[2025-03-01T14:04:21.539+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.539+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-19
+[2025-03-01T14:04:21.540+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.540+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-19
+[2025-03-01T14:04:21.541+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.541+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-19
+[2025-03-01T14:04:21.542+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.542+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-19
+[2025-03-01T14:04:21.543+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.543+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-19
+[2025-03-01T14:04:21.544+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.544+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-19
+[2025-03-01T14:04:21.545+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.545+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-19
+[2025-03-01T14:04:21.545+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.546+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-19
+[2025-03-01T14:04:21.546+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.547+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-24
+[2025-03-01T14:04:21.547+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.547+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-24
+[2025-03-01T14:04:21.548+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.548+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-24
+[2025-03-01T14:04:21.549+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.549+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-24
+[2025-03-01T14:04:21.549+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.550+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-24
+[2025-03-01T14:04:21.550+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.551+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-24
+[2025-03-01T14:04:21.551+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.551+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-24
+[2025-03-01T14:04:21.552+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.552+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-24
+[2025-03-01T14:04:21.553+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.553+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-25
+[2025-03-01T14:04:21.554+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.554+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-25
+[2025-03-01T14:04:21.554+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.555+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-25
+[2025-03-01T14:04:21.555+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.555+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-27
+[2025-03-01T14:04:21.556+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: metadata:None
+[2025-03-01T14:04:21.556+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: lastmod: 2025-02-27
+[2025-03-01T14:04:21.864+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: URL: https://www.thegioididong.com/sac-dtdd/ava-pj-jp192
+[2025-03-01T14:04:21.881+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:21 [root] INFO: cnt: 1
+[2025-03-01T14:04:22.366+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:22 [root] INFO: URL: https://www.thegioididong.com/airtag/thiet-bi-dinh-vi-thong-minh-airtag-1-pack-mx532
+[2025-03-01T14:04:22.375+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:22 [root] INFO: cnt: 2
+[2025-03-01T14:04:22.467+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//tivi-qled-4k-samsung-qa55q65a>: HTTP status code is not handled or not allowed
+[2025-03-01T14:04:23.594+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//chao-nhom-chong-dinh-van-da-day-tu-24cm-delites-ce>: HTTP status code is not handled or not allowed
+[2025-03-01T14:04:23.785+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:23 [root] INFO: URL: https://www.thegioididong.com/loa-laptop/bluetooth-mozard-bt100
+[2025-03-01T14:04:23.796+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:23 [root] INFO: cnt: 3
+[2025-03-01T14:04:23.858+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:23 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-nh8395-77e-nam
+[2025-03-01T14:04:23.867+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:23 [root] INFO: cnt: 4
+[2025-03-01T14:04:23.933+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:23 [root] INFO: URL: https://www.thegioididong.com/laptop/apple-macbook-air-2020-mgn63saa
+[2025-03-01T14:04:23.947+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:23 [root] INFO: cnt: 5
+[2025-03-01T14:04:24.008+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:24 [root] INFO: URL: https://www.thegioididong.com/tui-chong-soc/tui-chong-soc-laptop-14-inch-co-ngan-phu-evalu-lmp-t004d
+[2025-03-01T14:04:24.017+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:24 [root] INFO: cnt: 6
+[2025-03-01T14:04:24.701+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:24 [root] INFO: URL: https://www.thegioididong.com/thiet-bi-mang/bo-phat-wifi-mesh-chuan-ac1200-tenda-nova-mw3
+[2025-03-01T14:04:24.713+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:24 [root] INFO: cnt: 7
+[2025-03-01T14:04:24.854+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:24 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/skmei-sk-1483-hong-dam
+[2025-03-01T14:04:24.863+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:24 [root] INFO: cnt: 8
+[2025-03-01T14:04:25.182+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:25 [root] INFO: URL: https://www.thegioididong.com/chuot-may-tinh/chuot-bluetooth-gaming-corsair-harpoon-rgb-den
+[2025-03-01T14:04:25.193+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:25 [root] INFO: cnt: 9
+[2025-03-01T14:04:25.283+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:25 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.thegioididong.com//gree-gwc12pb-k3d0p4>: HTTP status code is not handled or not allowed
+[2025-03-01T14:04:25.631+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:25 [root] INFO: URL: https://www.thegioididong.com/hub-chuyen-doi/adapter-chuyen-doi-usb-c-6-in-1-hyperdrive-hd22e
+[2025-03-01T14:04:25.649+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:25 [root] INFO: cnt: 10
+[2025-03-01T14:04:25.691+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:25 [root] INFO: URL: https://www.thegioididong.com/tui-dung-airpods/tui-dung-airpods-1-2-silicone-kem-moc-jm-sn07
+[2025-03-01T14:04:25.699+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:25 [root] INFO: cnt: 11
+[2025-03-01T14:04:25.898+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:25 [root] INFO: URL: https://www.thegioididong.com/laptop/msi-stealth-18-hx-ai-a2xwig-ultra-9-017vn
+[2025-03-01T14:04:25.911+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:25 [root] INFO: cnt: 12
+[2025-03-01T14:04:26.177+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:26 [root] INFO: URL: https://www.thegioididong.com/laptop/msi-raider-18-hx-ai-a2xwig-ultra-9-033vn
+[2025-03-01T14:04:26.186+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:26 [root] INFO: cnt: 13
+[2025-03-01T14:04:26.388+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:26 [root] INFO: URL: https://www.thegioididong.com/day-dong-ho/day-da-dong-ho-size-16-mm-den-f1200-41
+[2025-03-01T14:04:26.396+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:26 [root] INFO: cnt: 14
+[2025-03-01T14:04:26.445+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:26 [root] INFO: URL: https://www.thegioididong.com/laptop/msi-vector-16-hx-ai-a2xwig-ultra-9-062vn
+[2025-03-01T14:04:26.456+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:26 [root] INFO: cnt: 15
+[2025-03-01T14:04:26.457+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:26 [root] INFO: URL: https://www.thegioididong.com/loa-laptop/loa-thanh-samsung-hw-t420
+[2025-03-01T14:04:26.469+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:26 [root] INFO: cnt: 16
+[2025-03-01T14:04:26.721+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:26 [root] INFO: URL: https://www.thegioididong.com/laptop/msi-titan-18-hx-ai-a2xwig-ultra-9-090vn
+[2025-03-01T14:04:26.732+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:26 [root] INFO: cnt: 17
+[2025-03-01T14:04:26.970+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:26 [root] INFO: URL: https://www.thegioididong.com/laptop/msi-titan-18-hx-ai-a2xwjg-ultra-9-035vn
+[2025-03-01T14:04:26.981+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:26 [root] INFO: cnt: 18
+[2025-03-01T14:04:27.220+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:27 [root] INFO: URL: https://www.thegioididong.com/laptop/acer-aspire-lite-al14-52m-54cj-i5-nxj39sv002
+[2025-03-01T14:04:27.232+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:27 [root] INFO: cnt: 19
+[2025-03-01T14:04:27.517+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:27 [root] INFO: URL: https://www.thegioididong.com/may-tinh-bang/lenovo-tab-wifi
+[2025-03-01T14:04:27.529+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:27 [root] INFO: cnt: 20
+[2025-03-01T14:04:27.796+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:27 [root] INFO: URL: https://www.thegioididong.com/may-tinh-bang/lenovo-tab-4g
+[2025-03-01T14:04:27.808+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:27 [root] INFO: cnt: 21
+[2025-03-01T14:04:28.011+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:28 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/garmin-instinct-e-45mm
+[2025-03-01T14:04:28.025+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:28 [root] INFO: cnt: 22
+[2025-03-01T14:04:28.216+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:28 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/garmin-instinct-3-50mm
+[2025-03-01T14:04:28.228+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:28 [root] INFO: cnt: 23
+[2025-03-01T14:04:28.420+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:28 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/garmin-instinct-3-45mm
+[2025-03-01T14:04:28.432+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:28 [root] INFO: cnt: 24
+[2025-03-01T14:04:28.686+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:28 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/garmin-instinct-3-solar-50mm
+[2025-03-01T14:04:28.700+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:28 [root] INFO: cnt: 25
+[2025-03-01T14:04:28.869+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:28 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/garmin-instinct-3-solar-45mm
+[2025-03-01T14:04:28.881+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:28 [root] INFO: cnt: 26
+[2025-03-01T14:04:29.263+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:29 [root] INFO: URL: https://www.thegioididong.com/dtdd/iphone-16e-512gb
+[2025-03-01T14:04:29.275+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:29 [root] INFO: cnt: 27
+[2025-03-01T14:04:29.705+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:29 [root] INFO: URL: https://www.thegioididong.com/dtdd/iphone-16e
+[2025-03-01T14:04:29.718+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:29 [root] INFO: cnt: 28
+[2025-03-01T14:04:29.824+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:29 [root] INFO: URL: https://www.thegioididong.com/dtdd/xiaomi-15-ultra-trang
+[2025-03-01T14:04:29.833+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:29 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.thegioididong.com/dtdd/xiaomi-15-ultra-trang> (referer: https://www.thegioididong.com/newsitemap/sitemap-product-2025-2?page=1)
+[2025-03-01T14:04:29.833+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T14:04:29.834+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 1088, in _runCallbacks
+[2025-03-01T14:04:29.834+0000] {subprocess.py:93} INFO -     current.result = callback(  # type: ignore[misc]
+[2025-03-01T14:04:29.835+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T14:04:29.835+0000] {subprocess.py:93} INFO -   File "/opt/***/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 70, in parse_detail_product
+[2025-03-01T14:04:29.836+0000] {subprocess.py:93} INFO -     productld = json.loads(response.xpath('//*[@id="productld"]/text()').get())
+[2025-03-01T14:04:29.836+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T14:04:29.837+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/json/__init__.py", line 339, in loads
+[2025-03-01T14:04:29.837+0000] {subprocess.py:93} INFO -     raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+[2025-03-01T14:04:29.838+0000] {subprocess.py:93} INFO - TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[2025-03-01T14:04:29.861+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:29 [root] INFO: URL: https://www.thegioididong.com/dtdd/iphone-16e-256gb
+[2025-03-01T14:04:29.874+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:29 [root] INFO: cnt: 29
+[2025-03-01T14:04:30.101+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:30 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-zenbook-a14-ux3407qa-x1-26-100-qd299ws
+[2025-03-01T14:04:30.110+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:30 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.thegioididong.com/laptop/asus-zenbook-a14-ux3407qa-x1-26-100-qd299ws> (referer: https://www.thegioididong.com/newsitemap/sitemap-product-2025-2?page=1)
+[2025-03-01T14:04:30.111+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T14:04:30.111+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 1088, in _runCallbacks
+[2025-03-01T14:04:30.112+0000] {subprocess.py:93} INFO -     current.result = callback(  # type: ignore[misc]
+[2025-03-01T14:04:30.112+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T14:04:30.113+0000] {subprocess.py:93} INFO -   File "/opt/***/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 70, in parse_detail_product
+[2025-03-01T14:04:30.113+0000] {subprocess.py:93} INFO -     productld = json.loads(response.xpath('//*[@id="productld"]/text()').get())
+[2025-03-01T14:04:30.114+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T14:04:30.114+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/json/__init__.py", line 339, in loads
+[2025-03-01T14:04:30.114+0000] {subprocess.py:93} INFO -     raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+[2025-03-01T14:04:30.115+0000] {subprocess.py:93} INFO - TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[2025-03-01T14:04:30.282+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:30 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-vivobook-16-m1607ka-r7-ai-350-mb091ws
+[2025-03-01T14:04:30.296+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:30 [root] INFO: cnt: 30
+[2025-03-01T14:04:30.525+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:30 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-zenbook-duo-ux8406ca-ultra-9-pz109ws
+[2025-03-01T14:04:30.536+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:30 [root] INFO: cnt: 31
+[2025-03-01T14:04:30.824+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:30 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-zenbook-14-ux3405ca-ultra-7-pz368ws
+[2025-03-01T14:04:30.836+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:30 [root] INFO: cnt: 32
+[2025-03-01T14:04:31.091+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:31 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-zenbook-14-ux3405ca-ultra-5-pz187ws
+[2025-03-01T14:04:31.102+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:31 [root] INFO: cnt: 33
+[2025-03-01T14:04:31.366+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:31 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-vivobook-16-x1605va-i7-mb1875ws
+[2025-03-01T14:04:31.378+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:31 [root] INFO: cnt: 34
+[2025-03-01T14:04:31.600+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:31 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-vivobook-16-x1605va-i5-mb1876ws
+[2025-03-01T14:04:31.613+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:31 [root] INFO: cnt: 35
+[2025-03-01T14:04:31.834+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:31 [root] INFO: URL: https://www.thegioididong.com/laptop/asus-vivobook-15-x1504va-i3-nj1634w
+[2025-03-01T14:04:31.850+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:31 [root] INFO: cnt: 36
+[2025-03-01T14:04:32.092+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:32 [root] INFO: URL: https://www.thegioididong.com/laptop/macbook-air-13-inch-m2-16gb-512gb-70w
+[2025-03-01T14:04:32.103+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:32 [root] INFO: cnt: 37
+[2025-03-01T14:04:32.377+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:32 [root] INFO: URL: https://www.thegioididong.com/sac-dtdd/pin-sac-du-phong-20000mah-type-c-pd-22-5w-baseus-lipow-ppjp312
+[2025-03-01T14:04:32.386+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:32 [root] INFO: cnt: 38
+[2025-03-01T14:04:32.615+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:32 [root] INFO: URL: https://www.thegioididong.com/laptop/gigabyte-aorus-16x-x6lag-i7-9rx6lasgddjixdvn010
+[2025-03-01T14:04:32.627+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:32 [root] INFO: cnt: 39
+[2025-03-01T14:04:32.884+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:32 [root] INFO: URL: https://www.thegioididong.com/laptop/gigabyte-g6-kf-rc56-i7-9rc56kf0hjjanivn000
+[2025-03-01T14:04:32.895+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:32 [root] INFO: cnt: 40
+[2025-03-01T14:04:33.175+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:33 [root] INFO: URL: https://www.thegioididong.com/laptop/gigabyte-g5-mf5-rc555-i7-9rc55mf5fjiinivn000
+[2025-03-01T14:04:33.186+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:33 [root] INFO: cnt: 41
+[2025-03-01T14:04:33.410+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:33 [root] INFO: URL: https://www.thegioididong.com/laptop/gigabyte-g5-mf5-rc555-i5-9rc55mf5feiaa1vn0c0
+[2025-03-01T14:04:33.421+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:33 [root] INFO: cnt: 42
+[2025-03-01T14:04:33.672+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:33 [root] INFO: URL: https://www.thegioididong.com/phan-mem/esim-du-lich-bluecom-thailand-4gb-7-ngay
+[2025-03-01T14:04:33.681+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:33 [root] INFO: cnt: 43
+[2025-03-01T14:04:33.910+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:33 [root] INFO: URL: https://www.thegioididong.com/phan-mem/esim-du-lich-bluecom-south-korea-8gb-15-ngay
+[2025-03-01T14:04:33.917+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:33 [root] INFO: cnt: 44
+[2025-03-01T14:04:34.164+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:34 [root] INFO: URL: https://www.thegioididong.com/phan-mem/esim-du-lich-bluecom-china-1gb-ngay-3-ngay
+[2025-03-01T14:04:34.172+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:34 [root] INFO: cnt: 45
+[2025-03-01T14:04:34.417+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:34 [root] INFO: URL: https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7-8gb-256gb
+[2025-03-01T14:04:34.426+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:34 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7-8gb-256gb> (referer: https://www.thegioididong.com/newsitemap/sitemap-product-2025-2?page=1)
+[2025-03-01T14:04:34.426+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T14:04:34.427+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 1088, in _runCallbacks
+[2025-03-01T14:04:34.428+0000] {subprocess.py:93} INFO -     current.result = callback(  # type: ignore[misc]
+[2025-03-01T14:04:34.429+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T14:04:34.429+0000] {subprocess.py:93} INFO -   File "/opt/***/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 70, in parse_detail_product
+[2025-03-01T14:04:34.430+0000] {subprocess.py:93} INFO -     productld = json.loads(response.xpath('//*[@id="productld"]/text()').get())
+[2025-03-01T14:04:34.431+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T14:04:34.431+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/json/__init__.py", line 339, in loads
+[2025-03-01T14:04:34.431+0000] {subprocess.py:93} INFO -     raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+[2025-03-01T14:04:34.432+0000] {subprocess.py:93} INFO - TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[2025-03-01T14:04:34.676+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:34 [root] INFO: URL: https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7
+[2025-03-01T14:04:34.683+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:34 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7> (referer: https://www.thegioididong.com/newsitemap/sitemap-product-2025-2?page=1)
+[2025-03-01T14:04:34.684+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T14:04:34.685+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 1088, in _runCallbacks
+[2025-03-01T14:04:34.685+0000] {subprocess.py:93} INFO -     current.result = callback(  # type: ignore[misc]
+[2025-03-01T14:04:34.686+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T14:04:34.686+0000] {subprocess.py:93} INFO -   File "/opt/***/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 70, in parse_detail_product
+[2025-03-01T14:04:34.687+0000] {subprocess.py:93} INFO -     productld = json.loads(response.xpath('//*[@id="productld"]/text()').get())
+[2025-03-01T14:04:34.688+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T14:04:34.688+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/json/__init__.py", line 339, in loads
+[2025-03-01T14:04:34.689+0000] {subprocess.py:93} INFO -     raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+[2025-03-01T14:04:34.689+0000] {subprocess.py:93} INFO - TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[2025-03-01T14:04:34.902+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:34 [root] INFO: URL: https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7-pro
+[2025-03-01T14:04:34.912+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:34 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7-pro> (referer: https://www.thegioididong.com/newsitemap/sitemap-product-2025-2?page=1)
+[2025-03-01T14:04:34.913+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T14:04:34.914+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 1088, in _runCallbacks
+[2025-03-01T14:04:34.914+0000] {subprocess.py:93} INFO -     current.result = callback(  # type: ignore[misc]
+[2025-03-01T14:04:34.915+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T14:04:34.916+0000] {subprocess.py:93} INFO -   File "/opt/***/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 70, in parse_detail_product
+[2025-03-01T14:04:34.917+0000] {subprocess.py:93} INFO -     productld = json.loads(response.xpath('//*[@id="productld"]/text()').get())
+[2025-03-01T14:04:34.917+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T14:04:34.918+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/json/__init__.py", line 339, in loads
+[2025-03-01T14:04:34.918+0000] {subprocess.py:93} INFO -     raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+[2025-03-01T14:04:34.919+0000] {subprocess.py:93} INFO - TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[2025-03-01T14:04:35.138+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:35 [root] INFO: URL: https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7-pro-12gb-512gb
+[2025-03-01T14:04:35.149+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:35 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.thegioididong.com/may-tinh-bang/xiaomi-pad-7-pro-12gb-512gb> (referer: https://www.thegioididong.com/newsitemap/sitemap-product-2025-2?page=1)
+[2025-03-01T14:04:35.150+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T14:04:35.151+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 1088, in _runCallbacks
+[2025-03-01T14:04:35.151+0000] {subprocess.py:93} INFO -     current.result = callback(  # type: ignore[misc]
+[2025-03-01T14:04:35.152+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T14:04:35.153+0000] {subprocess.py:93} INFO -   File "/opt/***/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 70, in parse_detail_product
+[2025-03-01T14:04:35.153+0000] {subprocess.py:93} INFO -     productld = json.loads(response.xpath('//*[@id="productld"]/text()').get())
+[2025-03-01T14:04:35.153+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T14:04:35.154+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/json/__init__.py", line 339, in loads
+[2025-03-01T14:04:35.155+0000] {subprocess.py:93} INFO -     raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+[2025-03-01T14:04:35.155+0000] {subprocess.py:93} INFO - TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[2025-03-01T14:04:35.356+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:35 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-yoga-7-2in1-14iml9-ultra-7-83dj001fvn
+[2025-03-01T14:04:35.377+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:35 [root] INFO: cnt: 46
+[2025-03-01T14:04:35.564+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:35 [root] INFO: URL: https://www.thegioididong.com/loa-laptop/mobell-mk-6790a-800w
+[2025-03-01T14:04:35.576+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:35 [root] INFO: cnt: 47
+[2025-03-01T14:04:35.821+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:35 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-thinkpad-x13-ultra-7-21lu004tvn
+[2025-03-01T14:04:35.836+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:35 [root] INFO: cnt: 48
+[2025-03-01T14:04:36.025+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:36 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-thinkpad-t14s-ultra-5-21ls005rvn
+[2025-03-01T14:04:36.037+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:36 [root] INFO: cnt: 49
+[2025-03-01T14:04:36.323+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:36 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-legion-slim-5-16ahp9-r7-83dh003avn
+[2025-03-01T14:04:36.342+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:36 [root] INFO: cnt: 50
+[2025-03-01T14:04:36.581+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:36 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-legion-pro-7-16irx9h-i9-83de001nvn
+[2025-03-01T14:04:36.602+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:36 [root] INFO: cnt: 51
+[2025-03-01T14:04:36.781+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:36 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-loq-15iax9-i5-83gs000rvn
+[2025-03-01T14:04:36.798+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:36 [root] INFO: cnt: 52
+[2025-03-01T14:04:36.976+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:36 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-loq-15iax9-i5-83gs001qvn
+[2025-03-01T14:04:37.003+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:37 [root] INFO: cnt: 53
+[2025-03-01T14:04:37.245+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:37 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-loq-15arp9-r7-83jc003vvn
+[2025-03-01T14:04:37.259+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:37 [root] INFO: cnt: 54
+[2025-03-01T14:04:37.502+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:37 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-loq-15arp9-r5-83jc007hvn
+[2025-03-01T14:04:37.515+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:37 [root] INFO: cnt: 55
+[2025-03-01T14:04:37.635+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:37 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-ideapad-slim-3-16irh10-i5-83k20003vn
+[2025-03-01T14:04:37.653+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:37 [root] INFO: cnt: 56
+[2025-03-01T14:04:37.825+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:37 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-ideapad-slim-3-15irh10-i7-83k1000fvn
+[2025-03-01T14:04:37.847+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:37 [root] INFO: cnt: 57
+[2025-03-01T14:04:38.072+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:38 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-ideapad-slim-3-15irh10-i7-83k1000jvn
+[2025-03-01T14:04:38.087+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:38 [root] INFO: cnt: 58
+[2025-03-01T14:04:38.273+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:38 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-ideapad-slim-3-15irh10-i5-83k1000hvn
+[2025-03-01T14:04:38.292+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:38 [root] INFO: cnt: 59
+[2025-03-01T14:04:38.566+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:38 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-ideapad-5-2in1-14irh9-i7-83kx003xvn
+[2025-03-01T14:04:38.603+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:38 [root] INFO: cnt: 60
+[2025-03-01T14:04:38.838+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:38 [root] INFO: URL: https://www.thegioididong.com/laptop/lenovo-ideapad-5-2in1-14irh9-i5-83kx003wvn
+[2025-03-01T14:04:38.858+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:38 [root] INFO: cnt: 61
+[2025-03-01T14:04:39.068+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:39 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/xiaomi-watch-s4
+[2025-03-01T14:04:39.083+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:39 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.thegioididong.com/dong-ho-thong-minh/xiaomi-watch-s4> (referer: https://www.thegioididong.com/newsitemap/sitemap-product-2025-2?page=1)
+[2025-03-01T14:04:39.084+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T14:04:39.085+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 1088, in _runCallbacks
+[2025-03-01T14:04:39.087+0000] {subprocess.py:93} INFO -     current.result = callback(  # type: ignore[misc]
+[2025-03-01T14:04:39.088+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T14:04:39.088+0000] {subprocess.py:93} INFO -   File "/opt/***/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 70, in parse_detail_product
+[2025-03-01T14:04:39.089+0000] {subprocess.py:93} INFO -     productld = json.loads(response.xpath('//*[@id="productld"]/text()').get())
+[2025-03-01T14:04:39.090+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T14:04:39.090+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/json/__init__.py", line 339, in loads
+[2025-03-01T14:04:39.091+0000] {subprocess.py:93} INFO -     raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+[2025-03-01T14:04:39.092+0000] {subprocess.py:93} INFO - TypeError: the JSON object must be str, bytes or bytearray, not NoneType
+[2025-03-01T14:04:39.250+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:39 [root] INFO: URL: https://www.thegioididong.com/ban-phim/ban-phim-co-khong-day-akko-3108-rf-dragon-ball-z-goku-cream-yellow
+[2025-03-01T14:04:39.268+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:39 [root] INFO: cnt: 62
+[2025-03-01T14:04:39.463+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:39 [root] INFO: URL: https://www.thegioididong.com/ban-phim/ban-phim-co-khong-day-akko-3108-rf-dragon-ball-z-cream-blue
+[2025-03-01T14:04:39.474+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:39 [root] INFO: cnt: 63
+[2025-03-01T14:04:39.665+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:39 [root] INFO: URL: https://www.thegioididong.com/ban-phim/ban-phim-co-khong-day-akko-3087-rf-dragon-ball-z-goku-cream-yellow
+[2025-03-01T14:04:39.677+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:39 [root] INFO: cnt: 64
+[2025-03-01T14:04:39.844+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:39 [root] INFO: URL: https://www.thegioididong.com/op-lung-flipcover/op-lung-iphone-15-nhua-cung-vien-deo-jincase-jcs1601-trong
+[2025-03-01T14:04:39.860+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:39 [root] INFO: cnt: 65
+[2025-03-01T14:04:40.053+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:40 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-ipad-air-13-inch-2024-jcpal
+[2025-03-01T14:04:40.074+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:40 [root] INFO: cnt: 66
+[2025-03-01T14:04:40.308+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:40 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-ipad-air-11-inch-2024-jcpal-iclara
+[2025-03-01T14:04:40.316+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:40 [root] INFO: cnt: 67
+[2025-03-01T14:04:40.563+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:40 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-ipad-pro-13-inch-2024-jcpal-iclara
+[2025-03-01T14:04:40.572+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:40 [root] INFO: cnt: 68
+[2025-03-01T14:04:40.756+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:40 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-ipad-pro-11-inch-2024-jcpal-iclara
+[2025-03-01T14:04:40.765+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:40 [root] INFO: cnt: 69
+[2025-03-01T14:04:41.005+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:41 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-iphone-16-pro-max-mipow-bj604-cr
+[2025-03-01T14:04:41.017+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:41 [root] INFO: cnt: 70
+[2025-03-01T14:04:41.274+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:41 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-chong-nhin-trom-samsung-galaxy-s25-ultra-uniq
+[2025-03-01T14:04:41.281+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:41 [root] INFO: cnt: 71
+[2025-03-01T14:04:41.496+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:41 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-samsung-galaxy-s25-ultra-uniq
+[2025-03-01T14:04:41.504+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:41 [root] INFO: cnt: 72
+[2025-03-01T14:04:41.673+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:41 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-samsung-galaxy-s25-plus-uniq
+[2025-03-01T14:04:41.682+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:41 [root] INFO: cnt: 73
+[2025-03-01T14:04:41.841+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:41 [root] INFO: URL: https://www.thegioididong.com/mieng-dan-man-hinh/mieng-dan-kinh-cuong-luc-samsung-galaxy-s25-uniq
+[2025-03-01T14:04:41.850+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:41 [root] INFO: cnt: 74
+[2025-03-01T14:04:42.114+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:42 [root] INFO: URL: https://www.thegioididong.com/op-lung-flipcover/op-lung-galaxy-s25-nhua-pc-tpu-samsung-x-otterbox-react-magnet-trong
+[2025-03-01T14:04:42.123+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:42 [root] INFO: cnt: 75
+[2025-03-01T14:04:42.372+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:42 [root] INFO: URL: https://www.thegioididong.com/op-lung-flipcover/op-lung-magsafe-galaxy-s25-ultra-nhua-deo-tpu-samsung-x-spigen-enzo-aramid-den
+[2025-03-01T14:04:42.381+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:42 [root] INFO: cnt: 76
+[2025-03-01T14:04:42.588+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:42 [root] INFO: URL: https://www.thegioididong.com/op-lung-flipcover/op-lung-magsafe-galaxy-s25-plus-nhua-deo-tpu-samsung-x-spigen-enzo-aramid-den
+[2025-03-01T14:04:42.595+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:42 [root] INFO: cnt: 77
+[2025-03-01T14:04:42.798+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:42 [root] INFO: URL: https://www.thegioididong.com/op-lung-flipcover/op-lung-magsafe-galaxy-s25-nhua-deo-tpu-samsung-x-spigen-enzo-aramid-den
+[2025-03-01T14:04:42.808+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:42 [root] INFO: cnt: 78
+[2025-03-01T14:04:42.945+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:42 [root] INFO: URL: https://www.thegioididong.com/op-lung-flipcover/op-lung-magsafe-galaxy-s25-ultra-nhua-pc-tpu-samsung-trong
+[2025-03-01T14:04:42.952+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:42 [root] INFO: cnt: 79
+[2025-03-01T14:04:43.067+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:43 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-sa272u-e-27-inch-2k-ips-100hz-4ms-trang
+[2025-03-01T14:04:43.082+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:43 [root] INFO: cnt: 80
+[2025-03-01T14:04:43.337+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:43 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/xiaomi-a27qi-27-inch-2k-ips-100hz-6ms
+[2025-03-01T14:04:43.348+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:43 [root] INFO: cnt: 81
+[2025-03-01T14:04:43.605+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:43 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-ed320q-x-31-5-inch-fhd-va-240hz-5ms
+[2025-03-01T14:04:43.615+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:43 [root] INFO: cnt: 82
+[2025-03-01T14:04:43.871+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:43 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-sa272u-e-27-inch-2k-ips-100hz-4ms
+[2025-03-01T14:04:43.882+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:43 [root] INFO: cnt: 83
+[2025-03-01T14:04:44.140+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:44 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-ek251q-g-24-5-inch-fhd-ips-120hz-4ms
+[2025-03-01T14:04:44.159+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:44 [root] INFO: cnt: 84
+[2025-03-01T14:04:44.427+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:44 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-ek241y-g-23-8-inch-fhd-ips-120hz-4ms
+[2025-03-01T14:04:44.439+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:44 [root] INFO: cnt: 85
+[2025-03-01T14:04:44.692+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:44 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-ek221q-e3-21-5-inch-fhd-ips-100hz-5ms
+[2025-03-01T14:04:44.703+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:44 [root] INFO: cnt: 86
+[2025-03-01T14:04:44.873+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:44 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-nitro-kg270-x1-27-inch-fhd-ips-200hz-4ms
+[2025-03-01T14:04:44.884+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:44 [root] INFO: cnt: 87
+[2025-03-01T14:04:45.107+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:45 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/acer-nitro-kg240y-x1-23-8-inch-fhd-ips-200hz-4ms
+[2025-03-01T14:04:45.119+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:45 [root] INFO: cnt: 88
+[2025-03-01T14:04:45.364+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:45 [root] INFO: URL: https://www.thegioididong.com/may-tinh-de-ban/asus-aio-a3402wvak-i5-1335u-23-8-inch-wpc104w
+[2025-03-01T14:04:45.375+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:45 [root] INFO: cnt: 89
+[2025-03-01T14:04:45.593+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:45 [root] INFO: URL: https://www.thegioididong.com/may-tinh-de-ban/asus-s500se-i3-13100-8gb-512gb-s500se-313100070w
+[2025-03-01T14:04:45.603+0000] {subprocess.py:93} INFO - 2025-03-01 14:04:45 [root] INFO: cnt: 90
+[2025-03-01T14:04:45.867+0000] {local_task_job_runner.py:313} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-03-01T14:04:45.868+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-03-01T14:04:45.870+0000] {process_utils.py:132} INFO - Sending 15 to group 641. PIDs of all processes in the group: [642, 641]
+[2025-03-01T14:04:45.871+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 641
+[2025-03-01T14:04:45.872+0000] {taskinstance.py:2611} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-03-01T14:04:45.872+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2025-03-01T14:04:45.873+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-01T14:04:45.924+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=641, status='terminated', exitcode=0, started='14:04:14') (641) terminated with exit code 0
+[2025-03-01T14:04:50.828+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=642, status='terminated', started='14:04:14') (642) terminated with exit code None

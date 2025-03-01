@@ -9161,3 +9161,24 @@
 [2025-02-26T19:02:49.709+0000] {logging_mixin.py:188} INFO - [2025-02-26T19:02:49.709+0000] {dag.py:3089} INFO - Sync 1 DAGs
 [2025-02-26T19:02:49.754+0000] {logging_mixin.py:188} INFO - [2025-02-26T19:02:49.754+0000] {dag.py:3947} INFO - Setting next_dagrun for crawl_thegioididong_full to None, run_after=None
 [2025-02-26T19:02:49.785+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crawl_full_tgdd.py took 0.191 seconds
+[2025-02-26T19:03:20.354+0000] {processor.py:161} INFO - Started process (PID=3814) to work on /opt/airflow/dags/crawl_full_tgdd.py
+[2025-02-26T19:03:20.355+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crawl_full_tgdd.py for tasks to queue
+[2025-02-26T19:03:20.360+0000] {logging_mixin.py:188} INFO - [2025-02-26T19:03:20.359+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/crawl_full_tgdd.py
+[2025-02-26T19:03:20.387+0000] {processor.py:840} INFO - DAG(s) 'crawl_thegioididong_full' retrieved from /opt/airflow/dags/crawl_full_tgdd.py
+[2025-02-26T19:03:20.439+0000] {logging_mixin.py:188} INFO - [2025-02-26T19:03:20.439+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-02-26T19:03:20.474+0000] {logging_mixin.py:188} INFO - [2025-02-26T19:03:20.474+0000] {dag.py:3947} INFO - Setting next_dagrun for crawl_thegioididong_full to None, run_after=None
+[2025-02-26T19:03:20.508+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crawl_full_tgdd.py took 0.166 seconds
+[2025-02-26T19:03:51.101+0000] {processor.py:161} INFO - Started process (PID=3822) to work on /opt/airflow/dags/crawl_full_tgdd.py
+[2025-02-26T19:03:51.102+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crawl_full_tgdd.py for tasks to queue
+[2025-02-26T19:03:51.105+0000] {logging_mixin.py:188} INFO - [2025-02-26T19:03:51.104+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/crawl_full_tgdd.py
+[2025-02-26T19:03:51.128+0000] {processor.py:840} INFO - DAG(s) 'crawl_thegioididong_full' retrieved from /opt/airflow/dags/crawl_full_tgdd.py
+[2025-02-26T19:03:51.160+0000] {logging_mixin.py:188} INFO - [2025-02-26T19:03:51.160+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-02-26T19:03:51.195+0000] {logging_mixin.py:188} INFO - [2025-02-26T19:03:51.195+0000] {dag.py:3947} INFO - Setting next_dagrun for crawl_thegioididong_full to None, run_after=None
+[2025-02-26T19:03:51.222+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crawl_full_tgdd.py took 0.128 seconds
+[2025-02-26T19:04:21.799+0000] {processor.py:161} INFO - Started process (PID=3830) to work on /opt/airflow/dags/crawl_full_tgdd.py
+[2025-02-26T19:04:21.801+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crawl_full_tgdd.py for tasks to queue
+[2025-02-26T19:04:21.803+0000] {logging_mixin.py:188} INFO - [2025-02-26T19:04:21.802+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/crawl_full_tgdd.py
+[2025-02-26T19:04:21.824+0000] {processor.py:840} INFO - DAG(s) 'crawl_thegioididong_full' retrieved from /opt/airflow/dags/crawl_full_tgdd.py
+[2025-02-26T19:04:21.855+0000] {logging_mixin.py:188} INFO - [2025-02-26T19:04:21.855+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-02-26T19:04:21.878+0000] {logging_mixin.py:188} INFO - [2025-02-26T19:04:21.878+0000] {dag.py:3947} INFO - Setting next_dagrun for crawl_thegioididong_full to None, run_after=None
+[2025-02-26T19:04:21.904+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crawl_full_tgdd.py took 0.110 seconds

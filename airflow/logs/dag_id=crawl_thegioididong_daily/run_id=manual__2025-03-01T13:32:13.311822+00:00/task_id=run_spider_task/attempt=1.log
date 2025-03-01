@@ -1,0 +1,73 @@
+[2025-03-01T13:32:14.439+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-01T13:32:14.479+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.run_spider_task manual__2025-03-01T13:32:13.311822+00:00 [queued]>
+[2025-03-01T13:32:14.490+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.run_spider_task manual__2025-03-01T13:32:13.311822+00:00 [queued]>
+[2025-03-01T13:32:14.490+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-03-01T13:32:14.506+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): run_spider_task> on 2025-03-01 13:32:13.311822+00:00
+[2025-03-01T13:32:14.512+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=180) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-01T13:32:14.514+0000] {standard_task_runner.py:64} INFO - Started process 181 to run task
+[2025-03-01T13:32:14.513+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'crawl_thegioididong_daily', 'run_spider_task', 'manual__2025-03-01T13:32:13.311822+00:00', '--job-id', '104', '--raw', '--subdir', 'DAGS_FOLDER/crawl_daily_tgdd.py', '--cfg-path', '/tmp/tmpq7pkiv8a']
+[2025-03-01T13:32:14.515+0000] {standard_task_runner.py:91} INFO - Job 104: Subtask run_spider_task
+[2025-03-01T13:32:14.570+0000] {task_command.py:426} INFO - Running <TaskInstance: crawl_thegioididong_daily.run_spider_task manual__2025-03-01T13:32:13.311822+00:00 [running]> on host 934a1bc80592
+[2025-03-01T13:32:14.682+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crawl_thegioididong_daily' AIRFLOW_CTX_TASK_ID='run_spider_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-01T13:32:13.311822+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-01T13:32:13.311822+00:00'
+[2025-03-01T13:32:14.683+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-01T13:32:14.710+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-01T13:32:14.712+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/crawler/tgdd_crawler/tgdd_crawler; scrapy crawl my_spider -a daily=true; ']
+[2025-03-01T13:32:14.727+0000] {subprocess.py:86} INFO - Output:
+[2025-03-01T13:32:15.948+0000] {subprocess.py:93} INFO - 2025-03-01 13:32:15 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: scrapybot)
+[2025-03-01T13:32:15.954+0000] {subprocess.py:93} INFO - 2025-03-01 13:32:15 [scrapy.utils.log] INFO: Versions: lxml 5.2.2.0, libxml2 2.12.6, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.12.4 (main, Jul 23 2024, 07:23:20) [GCC 12.2.0], pyOpenSSL 24.1.0 (OpenSSL 3.1.4 24 Oct 2023), cryptography 41.0.7, Platform Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2025-03-01T13:32:15.955+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T13:32:15.956+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/scrapy/spiderloader.py", line 89, in load
+[2025-03-01T13:32:15.957+0000] {subprocess.py:93} INFO -     return self._spiders[spider_name]
+[2025-03-01T13:32:15.957+0000] {subprocess.py:93} INFO -            ~~~~~~~~~~~~~^^^^^^^^^^^^^
+[2025-03-01T13:32:15.958+0000] {subprocess.py:93} INFO - KeyError: 'my_spider'
+[2025-03-01T13:32:15.958+0000] {subprocess.py:93} INFO - 
+[2025-03-01T13:32:15.958+0000] {subprocess.py:93} INFO - During handling of the above exception, another exception occurred:
+[2025-03-01T13:32:15.959+0000] {subprocess.py:93} INFO - 
+[2025-03-01T13:32:15.959+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-01T13:32:15.959+0000] {subprocess.py:93} INFO -   File "/home/***/.local/bin/scrapy", line 8, in <module>
+[2025-03-01T13:32:15.960+0000] {subprocess.py:93} INFO -     sys.exit(execute())
+[2025-03-01T13:32:15.960+0000] {subprocess.py:93} INFO -              ^^^^^^^^^
+[2025-03-01T13:32:15.961+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/scrapy/cmdline.py", line 188, in execute
+[2025-03-01T13:32:15.961+0000] {subprocess.py:93} INFO -     _run_print_help(parser, _run_command, cmd, args, opts)
+[2025-03-01T13:32:15.962+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/scrapy/cmdline.py", line 141, in _run_print_help
+[2025-03-01T13:32:15.963+0000] {subprocess.py:93} INFO -     func(*a, **kw)
+[2025-03-01T13:32:15.964+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/scrapy/cmdline.py", line 196, in _run_command
+[2025-03-01T13:32:15.965+0000] {subprocess.py:93} INFO -     cmd.run(args, opts)
+[2025-03-01T13:32:15.965+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/scrapy/commands/crawl.py", line 33, in run
+[2025-03-01T13:32:15.966+0000] {subprocess.py:93} INFO -     crawl_defer = self.crawler_process.crawl(spname, **opts.spargs)
+[2025-03-01T13:32:15.966+0000] {subprocess.py:93} INFO -                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:32:15.967+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/scrapy/crawler.py", line 332, in crawl
+[2025-03-01T13:32:15.967+0000] {subprocess.py:93} INFO -     crawler = self.create_crawler(crawler_or_spidercls)
+[2025-03-01T13:32:15.968+0000] {subprocess.py:93} INFO -               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:32:15.969+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/scrapy/crawler.py", line 368, in create_crawler
+[2025-03-01T13:32:15.970+0000] {subprocess.py:93} INFO -     return self._create_crawler(crawler_or_spidercls)
+[2025-03-01T13:32:15.970+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:32:15.971+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/scrapy/crawler.py", line 452, in _create_crawler
+[2025-03-01T13:32:15.971+0000] {subprocess.py:93} INFO -     spidercls = self.spider_loader.load(spidercls)
+[2025-03-01T13:32:15.971+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-01T13:32:15.972+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/scrapy/spiderloader.py", line 91, in load
+[2025-03-01T13:32:15.972+0000] {subprocess.py:93} INFO -     raise KeyError(f"Spider not found: {spider_name}")
+[2025-03-01T13:32:15.973+0000] {subprocess.py:93} INFO - KeyError: 'Spider not found: my_spider'
+[2025-03-01T13:32:16.133+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-03-01T13:32:16.134+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-01T13:32:16.145+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-03-01T13:32:16.150+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=crawl_thegioididong_daily, task_id=run_spider_task, run_id=manual__2025-03-01T13:32:13.311822+00:00, execution_date=20250301T133213, start_date=20250301T133214, end_date=20250301T133216
+[2025-03-01T13:32:16.166+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 104 for task run_spider_task (Bash command failed. The command returned a non-zero exit code 1.; 181)
+[2025-03-01T13:32:16.215+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-03-01T13:32:16.242+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-01T13:32:16.247+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

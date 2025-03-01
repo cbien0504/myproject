@@ -1,0 +1,17 @@
+column_mapping_tgdd = {
+    "product_id": "src.product_id",
+    "product_name": "src.product_name",
+    "category": "src.category",
+    "url": "src.url",
+    "brand": "src.brand",
+    "description": "src.description",
+    "price": "src.price",
+    "price_origin": "src.price_origin",
+    "price_present": "src.price_present",
+    "crawled_at": "src.crawled_at",
+    "updated_at": "src.updated_at",
+    "discount_percent": "src.discount_percent",
+    "discount": "src.discount",
+    "is_sale_off": "src.is_sale_off",
+    "source": "src.source",
+    }
