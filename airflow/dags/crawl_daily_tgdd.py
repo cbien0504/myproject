@@ -20,7 +20,7 @@ dag = DAG(
 crawl = BashOperator(
     task_id='crawl',
     bash_command=(
-        'cd /opt/airflow/crawler/tgdd_crawler/tgdd_crawler; '
+        'cd /opt/crawler/tgdd_crawler/tgdd_crawler; '
         'scrapy crawl tgdd_crawler -a daily=true; '
     ),
     dag=dag,

@@ -21,8 +21,9 @@ class MySpider(scrapy.Spider):
         self.chunk_size = 1000
         self.chunk_index = 0
         self.daily = daily
+        self.timenow = datetime.now().strftime('%Y-%m-%d')
         self.ingest_id = datetime.now().strftime('%Y%m%d')
-        self.output_dir = os.path.join('../../warehouse', 'daily', 'tgdd', self.ingest_id)
+        self.output_dir = os.path.join('../../../warehouse', 'daily', 'tgdd', self.ingest_id)
         self.metadata_path = os.path.join(os.getcwd(), 'metadata.json')
         logging.info(self.metadata_path)
         if not os.path.exists(self.output_dir):
@@ -108,7 +109,7 @@ class MySpider(scrapy.Spider):
     def spider_closed_handler(self, spider, reason):
         logging.info(f"Spider closed: {reason}")
         save_data(self.output_dir, self.data_buffer, self.chunk_index)
-        metadata = {"last_mod": datetime.now().strftime('%Y-%m-%d')}
+        metadata = {"last_mod": self.timenow}
         with open(self.metadata_path, 'w', encoding='utf-8') as f:
             json.dump(metadata, f, ensure_ascii=False, indent=4)
 

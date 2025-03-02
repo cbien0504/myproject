@@ -1,0 +1,41 @@
+[2025-03-01T16:41:44.173+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-01T16:41:44.199+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: normalize_thegioididong_daily.normalize_task manual__2025-03-01T16:41:42.717342+00:00 [queued]>
+[2025-03-01T16:41:44.214+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: normalize_thegioididong_daily.normalize_task manual__2025-03-01T16:41:42.717342+00:00 [queued]>
+[2025-03-01T16:41:44.215+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-03-01T16:41:44.232+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): normalize_task> on 2025-03-01 16:41:42.717342+00:00
+[2025-03-01T16:41:44.241+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=98) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-01T16:41:44.241+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'normalize_thegioididong_daily', 'normalize_task', 'manual__2025-03-01T16:41:42.717342+00:00', '--job-id', '159', '--raw', '--subdir', 'DAGS_FOLDER/normalize_daily_tgdd.py', '--cfg-path', '/tmp/tmpqc0llm_2']
+[2025-03-01T16:41:44.243+0000] {standard_task_runner.py:64} INFO - Started process 99 to run task
+[2025-03-01T16:41:44.243+0000] {standard_task_runner.py:91} INFO - Job 159: Subtask normalize_task
+[2025-03-01T16:41:44.299+0000] {task_command.py:426} INFO - Running <TaskInstance: normalize_thegioididong_daily.normalize_task manual__2025-03-01T16:41:42.717342+00:00 [running]> on host 2e90f9d31db5
+[2025-03-01T16:41:44.419+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='normalize_thegioididong_daily' AIRFLOW_CTX_TASK_ID='normalize_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-01T16:41:42.717342+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-01T16:41:42.717342+00:00'
+[2025-03-01T16:41:44.420+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-01T16:41:44.451+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-01T16:41:44.452+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/normalize_daily_tgdd.py", line 12, in run_script
+    with open('/opt/airflow/crawler/tgdd_crawler/tgdd_crawler/metadata.json', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/crawler/tgdd_crawler/tgdd_crawler/metadata.json'
+[2025-03-01T16:41:44.473+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=normalize_thegioididong_daily, task_id=normalize_task, run_id=manual__2025-03-01T16:41:42.717342+00:00, execution_date=20250301T164142, start_date=20250301T164144, end_date=20250301T164144
+[2025-03-01T16:41:44.489+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 159 for task normalize_task ([Errno 2] No such file or directory: '/opt/airflow/crawler/tgdd_crawler/tgdd_crawler/metadata.json'; 99)
+[2025-03-01T16:41:44.499+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-03-01T16:41:44.515+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-01T16:41:44.518+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

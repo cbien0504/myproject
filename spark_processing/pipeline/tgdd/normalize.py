@@ -1,13 +1,14 @@
+import os, sys
+sys.path.append(os.getcwd())
 from delta import *
 import pyspark.sql.functions as F
 from pyspark.sql.functions import format_number, current_timestamp, date_format
 from spark_processing.pipeline.tgdd.udf import *
 from spark_processing.pipeline.config_spark_delta import config_spark_delta
 
-
 def normalize_tgdd(ingest_id):
     spark = config_spark_delta()
-    df = spark.read.format("json").load(f"/mnt/d/hust/code/thesis/warehouse/daily/tgdd/{ingest_id}/*.json")
+    df = spark.read.format("json").load(f"warehouse/daily/tgdd/{ingest_id}/*.json")
     df = df.withColumn("discount_percent", format_number((F.col("price_origin") - F.col("price_present")) / F.col("price_origin") * 100, 2))
     df = df.withColumn('price_origin', F.col('price_origin').cast('double'))
     df = df.withColumn('price_present', F.col('price_present').cast('double'))
@@ -19,4 +20,9 @@ def normalize_tgdd(ingest_id):
     df = extract_review_column(df)
     df = df.withColumn("reviews_count", F.size(F.coalesce(df["review_author_name"], F.array())))
     df = df.withColumn("reviews", create_list_reviews_udf(*review_column_names))
-    df.write.format("delta").option("overwrite", "true").save(f"/mnt/d/hust/code/thesis/warehouse/normalized/tgdd/{ingest_id}")
+    df.write.format("delta").option("overwrite", "true").save(f"warehouse/normalized/tgdd/{ingest_id}")
+
+if __name__ == "__main__":
+    # ingest_id = sys.argv[1]
+    # normalize_tgdd(ingest_id)
+    normalize_tgdd("20250301")
