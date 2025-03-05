@@ -20,9 +20,9 @@ def normalize_tgdd(ingest_id):
     df = extract_review_column(df)
     df = df.withColumn("reviews_count", F.size(F.coalesce(df["review_author_name"], F.array())))
     df = df.withColumn("reviews", create_list_reviews_udf(*review_column_names))
-    df.write.format("delta").option("overwrite", "true").save(f"warehouse/normalized/tgdd/{ingest_id}")
+    df.write.format("delta").save(f"warehouse/normalized/tgdd/{ingest_id}")
+
 
 if __name__ == "__main__":
-    # ingest_id = sys.argv[1]
-    # normalize_tgdd(ingest_id)
-    normalize_tgdd("20250301")
+    ingest_id = sys.argv[1]
+    normalize_tgdd(ingest_id)

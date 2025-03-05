@@ -1,0 +1,74 @@
+[2025-03-05T18:54:04.447+0000] {processor.py:161} INFO - Started process (PID=300) to work on /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:54:04.450+0000] {processor.py:830} INFO - Processing file /app/airflow/dags/normalize_common_tgdd.py for tasks to queue
+[2025-03-05T18:54:04.454+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:54:04.453+0000] {dagbag.py:545} INFO - Filling up the DagBag from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:54:04.503+0000] {processor.py:840} INFO - DAG(s) 'normalize_common_thegioididong_daily' retrieved from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:54:04.654+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:54:04.653+0000] {override.py:1858} INFO - Created Permission View: can read on DAG:normalize_common_thegioididong_daily
+[2025-03-05T18:54:04.669+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:54:04.668+0000] {override.py:1858} INFO - Created Permission View: can delete on DAG:normalize_common_thegioididong_daily
+[2025-03-05T18:54:04.679+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:54:04.679+0000] {override.py:1858} INFO - Created Permission View: can edit on DAG:normalize_common_thegioididong_daily
+[2025-03-05T18:54:04.680+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:54:04.680+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-03-05T18:54:04.693+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:54:04.693+0000] {dag.py:3111} INFO - Creating ORM DAG for normalize_common_thegioididong_daily
+[2025-03-05T18:54:04.695+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:54:04.694+0000] {dag.py:3947} INFO - Setting next_dagrun for normalize_common_thegioididong_daily to None, run_after=None
+[2025-03-05T18:54:04.731+0000] {processor.py:183} INFO - Processing /app/airflow/dags/normalize_common_tgdd.py took 0.293 seconds
+[2025-03-05T18:54:38.815+0000] {processor.py:161} INFO - Started process (PID=310) to work on /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:54:38.817+0000] {processor.py:830} INFO - Processing file /app/airflow/dags/normalize_common_tgdd.py for tasks to queue
+[2025-03-05T18:54:38.820+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:54:38.819+0000] {dagbag.py:545} INFO - Filling up the DagBag from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:54:38.855+0000] {processor.py:840} INFO - DAG(s) 'normalize_common_thegioididong_daily' retrieved from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:54:38.902+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:54:38.901+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-03-05T18:54:38.923+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:54:38.923+0000] {dag.py:3947} INFO - Setting next_dagrun for normalize_common_thegioididong_daily to None, run_after=None
+[2025-03-05T18:54:38.949+0000] {processor.py:183} INFO - Processing /app/airflow/dags/normalize_common_tgdd.py took 0.146 seconds
+[2025-03-05T18:55:09.206+0000] {processor.py:161} INFO - Started process (PID=331) to work on /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:55:09.208+0000] {processor.py:830} INFO - Processing file /app/airflow/dags/normalize_common_tgdd.py for tasks to queue
+[2025-03-05T18:55:09.212+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:55:09.211+0000] {dagbag.py:545} INFO - Filling up the DagBag from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:55:09.244+0000] {processor.py:840} INFO - DAG(s) 'normalize_common_thegioididong_daily' retrieved from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:55:09.283+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:55:09.283+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-03-05T18:55:09.301+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:55:09.301+0000] {dag.py:3947} INFO - Setting next_dagrun for normalize_common_thegioididong_daily to None, run_after=None
+[2025-03-05T18:55:09.334+0000] {processor.py:183} INFO - Processing /app/airflow/dags/normalize_common_tgdd.py took 0.138 seconds
+[2025-03-05T18:55:40.124+0000] {processor.py:161} INFO - Started process (PID=341) to work on /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:55:40.126+0000] {processor.py:830} INFO - Processing file /app/airflow/dags/normalize_common_tgdd.py for tasks to queue
+[2025-03-05T18:55:40.129+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:55:40.129+0000] {dagbag.py:545} INFO - Filling up the DagBag from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:55:40.161+0000] {processor.py:840} INFO - DAG(s) 'normalize_common_thegioididong_daily' retrieved from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:55:40.191+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:55:40.191+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-03-05T18:55:40.206+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:55:40.206+0000] {dag.py:3947} INFO - Setting next_dagrun for normalize_common_thegioididong_daily to None, run_after=None
+[2025-03-05T18:55:40.235+0000] {processor.py:183} INFO - Processing /app/airflow/dags/normalize_common_tgdd.py took 0.117 seconds
+[2025-03-05T18:56:10.760+0000] {processor.py:161} INFO - Started process (PID=379) to work on /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:56:10.761+0000] {processor.py:830} INFO - Processing file /app/airflow/dags/normalize_common_tgdd.py for tasks to queue
+[2025-03-05T18:56:10.763+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:56:10.763+0000] {dagbag.py:545} INFO - Filling up the DagBag from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:56:10.790+0000] {processor.py:840} INFO - DAG(s) 'normalize_common_thegioididong_daily' retrieved from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:56:10.817+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:56:10.817+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-03-05T18:56:10.833+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:56:10.832+0000] {dag.py:3947} INFO - Setting next_dagrun for normalize_common_thegioididong_daily to None, run_after=None
+[2025-03-05T18:56:10.864+0000] {processor.py:183} INFO - Processing /app/airflow/dags/normalize_common_tgdd.py took 0.110 seconds
+[2025-03-05T18:56:40.981+0000] {processor.py:161} INFO - Started process (PID=402) to work on /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:56:40.982+0000] {processor.py:830} INFO - Processing file /app/airflow/dags/normalize_common_tgdd.py for tasks to queue
+[2025-03-05T18:56:40.985+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:56:40.984+0000] {dagbag.py:545} INFO - Filling up the DagBag from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:56:41.015+0000] {processor.py:840} INFO - DAG(s) 'normalize_common_thegioididong_daily' retrieved from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:56:41.046+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:56:41.046+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-03-05T18:56:41.061+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:56:41.061+0000] {dag.py:3947} INFO - Setting next_dagrun for normalize_common_thegioididong_daily to None, run_after=None
+[2025-03-05T18:56:41.089+0000] {processor.py:183} INFO - Processing /app/airflow/dags/normalize_common_tgdd.py took 0.115 seconds
+[2025-03-05T18:57:14.004+0000] {processor.py:161} INFO - Started process (PID=419) to work on /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:57:14.006+0000] {processor.py:830} INFO - Processing file /app/airflow/dags/normalize_common_tgdd.py for tasks to queue
+[2025-03-05T18:57:14.009+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:57:14.008+0000] {dagbag.py:545} INFO - Filling up the DagBag from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:57:14.043+0000] {processor.py:840} INFO - DAG(s) 'normalize_common_thegioididong_daily' retrieved from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:57:14.121+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:57:14.120+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-03-05T18:57:14.162+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:57:14.161+0000] {dag.py:3947} INFO - Setting next_dagrun for normalize_common_thegioididong_daily to None, run_after=None
+[2025-03-05T18:57:05.748+0000] {processor.py:183} INFO - Processing /app/airflow/dags/normalize_common_tgdd.py took 0.210 seconds
+[2025-03-05T18:57:35.987+0000] {processor.py:161} INFO - Started process (PID=429) to work on /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:57:35.989+0000] {processor.py:830} INFO - Processing file /app/airflow/dags/normalize_common_tgdd.py for tasks to queue
+[2025-03-05T18:57:35.991+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:57:35.991+0000] {dagbag.py:545} INFO - Filling up the DagBag from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:57:43.969+0000] {processor.py:840} INFO - DAG(s) 'normalize_common_thegioididong_daily' retrieved from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:57:44.012+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:57:44.012+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-03-05T18:57:44.027+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:57:44.026+0000] {dag.py:3947} INFO - Setting next_dagrun for normalize_common_thegioididong_daily to None, run_after=None
+[2025-03-05T18:57:44.049+0000] {processor.py:183} INFO - Processing /app/airflow/dags/normalize_common_tgdd.py took 0.134 seconds
+[2025-03-05T18:58:14.124+0000] {processor.py:161} INFO - Started process (PID=440) to work on /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:58:14.126+0000] {processor.py:830} INFO - Processing file /app/airflow/dags/normalize_common_tgdd.py for tasks to queue
+[2025-03-05T18:58:14.128+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:58:14.128+0000] {dagbag.py:545} INFO - Filling up the DagBag from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:58:14.153+0000] {processor.py:840} INFO - DAG(s) 'normalize_common_thegioididong_daily' retrieved from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:58:14.181+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:58:14.181+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-03-05T18:58:14.194+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:58:14.194+0000] {dag.py:3947} INFO - Setting next_dagrun for normalize_common_thegioididong_daily to None, run_after=None
+[2025-03-05T18:58:14.222+0000] {processor.py:183} INFO - Processing /app/airflow/dags/normalize_common_tgdd.py took 0.103 seconds
+[2025-03-05T18:58:44.421+0000] {processor.py:161} INFO - Started process (PID=451) to work on /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:58:44.423+0000] {processor.py:830} INFO - Processing file /app/airflow/dags/normalize_common_tgdd.py for tasks to queue
+[2025-03-05T18:58:44.425+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:58:44.425+0000] {dagbag.py:545} INFO - Filling up the DagBag from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:58:44.451+0000] {processor.py:840} INFO - DAG(s) 'normalize_common_thegioididong_daily' retrieved from /app/airflow/dags/normalize_common_tgdd.py
+[2025-03-05T18:58:44.479+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:58:44.479+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-03-05T18:58:44.492+0000] {logging_mixin.py:188} INFO - [2025-03-05T18:58:44.492+0000] {dag.py:3947} INFO - Setting next_dagrun for normalize_common_thegioididong_daily to None, run_after=None
+[2025-03-05T18:58:44.520+0000] {processor.py:183} INFO - Processing /app/airflow/dags/normalize_common_tgdd.py took 0.105 seconds

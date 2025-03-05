@@ -1,0 +1,112 @@
+[2025-03-04T02:27:31.540+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-04T02:27:31.871+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.crawl scheduled__2025-03-03T00:00:00+00:00 [queued]>
+[2025-03-04T02:27:31.905+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.crawl scheduled__2025-03-03T00:00:00+00:00 [queued]>
+[2025-03-04T02:27:31.915+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-03-04T02:27:31.989+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): crawl> on 2025-03-03 00:00:00+00:00
+[2025-03-04T02:27:32.062+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=1191) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-04T02:27:32.063+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'crawl_thegioididong_daily', 'crawl', 'scheduled__2025-03-03T00:00:00+00:00', '--job-id', '260', '--raw', '--subdir', 'DAGS_FOLDER/crawl_daily_tgdd.py', '--cfg-path', '/tmp/tmpggiv1ino']
+[2025-03-04T02:27:32.066+0000] {standard_task_runner.py:64} INFO - Started process 1192 to run task
+[2025-03-04T02:27:32.069+0000] {standard_task_runner.py:91} INFO - Job 260: Subtask crawl
+[2025-03-04T02:27:32.390+0000] {task_command.py:426} INFO - Running <TaskInstance: crawl_thegioididong_daily.crawl scheduled__2025-03-03T00:00:00+00:00 [running]> on host fde12ad1f9fd
+[2025-03-04T02:27:32.817+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crawl_thegioididong_daily' AIRFLOW_CTX_TASK_ID='crawl' AIRFLOW_CTX_EXECUTION_DATE='2025-03-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-03T00:00:00+00:00'
+[2025-03-04T02:27:32.825+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-04T02:27:32.898+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-04T02:27:32.907+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/crawler/tgdd_crawler/tgdd_crawler; scrapy crawl tgdd_crawler -a daily=true; ']
+[2025-03-04T02:27:32.944+0000] {subprocess.py:86} INFO - Output:
+[2025-03-04T02:27:37.948+0000] {subprocess.py:93} INFO - 2025-03-04 02:27:37 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: scrapybot)
+[2025-03-04T02:27:37.950+0000] {subprocess.py:93} INFO - 2025-03-04 02:27:37 [scrapy.utils.log] INFO: Versions: lxml 5.2.2.0, libxml2 2.12.6, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.12.4 (main, Jul 23 2024, 07:23:20) [GCC 12.2.0], pyOpenSSL 24.1.0 (OpenSSL 3.1.4 24 Oct 2023), cryptography 41.0.7, Platform Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2025-03-04T02:27:37.952+0000] {subprocess.py:93} INFO - 2025-03-04 02:27:37 [root] INFO: /opt/crawler/tgdd_crawler/tgdd_crawler/metadata.json
+[2025-03-04T02:27:37.974+0000] {subprocess.py:93} INFO - 2025-03-04 02:27:37 [scrapy.addons] INFO: Enabled addons:
+[2025-03-04T02:27:37.977+0000] {subprocess.py:93} INFO - []
+[2025-03-04T02:27:37.981+0000] {subprocess.py:93} INFO - 2025-03-04 02:27:37 [scrapy.extensions.telnet] INFO: Telnet Password: e5d890c0f660d748
+[2025-03-04T02:27:38.073+0000] {subprocess.py:93} INFO - 2025-03-04 02:27:38 [scrapy.middleware] INFO: Enabled extensions:
+[2025-03-04T02:27:38.074+0000] {subprocess.py:93} INFO - ['scrapy.extensions.corestats.CoreStats',
+[2025-03-04T02:27:38.075+0000] {subprocess.py:93} INFO -  'scrapy.extensions.telnet.TelnetConsole',
+[2025-03-04T02:27:38.075+0000] {subprocess.py:93} INFO -  'scrapy.extensions.memusage.MemoryUsage',
+[2025-03-04T02:27:38.076+0000] {subprocess.py:93} INFO -  'scrapy.extensions.logstats.LogStats']
+[2025-03-04T02:27:38.076+0000] {subprocess.py:93} INFO - 2025-03-04 02:27:38 [scrapy.crawler] INFO: Overridden settings:
+[2025-03-04T02:27:38.078+0000] {subprocess.py:93} INFO - {'DOWNLOAD_DELAY': 0.1,
+[2025-03-04T02:27:38.079+0000] {subprocess.py:93} INFO -  'FEED_EXPORT_ENCODING': 'utf-8',
+[2025-03-04T02:27:38.080+0000] {subprocess.py:93} INFO -  'LOG_LEVEL': 'INFO',
+[2025-03-04T02:27:38.081+0000] {subprocess.py:93} INFO -  'NEWSPIDER_MODULE': 'tgdd_crawler.spiders',
+[2025-03-04T02:27:38.081+0000] {subprocess.py:93} INFO -  'SPIDER_MODULES': ['tgdd_crawler.spiders'],
+[2025-03-04T02:27:38.082+0000] {subprocess.py:93} INFO -  'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+[2025-03-04T02:27:38.082+0000] {subprocess.py:93} INFO -  'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+[2025-03-04T02:27:38.083+0000] {subprocess.py:93} INFO -                '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'}
+[2025-03-04T02:27:38.221+0000] {subprocess.py:93} INFO - 2025-03-04 02:27:38 [scrapy.middleware] INFO: Enabled downloader middlewares:
+[2025-03-04T02:27:38.222+0000] {subprocess.py:93} INFO - ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+[2025-03-04T02:27:38.222+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+[2025-03-04T02:27:38.223+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+[2025-03-04T02:27:38.223+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+[2025-03-04T02:27:38.224+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+[2025-03-04T02:27:38.224+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+[2025-03-04T02:27:38.226+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+[2025-03-04T02:27:38.227+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+[2025-03-04T02:27:38.227+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+[2025-03-04T02:27:38.228+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+[2025-03-04T02:27:38.228+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+[2025-03-04T02:27:38.229+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2025-03-04T02:27:38.229+0000] {subprocess.py:93} INFO - 2025-03-04 02:27:38 [scrapy.middleware] INFO: Enabled spider middlewares:
+[2025-03-04T02:27:38.230+0000] {subprocess.py:93} INFO - ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+[2025-03-04T02:27:38.230+0000] {subprocess.py:93} INFO -  'scrapy.spidermiddlewares.referer.RefererMiddleware',
+[2025-03-04T02:27:38.231+0000] {subprocess.py:93} INFO -  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+[2025-03-04T02:27:38.231+0000] {subprocess.py:93} INFO -  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2025-03-04T02:27:38.232+0000] {subprocess.py:93} INFO - 2025-03-04 02:27:38 [scrapy.middleware] INFO: Enabled item pipelines:
+[2025-03-04T02:27:38.232+0000] {subprocess.py:93} INFO - []
+[2025-03-04T02:27:38.233+0000] {subprocess.py:93} INFO - 2025-03-04 02:27:38 [scrapy.core.engine] INFO: Spider opened
+[2025-03-04T02:27:38.246+0000] {subprocess.py:93} INFO - 2025-03-04 02:27:38 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2025-03-04T02:27:38.250+0000] {subprocess.py:93} INFO - 2025-03-04 02:27:38 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2025-03-04T02:28:15.981+0000] {subprocess.py:93} INFO - 2025-03-04 02:28:15 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.thegioididong.com/newsitemap/sitemap-product> (failed 3 times): DNS lookup failed: no results for hostname lookup: www.thegioididong.com.
+[2025-03-04T02:28:16.086+0000] {subprocess.py:93} INFO - 2025-03-04 02:28:16 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.thegioididong.com/newsitemap/sitemap-product>
+[2025-03-04T02:28:16.087+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-04T02:28:16.088+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 2013, in _inlineCallbacks
+[2025-03-04T02:28:16.089+0000] {subprocess.py:93} INFO -     result = context.run(
+[2025-03-04T02:28:16.089+0000] {subprocess.py:93} INFO -              ^^^^^^^^^^^^
+[2025-03-04T02:28:16.090+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/python/failure.py", line 467, in throwExceptionIntoGenerator
+[2025-03-04T02:28:16.090+0000] {subprocess.py:93} INFO -     return g.throw(self.value.with_traceback(self.tb))
+[2025-03-04T02:28:16.090+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-04T02:28:16.091+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/scrapy/core/downloader/middleware.py", line 68, in process_request
+[2025-03-04T02:28:16.091+0000] {subprocess.py:93} INFO -     return (yield download_func(request, spider))
+[2025-03-04T02:28:16.092+0000] {subprocess.py:93} INFO -             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-04T02:28:16.092+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/defer.py", line 1088, in _runCallbacks
+[2025-03-04T02:28:16.093+0000] {subprocess.py:93} INFO -     current.result = callback(  # type: ignore[misc]
+[2025-03-04T02:28:16.093+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-03-04T02:28:16.093+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/twisted/internet/endpoints.py", line 1061, in startConnectionAttempts
+[2025-03-04T02:28:16.094+0000] {subprocess.py:93} INFO -     raise error.DNSLookupError(
+[2025-03-04T02:28:16.094+0000] {subprocess.py:93} INFO - twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: www.thegioididong.com.
+[2025-03-04T02:28:16.187+0000] {subprocess.py:93} INFO - 2025-03-04 02:28:16 [scrapy.core.engine] INFO: Closing spider (finished)
+[2025-03-04T02:28:16.188+0000] {subprocess.py:93} INFO - 2025-03-04 02:28:16 [root] INFO: Spider closed: finished
+[2025-03-04T02:28:16.195+0000] {subprocess.py:93} INFO - 2025-03-04 02:28:16 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+[2025-03-04T02:28:16.195+0000] {subprocess.py:93} INFO - {'downloader/exception_count': 3,
+[2025-03-04T02:28:16.196+0000] {subprocess.py:93} INFO -  'downloader/exception_type_count/twisted.internet.error.DNSLookupError': 3,
+[2025-03-04T02:28:16.196+0000] {subprocess.py:93} INFO -  'downloader/request_bytes': 984,
+[2025-03-04T02:28:16.197+0000] {subprocess.py:93} INFO -  'downloader/request_count': 3,
+[2025-03-04T02:28:16.197+0000] {subprocess.py:93} INFO -  'downloader/request_method_count/GET': 3,
+[2025-03-04T02:28:16.198+0000] {subprocess.py:93} INFO -  'elapsed_time_seconds': 37.941422,
+[2025-03-04T02:28:16.198+0000] {subprocess.py:93} INFO -  'finish_reason': 'finished',
+[2025-03-04T02:28:16.198+0000] {subprocess.py:93} INFO -  'finish_time': datetime.datetime(2025, 3, 4, 2, 28, 16, 187670, tzinfo=datetime.timezone.utc),
+[2025-03-04T02:28:16.199+0000] {subprocess.py:93} INFO -  'items_per_minute': None,
+[2025-03-04T02:28:16.199+0000] {subprocess.py:93} INFO -  'log_count/ERROR': 2,
+[2025-03-04T02:28:16.200+0000] {subprocess.py:93} INFO -  'log_count/INFO': 11,
+[2025-03-04T02:28:16.201+0000] {subprocess.py:93} INFO -  'memusage/max': 179302400,
+[2025-03-04T02:28:16.201+0000] {subprocess.py:93} INFO -  'memusage/startup': 179302400,
+[2025-03-04T02:28:16.202+0000] {subprocess.py:93} INFO -  'responses_per_minute': None,
+[2025-03-04T02:28:16.202+0000] {subprocess.py:93} INFO -  'retry/count': 2,
+[2025-03-04T02:28:16.202+0000] {subprocess.py:93} INFO -  'retry/max_reached': 1,
+[2025-03-04T02:28:16.203+0000] {subprocess.py:93} INFO -  'retry/reason_count/twisted.internet.error.DNSLookupError': 2,
+[2025-03-04T02:28:16.203+0000] {subprocess.py:93} INFO -  'scheduler/dequeued': 3,
+[2025-03-04T02:28:16.203+0000] {subprocess.py:93} INFO -  'scheduler/dequeued/memory': 3,
+[2025-03-04T02:28:16.204+0000] {subprocess.py:93} INFO -  'scheduler/enqueued': 3,
+[2025-03-04T02:28:16.204+0000] {subprocess.py:93} INFO -  'scheduler/enqueued/memory': 3,
+[2025-03-04T02:28:16.205+0000] {subprocess.py:93} INFO -  'start_time': datetime.datetime(2025, 3, 4, 2, 27, 38, 246248, tzinfo=datetime.timezone.utc)}
+[2025-03-04T02:28:16.205+0000] {subprocess.py:93} INFO - 2025-03-04 02:28:16 [scrapy.core.engine] INFO: Spider closed (finished)
+[2025-03-04T02:28:16.205+0000] {subprocess.py:93} INFO - <module 'posixpath' (frozen)>
+[2025-03-04T02:28:16.207+0000] {subprocess.py:93} INFO - Tệp /opt/crawler/tgdd_crawler/tgdd_crawler/crawler/tgdd_crawler/tgdd_crawler/metadata.json không tồn tại.
+[2025-03-04T02:28:16.392+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-04T02:28:16.395+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-04T02:28:16.434+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=crawl_thegioididong_daily, task_id=crawl, run_id=scheduled__2025-03-03T00:00:00+00:00, execution_date=20250303T000000, start_date=20250304T022731, end_date=20250304T022816
+[2025-03-04T02:28:16.473+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-03-04T02:28:16.591+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-04T02:28:16.602+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

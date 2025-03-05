@@ -5,7 +5,6 @@ from airflow.operators.bash import BashOperator
 from airflow.operators.dagrun_operator import TriggerDagRunOperator
 
 import logging
-
 logging.basicConfig(level=logging.INFO)
 
 dag = DAG(
@@ -20,7 +19,7 @@ dag = DAG(
 crawl = BashOperator(
     task_id='crawl',
     bash_command=(
-        'cd /opt/crawler/tgdd_crawler/tgdd_crawler; '
+        'cd /app/crawler/tgdd_crawler/tgdd_crawler; '
         'scrapy crawl tgdd_crawler -a daily=true; '
     ),
     dag=dag,

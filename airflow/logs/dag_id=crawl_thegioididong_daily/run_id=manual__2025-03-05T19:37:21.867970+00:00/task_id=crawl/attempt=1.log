@@ -1,0 +1,78 @@
+[2025-03-05T19:37:22.667+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-05T19:37:22.690+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.crawl manual__2025-03-05T19:37:21.867970+00:00 [queued]>
+[2025-03-05T19:37:22.699+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.crawl manual__2025-03-05T19:37:21.867970+00:00 [queued]>
+[2025-03-05T19:37:22.700+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-03-05T19:37:22.715+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): crawl> on 2025-03-05 19:37:21.867970+00:00
+[2025-03-05T19:37:22.721+0000] {standard_task_runner.py:64} INFO - Started process 2716 to run task
+[2025-03-05T19:37:22.724+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'crawl_thegioididong_daily', 'crawl', 'manual__2025-03-05T19:37:21.867970+00:00', '--job-id', '298', '--raw', '--subdir', 'DAGS_FOLDER/crawl_daily_tgdd.py', '--cfg-path', '/tmp/tmp5ojh5ljr']
+[2025-03-05T19:37:22.725+0000] {standard_task_runner.py:91} INFO - Job 298: Subtask crawl
+[2025-03-05T19:37:22.793+0000] {task_command.py:426} INFO - Running <TaskInstance: crawl_thegioididong_daily.crawl manual__2025-03-05T19:37:21.867970+00:00 [running]> on host 94a30541a595
+[2025-03-05T19:37:22.925+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crawl_thegioididong_daily' AIRFLOW_CTX_TASK_ID='crawl' AIRFLOW_CTX_EXECUTION_DATE='2025-03-05T19:37:21.867970+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-05T19:37:21.867970+00:00'
+[2025-03-05T19:37:22.927+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-05T19:37:22.940+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-05T19:37:22.942+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /app/crawler/tgdd_crawler/tgdd_crawler; scrapy crawl tgdd_crawler -a daily=true; ']
+[2025-03-05T19:37:22.951+0000] {subprocess.py:86} INFO - Output:
+[2025-03-05T19:37:23.606+0000] {subprocess.py:93} INFO - 2025-03-05 19:37:23 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: scrapybot)
+[2025-03-05T19:37:23.611+0000] {subprocess.py:93} INFO - 2025-03-05 19:37:23 [scrapy.utils.log] INFO: Versions: lxml 5.2.2.0, libxml2 2.12.6, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.9.19 (main, Jul 23 2024, 07:18:03) - [GCC 12.2.0], pyOpenSSL 24.1.0 (OpenSSL 3.1.4 24 Oct 2023), cryptography 41.0.7, Platform Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2025-03-05T19:37:23.613+0000] {subprocess.py:93} INFO - 2025-03-05 19:37:23 [root] INFO: /app/crawler/tgdd_crawler/tgdd_crawler/metadata.json
+[2025-03-05T19:37:23.614+0000] {subprocess.py:93} INFO - <module 'posixpath' from '/usr/local/lib/python3.9/posixpath.py'>
+[2025-03-05T19:37:23.615+0000] {subprocess.py:93} INFO - Tệp /app/crawler/tgdd_crawler/tgdd_crawler/crawler/tgdd_crawler/tgdd_crawler/metadata.json không tồn tại.
+[2025-03-05T19:37:23.641+0000] {subprocess.py:93} INFO - Unhandled error in Deferred:
+[2025-03-05T19:37:23.642+0000] {subprocess.py:93} INFO - 2025-03-05 19:37:23 [twisted] CRITICAL: Unhandled error in Deferred:
+[2025-03-05T19:37:23.648+0000] {subprocess.py:93} INFO - 
+[2025-03-05T19:37:23.649+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-05T19:37:23.650+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.9/site-packages/twisted/internet/defer.py", line 2017, in _inlineCallbacks
+[2025-03-05T19:37:23.650+0000] {subprocess.py:93} INFO -     result = context.run(gen.send, result)
+[2025-03-05T19:37:23.650+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.9/site-packages/scrapy/crawler.py", line 149, in crawl
+[2025-03-05T19:37:23.651+0000] {subprocess.py:93} INFO -     self.spider = self._create_spider(*args, **kwargs)
+[2025-03-05T19:37:23.651+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.9/site-packages/scrapy/crawler.py", line 163, in _create_spider
+[2025-03-05T19:37:23.652+0000] {subprocess.py:93} INFO -     return self.spidercls.from_crawler(self, *args, **kwargs)
+[2025-03-05T19:37:23.652+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.9/site-packages/scrapy/spiders/__init__.py", line 66, in from_crawler
+[2025-03-05T19:37:23.653+0000] {subprocess.py:93} INFO -     spider = cls(*args, **kwargs)
+[2025-03-05T19:37:23.653+0000] {subprocess.py:93} INFO -   File "/app/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 30, in __init__
+[2025-03-05T19:37:23.654+0000] {subprocess.py:93} INFO -     os.makedirs(self.output_dir)
+[2025-03-05T19:37:23.654+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/os.py", line 215, in makedirs
+[2025-03-05T19:37:23.655+0000] {subprocess.py:93} INFO -     makedirs(head, exist_ok=exist_ok)
+[2025-03-05T19:37:23.655+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/os.py", line 215, in makedirs
+[2025-03-05T19:37:23.655+0000] {subprocess.py:93} INFO -     makedirs(head, exist_ok=exist_ok)
+[2025-03-05T19:37:23.656+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/os.py", line 225, in makedirs
+[2025-03-05T19:37:23.656+0000] {subprocess.py:93} INFO -     mkdir(name, mode)
+[2025-03-05T19:37:23.657+0000] {subprocess.py:93} INFO - builtins.FileNotFoundError: [Errno 2] No such file or directory: '../../../warehouse/daily'
+[2025-03-05T19:37:23.657+0000] {subprocess.py:93} INFO - 
+[2025-03-05T19:37:23.658+0000] {subprocess.py:93} INFO - 2025-03-05 19:37:23 [twisted] CRITICAL:
+[2025-03-05T19:37:23.658+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-05T19:37:23.658+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.9/site-packages/twisted/internet/defer.py", line 2017, in _inlineCallbacks
+[2025-03-05T19:37:23.659+0000] {subprocess.py:93} INFO -     result = context.run(gen.send, result)
+[2025-03-05T19:37:23.659+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.9/site-packages/scrapy/crawler.py", line 149, in crawl
+[2025-03-05T19:37:23.659+0000] {subprocess.py:93} INFO -     self.spider = self._create_spider(*args, **kwargs)
+[2025-03-05T19:37:23.660+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.9/site-packages/scrapy/crawler.py", line 163, in _create_spider
+[2025-03-05T19:37:23.660+0000] {subprocess.py:93} INFO -     return self.spidercls.from_crawler(self, *args, **kwargs)
+[2025-03-05T19:37:23.660+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.9/site-packages/scrapy/spiders/__init__.py", line 66, in from_crawler
+[2025-03-05T19:37:23.661+0000] {subprocess.py:93} INFO -     spider = cls(*args, **kwargs)
+[2025-03-05T19:37:23.662+0000] {subprocess.py:93} INFO -   File "/app/crawler/tgdd_crawler/tgdd_crawler/spiders/my_spider.py", line 30, in __init__
+[2025-03-05T19:37:23.662+0000] {subprocess.py:93} INFO -     os.makedirs(self.output_dir)
+[2025-03-05T19:37:23.663+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/os.py", line 215, in makedirs
+[2025-03-05T19:37:23.663+0000] {subprocess.py:93} INFO -     makedirs(head, exist_ok=exist_ok)
+[2025-03-05T19:37:23.664+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/os.py", line 215, in makedirs
+[2025-03-05T19:37:23.664+0000] {subprocess.py:93} INFO -     makedirs(head, exist_ok=exist_ok)
+[2025-03-05T19:37:23.664+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.9/os.py", line 225, in makedirs
+[2025-03-05T19:37:23.665+0000] {subprocess.py:93} INFO -     mkdir(name, mode)
+[2025-03-05T19:37:23.665+0000] {subprocess.py:93} INFO - FileNotFoundError: [Errno 2] No such file or directory: '../../../warehouse/daily'
+[2025-03-05T19:37:23.737+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-03-05T19:37:23.738+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-05T19:37:23.750+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-03-05T19:37:23.754+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=crawl_thegioididong_daily, task_id=crawl, run_id=manual__2025-03-05T19:37:21.867970+00:00, execution_date=20250305T193721, start_date=20250305T193722, end_date=20250305T193723
+[2025-03-05T19:37:23.771+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 298 for task crawl (Bash command failed. The command returned a non-zero exit code 1.; 2716)
+[2025-03-05T19:37:23.795+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-03-05T19:37:23.819+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-05T19:37:23.825+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

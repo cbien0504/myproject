@@ -49,7 +49,6 @@ def create_list_reviews_udf(*columns: List[Optional[object]]) -> List[dict]:
 
 def extract_review_column(df: DataFrame) -> DataFrame:
     if isinstance(df.schema['review'].dataType, StructType):
-        print('struct')
         df = df.withColumn('review_author_name', F.col('review.author.name'))\
             .withColumn('review_date', F.col('review.datePublished'))\
             .withColumn('review_description', F.col('review.description'))\
@@ -57,10 +56,8 @@ def extract_review_column(df: DataFrame) -> DataFrame:
             .withColumn('review_best_rating', F.col('review.reviewRating.bestRating'))\
             .withColumn('review_rating_value', F.col('review.reviewRating.ratingValue'))\
             .withColumn('review_image', F.col('review.image'))
-        df.printSchema()
         return df
     else:
-        print('string')
         df = df.withColumn('review_author_name', F.array().cast(ArrayType(StringType())))\
             .withColumn('review_date', F.array().cast(ArrayType(StringType())))\
             .withColumn('review_description', F.array().cast(ArrayType(StringType())))\
@@ -68,5 +65,4 @@ def extract_review_column(df: DataFrame) -> DataFrame:
             .withColumn('review_best_rating', F.array().cast(ArrayType(IntegerType())))\
             .withColumn('review_rating_value', F.array().cast(ArrayType(FloatType())))\
             .withColumn('review_image', F.array().cast(ArrayType(ArrayType(StringType()))))
-        df.printSchema()
         return df

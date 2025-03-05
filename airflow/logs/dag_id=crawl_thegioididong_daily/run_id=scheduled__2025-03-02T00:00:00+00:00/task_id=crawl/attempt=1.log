@@ -1,0 +1,62 @@
+[2025-03-03T02:09:27.200+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-03T02:09:27.230+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.crawl scheduled__2025-03-02T00:00:00+00:00 [queued]>
+[2025-03-03T02:09:27.240+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.crawl scheduled__2025-03-02T00:00:00+00:00 [queued]>
+[2025-03-03T02:09:27.241+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-03-03T02:09:27.256+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): crawl> on 2025-03-02 00:00:00+00:00
+[2025-03-03T02:09:27.263+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=61) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-03T02:09:27.264+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'crawl_thegioididong_daily', 'crawl', 'scheduled__2025-03-02T00:00:00+00:00', '--job-id', '225', '--raw', '--subdir', 'DAGS_FOLDER/crawl_daily_tgdd.py', '--cfg-path', '/tmp/tmpn5lsuvc6']
+[2025-03-03T02:09:27.266+0000] {standard_task_runner.py:64} INFO - Started process 62 to run task
+[2025-03-03T02:09:27.266+0000] {standard_task_runner.py:91} INFO - Job 225: Subtask crawl
+[2025-03-03T02:09:27.337+0000] {task_command.py:426} INFO - Running <TaskInstance: crawl_thegioididong_daily.crawl scheduled__2025-03-02T00:00:00+00:00 [running]> on host fde12ad1f9fd
+[2025-03-03T02:09:27.448+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crawl_thegioididong_daily' AIRFLOW_CTX_TASK_ID='crawl' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-02T00:00:00+00:00'
+[2025-03-03T02:09:27.449+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-03T02:09:27.468+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-03T02:09:27.469+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/crawler/tgdd_crawler/tgdd_crawler; scrapy crawl tgdd_crawler -a daily=true; ']
+[2025-03-03T02:09:27.480+0000] {subprocess.py:86} INFO - Output:
+[2025-03-03T02:09:29.289+0000] {subprocess.py:93} INFO - 2025-03-03 02:09:29 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: scrapybot)
+[2025-03-03T02:09:29.291+0000] {subprocess.py:93} INFO - 2025-03-03 02:09:29 [scrapy.utils.log] INFO: Versions: lxml 5.2.2.0, libxml2 2.12.6, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.12.4 (main, Jul 23 2024, 07:23:20) [GCC 12.2.0], pyOpenSSL 24.1.0 (OpenSSL 3.1.4 24 Oct 2023), cryptography 41.0.7, Platform Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2025-03-03T02:09:29.292+0000] {subprocess.py:93} INFO - 2025-03-03 02:09:29 [root] INFO: /opt/crawler/tgdd_crawler/tgdd_crawler/metadata.json
+[2025-03-03T02:09:29.308+0000] {subprocess.py:93} INFO - 2025-03-03 02:09:29 [scrapy.addons] INFO: Enabled addons:
+[2025-03-03T02:09:29.309+0000] {subprocess.py:93} INFO - []
+[2025-03-03T02:09:29.312+0000] {subprocess.py:93} INFO - 2025-03-03 02:09:29 [scrapy.extensions.telnet] INFO: Telnet Password: 04d118c6d2174335
+[2025-03-03T02:09:29.352+0000] {subprocess.py:93} INFO - 2025-03-03 02:09:29 [scrapy.middleware] INFO: Enabled extensions:
+[2025-03-03T02:09:29.352+0000] {subprocess.py:93} INFO - ['scrapy.extensions.corestats.CoreStats',
+[2025-03-03T02:09:29.353+0000] {subprocess.py:93} INFO -  'scrapy.extensions.telnet.TelnetConsole',
+[2025-03-03T02:09:29.353+0000] {subprocess.py:93} INFO -  'scrapy.extensions.memusage.MemoryUsage',
+[2025-03-03T02:09:29.354+0000] {subprocess.py:93} INFO -  'scrapy.extensions.logstats.LogStats']
+[2025-03-03T02:09:29.354+0000] {subprocess.py:93} INFO - 2025-03-03 02:09:29 [scrapy.crawler] INFO: Overridden settings:
+[2025-03-03T02:09:29.355+0000] {subprocess.py:93} INFO - {'DOWNLOAD_DELAY': 0.1,
+[2025-03-03T02:09:29.355+0000] {subprocess.py:93} INFO -  'FEED_EXPORT_ENCODING': 'utf-8',
+[2025-03-03T02:09:29.356+0000] {subprocess.py:93} INFO -  'LOG_LEVEL': 'INFO',
+[2025-03-03T02:09:29.356+0000] {subprocess.py:93} INFO -  'NEWSPIDER_MODULE': 'tgdd_crawler.spiders',
+[2025-03-03T02:09:29.357+0000] {subprocess.py:93} INFO -  'SPIDER_MODULES': ['tgdd_crawler.spiders'],
+[2025-03-03T02:09:29.358+0000] {subprocess.py:93} INFO -  'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+[2025-03-03T02:09:29.358+0000] {subprocess.py:93} INFO -  'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+[2025-03-03T02:09:29.359+0000] {subprocess.py:93} INFO -                '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'}
+[2025-03-03T02:09:29.534+0000] {subprocess.py:93} INFO - 2025-03-03 02:09:29 [scrapy.middleware] INFO: Enabled downloader middlewares:
+[2025-03-03T02:09:29.535+0000] {subprocess.py:93} INFO - ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+[2025-03-03T02:09:29.535+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+[2025-03-03T02:09:29.536+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+[2025-03-03T02:09:29.536+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+[2025-03-03T02:09:29.537+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+[2025-03-03T02:09:29.537+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+[2025-03-03T02:09:29.538+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+[2025-03-03T02:09:29.538+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+[2025-03-03T02:09:29.539+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+[2025-03-03T02:09:29.539+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+[2025-03-03T02:09:29.540+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+[2025-03-03T02:09:29.540+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2025-03-03T02:09:29.541+0000] {subprocess.py:93} INFO - 2025-03-03 02:09:29 [scrapy.middleware] INFO: Enabled spider middlewares:
+[2025-03-03T02:09:29.541+0000] {subprocess.py:93} INFO - ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+[2025-03-03T02:09:29.542+0000] {subprocess.py:93} INFO -  'scrapy.spidermiddlewares.referer.RefererMiddleware',
+[2025-03-03T02:09:29.542+0000] {subprocess.py:93} INFO -  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+[2025-03-03T02:09:29.543+0000] {subprocess.py:93} INFO -  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2025-03-03T02:09:29.543+0000] {subprocess.py:93} INFO - 2025-03-03 02:09:29 [scrapy.middleware] INFO: Enabled item pipelines:
+[2025-03-03T02:09:29.543+0000] {subprocess.py:93} INFO - []
+[2025-03-03T02:09:29.544+0000] {subprocess.py:93} INFO - 2025-03-03 02:09:29 [scrapy.core.engine] INFO: Spider opened
+[2025-03-03T02:09:29.556+0000] {subprocess.py:93} INFO - 2025-03-03 02:09:29 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2025-03-03T02:09:29.558+0000] {subprocess.py:93} INFO - 2025-03-03 02:09:29 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2025-03-03T02:10:29.557+0000] {subprocess.py:93} INFO - 2025-03-03 02:10:29 [scrapy.extensions.logstats] INFO: Crawled 19 pages (at 19 pages/min), scraped 0 items (at 0 items/min)
+[2025-03-03T02:11:29.556+0000] {subprocess.py:93} INFO - 2025-03-03 02:11:29 [scrapy.extensions.logstats] INFO: Crawled 24 pages (at 5 pages/min), scraped 0 items (at 0 items/min)

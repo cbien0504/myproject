@@ -1,0 +1,16 @@
+[2025-03-05T19:51:27.796+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-05T19:51:27.888+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: normalize_thegioididong_daily.trigger_normalize_common manual__2025-03-05T19:50:48.100727+00:00 [queued]>
+[2025-03-05T19:51:27.916+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: normalize_thegioididong_daily.trigger_normalize_common manual__2025-03-05T19:50:48.100727+00:00 [queued]>
+[2025-03-05T19:51:27.917+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-03-05T19:51:27.942+0000] {taskinstance.py:2330} INFO - Executing <Task(TriggerDagRunOperator): trigger_normalize_common> on 2025-03-05 19:50:48.100727+00:00
+[2025-03-05T19:51:27.953+0000] {standard_task_runner.py:64} INFO - Started process 427 to run task
+[2025-03-05T19:51:27.958+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'normalize_thegioididong_daily', 'trigger_normalize_common', 'manual__2025-03-05T19:50:48.100727+00:00', '--job-id', '306', '--raw', '--subdir', 'DAGS_FOLDER/normalize_daily_tgdd.py', '--cfg-path', '/tmp/tmpmeu8r7wr']
+[2025-03-05T19:51:27.960+0000] {standard_task_runner.py:91} INFO - Job 306: Subtask trigger_normalize_common
+[2025-03-05T19:51:28.032+0000] {task_command.py:426} INFO - Running <TaskInstance: normalize_thegioididong_daily.trigger_normalize_common manual__2025-03-05T19:50:48.100727+00:00 [running]> on host f5560d54c022
+[2025-03-05T19:51:28.179+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='normalize_thegioididong_daily' AIRFLOW_CTX_TASK_ID='trigger_normalize_common' AIRFLOW_CTX_EXECUTION_DATE='2025-03-05T19:50:48.100727+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-05T19:50:48.100727+00:00'
+[2025-03-05T19:51:28.181+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-05T19:51:28.307+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-05T19:51:28.319+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=normalize_thegioididong_daily, task_id=trigger_normalize_common, run_id=manual__2025-03-05T19:50:48.100727+00:00, execution_date=20250305T195048, start_date=20250305T195127, end_date=20250305T195128
+[2025-03-05T19:51:28.380+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-03-05T19:51:28.408+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-05T19:51:28.411+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

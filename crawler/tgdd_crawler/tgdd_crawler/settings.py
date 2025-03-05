@@ -5,6 +5,6 @@ NEWSPIDER_MODULE = "tgdd_crawler.spiders"
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
 ROBOTSTXT_OBEY = False
 CONCURRENT_REQUESTS = 16
-DOWNLOAD_DELAY = 0.2
+DOWNLOAD_DELAY = 0.1
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"

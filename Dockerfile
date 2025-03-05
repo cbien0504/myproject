@@ -1,4 +1,4 @@
-FROM apache/airflow:2.9.3
+FROM apache/airflow:2.9.3-python3.9
 
 USER root
 
@@ -18,11 +18,11 @@ RUN java -version
 
 USER airflow
 
-WORKDIR /opt
+WORKDIR /app
 
-COPY --chown=airflow:airflow --chmod=644 requirements.txt /opt/
+COPY --chown=airflow:airflow --chmod=644 requirements.txt /app/
 
 
-COPY requirements.txt /opt
+COPY requirements.txt /app
 
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
