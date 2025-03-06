@@ -19,7 +19,7 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/airflow:/app/airflow
     - ${AIRFLOW_PROJ_DIR:-.}/crawler:/app/crawler
     - ${AIRFLOW_PROJ_DIR:-.}/spark_processing:/app/spark_processing
-    - ${AIRFLOW_PROJ_DIR:-.}/warehouse:/app/warehouse
+    - ${AIRFLOW_PROJ_DIR:-.}/data:/app/data
     # - shared_volumes:/opt/hadoop-3.2.1
   user: root
 
@@ -198,44 +198,22 @@ services:
   #   networks:
   #     - my_network
 
-  # namenode:
-  #   image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
-  #   container_name: namenode
-  #   restart: always
-  #   ports:
-  #     - 9870:9870
-  #     - 9000:9000
-  #   volumes:
-  #     - hadoop_namenode:/hadoop/dfs/name
-  #     - shared_volumes:/opt/hadoop-3.2.1
-  #   deploy:
-  #     mode: replicated
-  #     replicas: 1
-  #   environment:
-  #     CLUSTER_NAME: "test" 
-  #   env_file:
-  #     - ./hadoop.env
-  #   networks:
-  #     - my_network
-  # 
-  # datanode:
-  #   image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
-  #   container_name: datanode
-  #   restart: always
-  #   volumes:
-  #     - hadoop_datanode:/hadoop/dfs/data
-  #   environment:
-  #     SERVICE_PRECONDITION: "namenode:9870"  
-  #   env_file:
-  #     - ./hadoop.env
-  #   networks:
-  #     - my_network
-  #
+  minio:
+    image: minio/minio
+    container_name: minio
+    environment:
+      - MINIO_ROOT_USER=bien
+      - MINIO_ROOT_PASSWORD=05042003
+    volumes:
+      - minio-data:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    command: server /data --console-address ":9001"
+    restart: always
 
 volumes:
-  # hadoop_namenode:
-  # hadoop_datanode:
+  minio-data:
   postgres-db-volume:
-  # shared_volumes:
 networks:
   my_network:

@@ -1,0 +1,254 @@
+[2025-03-06T05:36:40.777+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-06T05:36:40.807+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.crawl manual__2025-03-06T05:36:37.583042+00:00 [queued]>
+[2025-03-06T05:36:40.814+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_thegioididong_daily.crawl manual__2025-03-06T05:36:37.583042+00:00 [queued]>
+[2025-03-06T05:36:40.815+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-03-06T05:36:40.828+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): crawl> on 2025-03-06 05:36:37.583042+00:00
+[2025-03-06T05:36:40.832+0000] {standard_task_runner.py:64} INFO - Started process 429 to run task
+[2025-03-06T05:36:40.836+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'crawl_thegioididong_daily', 'crawl', 'manual__2025-03-06T05:36:37.583042+00:00', '--job-id', '328', '--raw', '--subdir', 'DAGS_FOLDER/crawl_daily_tgdd.py', '--cfg-path', '/tmp/tmpkc_dpsbf']
+[2025-03-06T05:36:40.838+0000] {standard_task_runner.py:91} INFO - Job 328: Subtask crawl
+[2025-03-06T05:36:40.889+0000] {task_command.py:426} INFO - Running <TaskInstance: crawl_thegioididong_daily.crawl manual__2025-03-06T05:36:37.583042+00:00 [running]> on host 6f3784a28653
+[2025-03-06T05:36:40.981+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crawl_thegioididong_daily' AIRFLOW_CTX_TASK_ID='crawl' AIRFLOW_CTX_EXECUTION_DATE='2025-03-06T05:36:37.583042+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-06T05:36:37.583042+00:00'
+[2025-03-06T05:36:40.982+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-06T05:36:41.021+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-06T05:36:41.023+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /app/crawler/tgdd_crawler/tgdd_crawler; scrapy crawl tgdd_crawler -a daily=true; ']
+[2025-03-06T05:36:41.033+0000] {subprocess.py:86} INFO - Output:
+[2025-03-06T05:36:42.115+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:42 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: scrapybot)
+[2025-03-06T05:36:42.122+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:42 [scrapy.utils.log] INFO: Versions: lxml 5.2.2.0, libxml2 2.12.6, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.9.19 (main, Jul 23 2024, 07:18:03) - [GCC 12.2.0], pyOpenSSL 24.1.0 (OpenSSL 3.1.4 24 Oct 2023), cryptography 41.0.7, Platform Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2025-03-06T05:36:42.125+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:42 [root] INFO: /app/crawler/tgdd_crawler/tgdd_crawler/metadata.json
+[2025-03-06T05:36:42.131+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:42 [scrapy.addons] INFO: Enabled addons:
+[2025-03-06T05:36:42.132+0000] {subprocess.py:93} INFO - []
+[2025-03-06T05:36:42.137+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:42 [scrapy.extensions.telnet] INFO: Telnet Password: b92cc5071193606d
+[2025-03-06T05:36:42.161+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:42 [scrapy.middleware] INFO: Enabled extensions:
+[2025-03-06T05:36:42.162+0000] {subprocess.py:93} INFO - ['scrapy.extensions.corestats.CoreStats',
+[2025-03-06T05:36:42.162+0000] {subprocess.py:93} INFO -  'scrapy.extensions.telnet.TelnetConsole',
+[2025-03-06T05:36:42.162+0000] {subprocess.py:93} INFO -  'scrapy.extensions.memusage.MemoryUsage',
+[2025-03-06T05:36:42.163+0000] {subprocess.py:93} INFO -  'scrapy.extensions.logstats.LogStats']
+[2025-03-06T05:36:42.163+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:42 [scrapy.crawler] INFO: Overridden settings:
+[2025-03-06T05:36:42.163+0000] {subprocess.py:93} INFO - {'DOWNLOAD_DELAY': 0.1,
+[2025-03-06T05:36:42.164+0000] {subprocess.py:93} INFO -  'FEED_EXPORT_ENCODING': 'utf-8',
+[2025-03-06T05:36:42.164+0000] {subprocess.py:93} INFO -  'LOG_LEVEL': 'INFO',
+[2025-03-06T05:36:42.165+0000] {subprocess.py:93} INFO -  'NEWSPIDER_MODULE': 'tgdd_crawler.spiders',
+[2025-03-06T05:36:42.165+0000] {subprocess.py:93} INFO -  'SPIDER_MODULES': ['tgdd_crawler.spiders'],
+[2025-03-06T05:36:42.165+0000] {subprocess.py:93} INFO -  'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+[2025-03-06T05:36:42.166+0000] {subprocess.py:93} INFO -  'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+[2025-03-06T05:36:42.166+0000] {subprocess.py:93} INFO -                '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'}
+[2025-03-06T05:36:42.280+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:42 [scrapy.middleware] INFO: Enabled downloader middlewares:
+[2025-03-06T05:36:42.281+0000] {subprocess.py:93} INFO - ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+[2025-03-06T05:36:42.282+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+[2025-03-06T05:36:42.283+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+[2025-03-06T05:36:42.283+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+[2025-03-06T05:36:42.284+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+[2025-03-06T05:36:42.284+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+[2025-03-06T05:36:42.285+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+[2025-03-06T05:36:42.285+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+[2025-03-06T05:36:42.286+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+[2025-03-06T05:36:42.287+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+[2025-03-06T05:36:42.287+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+[2025-03-06T05:36:42.288+0000] {subprocess.py:93} INFO -  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2025-03-06T05:36:42.288+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:42 [scrapy.middleware] INFO: Enabled spider middlewares:
+[2025-03-06T05:36:42.289+0000] {subprocess.py:93} INFO - ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+[2025-03-06T05:36:42.289+0000] {subprocess.py:93} INFO -  'scrapy.spidermiddlewares.referer.RefererMiddleware',
+[2025-03-06T05:36:42.290+0000] {subprocess.py:93} INFO -  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+[2025-03-06T05:36:42.290+0000] {subprocess.py:93} INFO -  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2025-03-06T05:36:42.291+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:42 [scrapy.middleware] INFO: Enabled item pipelines:
+[2025-03-06T05:36:42.291+0000] {subprocess.py:93} INFO - []
+[2025-03-06T05:36:42.292+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:42 [scrapy.core.engine] INFO: Spider opened
+[2025-03-06T05:36:42.301+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:42 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2025-03-06T05:36:42.302+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:42 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2025-03-06T05:36:45.076+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.077+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-28
+[2025-03-06T05:36:45.078+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.079+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-28
+[2025-03-06T05:36:45.079+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.080+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-28
+[2025-03-06T05:36:45.080+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.081+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-28
+[2025-03-06T05:36:45.081+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.082+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-03-01
+[2025-03-06T05:36:45.082+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.083+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-03-01
+[2025-03-06T05:36:45.230+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.230+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-21
+[2025-03-06T05:36:45.231+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.231+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-21
+[2025-03-06T05:36:45.232+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.232+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-24
+[2025-03-06T05:36:45.232+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.232+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-24
+[2025-03-06T05:36:45.233+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.233+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-24
+[2025-03-06T05:36:45.233+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.234+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-24
+[2025-03-06T05:36:45.234+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.234+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-24
+[2025-03-06T05:36:45.234+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.235+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-24
+[2025-03-06T05:36:45.235+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.235+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-24
+[2025-03-06T05:36:45.236+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.236+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-24
+[2025-03-06T05:36:45.236+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.236+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-24
+[2025-03-06T05:36:45.237+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.237+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-24
+[2025-03-06T05:36:45.237+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.238+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-24
+[2025-03-06T05:36:45.238+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.239+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.240+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.241+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.241+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.242+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.242+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.243+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.243+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.244+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.244+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.244+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.245+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.245+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.245+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.245+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.246+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.246+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.246+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.247+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.247+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.247+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.248+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.248+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.248+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.248+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.249+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.249+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.250+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.250+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.251+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.251+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-25
+[2025-03-06T05:36:45.251+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.252+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-27
+[2025-03-06T05:36:45.252+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.252+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-27
+[2025-03-06T05:36:45.253+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.253+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-27
+[2025-03-06T05:36:45.253+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.254+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-27
+[2025-03-06T05:36:45.254+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: metadata:2025-02-20
+[2025-03-06T05:36:45.254+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:45 [root] INFO: lastmod: 2025-02-27
+[2025-03-06T05:36:56.289+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:56 [root] INFO: URL: https://www.thegioididong.com/tai-nghe/tai-nghe-bluetooth-true-wireless-oppo-enco-buds-3-pro-etek1
+[2025-03-06T05:36:56.303+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:56 [root] INFO: cnt: 1
+[2025-03-06T05:37:05.855+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:05 [root] INFO: URL: https://www.thegioididong.com/camera-giam-sat/camera-ip-ngoai-troi-360-do-5mp-tp-link-tapo-c530ws
+[2025-03-06T05:37:05.864+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:05 [root] INFO: cnt: 2
+[2025-03-06T05:36:57.179+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:57 [root] INFO: URL: https://www.thegioididong.com/op-lung-may-tinh-bang/bao-da-nap-gap-ipad-10-tpu-pu-esr-rebound-magnetic-den
+[2025-03-06T05:36:57.185+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:57 [root] INFO: cnt: 3
+[2025-03-06T05:36:57.218+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:57 [root] INFO: URL: https://www.thegioididong.com/laptop/msi-raider-18-hx-ai-a2xwig-ultra-9-033vn
+[2025-03-06T05:36:57.225+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:57 [root] INFO: cnt: 4
+[2025-03-06T05:36:57.264+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:57 [root] INFO: URL: https://www.thegioididong.com/camera-giam-sat/camera-ip-ngoai-troi-360-do-3mp-tp-link-tapo-c510w
+[2025-03-06T05:36:57.274+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:57 [root] INFO: cnt: 5
+[2025-03-06T05:36:57.584+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:57 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-bf0581-54a-nam
+[2025-03-06T05:36:57.598+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:57 [root] INFO: cnt: 6
+[2025-03-06T05:36:57.864+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:57 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-fe1244-72a-nu
+[2025-03-06T05:36:57.872+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:57 [root] INFO: cnt: 7
+[2025-03-06T05:36:57.948+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:57 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-fe1241-71z-nu
+[2025-03-06T05:36:57.959+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:57 [root] INFO: cnt: 8
+[2025-03-06T05:36:57.965+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:57 [root] INFO: URL: https://www.thegioididong.com/laptop/msi-stealth-18-hx-ai-a2xwig-ultra-9-017vn
+[2025-03-06T05:36:57.971+0000] {subprocess.py:93} INFO - 2025-03-06 05:36:57 [root] INFO: cnt: 9
+[2025-03-06T05:37:15.645+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:15 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-eq0610-53a-nu
+[2025-03-06T05:37:15.660+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:15 [root] INFO: cnt: 10
+[2025-03-06T05:37:07.371+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:07 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-bi1031-51z-nam
+[2025-03-06T05:37:07.384+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:07 [root] INFO: cnt: 11
+[2025-03-06T05:37:07.405+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:07 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-eq0614-52b-nu
+[2025-03-06T05:37:07.414+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:07 [root] INFO: cnt: 12
+[2025-03-06T05:37:07.532+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:07 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-bf2026-89a-nam
+[2025-03-06T05:37:07.544+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:07 [root] INFO: cnt: 13
+[2025-03-06T05:37:07.771+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:07 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-bf0583-59p-nam
+[2025-03-06T05:37:07.781+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:07 [root] INFO: cnt: 14
+[2025-03-06T05:37:07.886+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:07 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-bf2021-82a-nam
+[2025-03-06T05:37:07.896+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:07 [root] INFO: cnt: 15
+[2025-03-06T05:37:07.913+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:07 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-bf2021-82l-nam
+[2025-03-06T05:37:07.922+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:07 [root] INFO: cnt: 16
+[2025-03-06T05:37:08.397+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:08 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-em0411-71x-nu
+[2025-03-06T05:37:08.411+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:08 [root] INFO: cnt: 17
+[2025-03-06T05:37:16.419+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:16 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-pr1040-88n-nu
+[2025-03-06T05:37:16.427+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:16 [root] INFO: cnt: 18
+[2025-03-06T05:37:16.624+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:16 [root] INFO: URL: https://www.thegioididong.com/laptop/msi-titan-18-hx-ai-a2xwig-ultra-9-090vn
+[2025-03-06T05:37:16.635+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:16 [root] INFO: cnt: 19
+[2025-03-06T05:37:25.702+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:25 [root] INFO: URL: https://www.thegioididong.com/laptop/msi-titan-18-hx-ai-a2xwjg-ultra-9-035vn
+[2025-03-06T05:37:25.711+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:25 [root] INFO: cnt: 20
+[2025-03-06T05:37:17.067+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:17 [root] INFO: URL: https://www.thegioididong.com/may-tinh-bang/lenovo-tab-wifi
+[2025-03-06T05:37:17.101+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:17 [root] INFO: cnt: 21
+[2025-03-06T05:37:17.103+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:17 [root] INFO: URL: https://www.thegioididong.com/may-tinh-bang/lenovo-tab-4g
+[2025-03-06T05:37:17.123+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:17 [root] INFO: cnt: 22
+[2025-03-06T05:37:17.235+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:17 [root] INFO: URL: https://www.thegioididong.com/laptop/msi-vector-16-hx-ai-a2xwig-ultra-9-062vn
+[2025-03-06T05:37:17.244+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:17 [root] INFO: cnt: 23
+[2025-03-06T05:37:17.470+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:17 [root] INFO: URL: https://www.thegioididong.com/laptop/acer-aspire-lite-al14-52m-54cj-i5-nxj39sv002
+[2025-03-06T05:37:17.487+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:17 [root] INFO: cnt: 24
+[2025-03-06T05:37:18.144+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:18 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/garmin-instinct-e-45mm
+[2025-03-06T05:37:18.158+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:18 [root] INFO: cnt: 25
+[2025-03-06T05:37:25.893+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:25 [root] INFO: URL: https://www.thegioididong.com/dong-ho-deo-tay/citizen-em0411-71a-nu
+[2025-03-06T05:37:25.906+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:25 [root] INFO: cnt: 26
+[2025-03-06T05:37:27.116+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:27 [root] INFO: URL: https://www.thegioididong.com/man-hinh-may-tinh/samsung-ls27d366gaexxv-27-inch-fhd-va-100hz-4ms
+[2025-03-06T05:37:27.131+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:27 [root] INFO: cnt: 27
+[2025-03-06T05:37:27.265+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:27 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/garmin-instinct-3-50mm
+[2025-03-06T05:37:27.285+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:27 [root] INFO: cnt: 28
+[2025-03-06T05:37:27.299+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:27 [root] INFO: URL: https://www.thegioididong.com/dtdd/tecno-spark-30c
+[2025-03-06T05:37:27.307+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:27 [root] INFO: cnt: 29
+[2025-03-06T05:37:27.315+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:27 [root] INFO: URL: https://www.thegioididong.com/dtdd/samsung-galaxy-a56
+[2025-03-06T05:37:27.328+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:27 [root] INFO: cnt: 30
+[2025-03-06T05:37:27.416+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:27 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/garmin-instinct-3-45mm
+[2025-03-06T05:37:27.430+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:27 [root] INFO: cnt: 31
+[2025-03-06T05:37:27.601+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:27 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/garmin-instinct-3-solar-50mm
+[2025-03-06T05:37:27.614+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:27 [root] INFO: cnt: 32
+[2025-03-06T05:37:27.657+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:27 [root] INFO: URL: https://www.thegioididong.com/dong-ho-thong-minh/garmin-instinct-3-solar-45mm
+[2025-03-06T05:37:27.670+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:27 [root] INFO: cnt: 33
+[2025-03-06T05:37:35.933+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:35 [root] INFO: URL: https://www.thegioididong.com/dtdd/tecno-spark-30
+[2025-03-06T05:37:35.941+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:35 [root] INFO: cnt: 34
+[2025-03-06T05:37:36.376+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:36 [root] INFO: URL: https://www.thegioididong.com/dtdd/samsung-galaxy-a56-8gb-128gb
+[2025-03-06T05:37:36.390+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:36 [root] INFO: cnt: 35
+[2025-03-06T05:37:36.478+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:36 [root] INFO: URL: https://www.thegioididong.com/dtdd/samsung-galaxy-a36
+[2025-03-06T05:37:36.496+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:36 [root] INFO: cnt: 36
+[2025-03-06T05:37:36.695+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:36 [root] INFO: URL: https://www.thegioididong.com/dtdd/samsung-galaxy-a36-8gb-128gb
+[2025-03-06T05:37:36.709+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:36 [root] INFO: cnt: 37
+[2025-03-06T05:37:45.671+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:45 [root] INFO: URL: https://www.thegioididong.com/dtdd/samsung-galaxy-a56-8gb-256gb
+[2025-03-06T05:37:45.686+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:45 [root] INFO: cnt: 38
+[2025-03-06T05:37:45.688+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:45 [scrapy.extensions.logstats] INFO: Crawled 72 pages (at 72 pages/min), scraped 0 items (at 0 items/min)
+[2025-03-06T05:37:45.794+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:45 [root] INFO: URL: https://www.thegioididong.com/dtdd/samsung-galaxy-a36-8gb-256gb
+[2025-03-06T05:37:45.809+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:45 [root] INFO: cnt: 39
+[2025-03-06T05:37:46.097+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:46 [root] INFO: URL: https://www.thegioididong.com/thiet-bi-mang/usb-wifi-chuan-wifi-6-totolink-x900usm
+[2025-03-06T05:37:46.105+0000] {subprocess.py:93} INFO - 2025-03-06 05:37:46 [root] INFO: cnt: 40
+[2025-03-06T05:38:45.742+0000] {subprocess.py:93} INFO - 2025-03-06 05:38:45 [scrapy.extensions.logstats] INFO: Crawled 137 pages (at 65 pages/min), scraped 0 items (at 0 items/min)
+[2025-03-06T05:38:46.486+0000] {subprocess.py:93} INFO - 2025-03-06 05:38:46 [scrapy.core.engine] INFO: Closing spider (finished)
+[2025-03-06T05:38:46.487+0000] {subprocess.py:93} INFO - 2025-03-06 05:38:46 [root] INFO: Spider closed: finished
+[2025-03-06T05:38:46.492+0000] {subprocess.py:93} INFO - 2025-03-06 05:38:46 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+[2025-03-06T05:38:46.493+0000] {subprocess.py:93} INFO - {'downloader/request_bytes': 138366,
+[2025-03-06T05:38:46.493+0000] {subprocess.py:93} INFO -  'downloader/request_count': 143,
+[2025-03-06T05:38:46.494+0000] {subprocess.py:93} INFO -  'downloader/request_method_count/GET': 143,
+[2025-03-06T05:38:46.494+0000] {subprocess.py:93} INFO -  'downloader/response_bytes': 6512151,
+[2025-03-06T05:38:46.495+0000] {subprocess.py:93} INFO -  'downloader/response_count': 143,
+[2025-03-06T05:38:46.495+0000] {subprocess.py:93} INFO -  'downloader/response_status_count/200': 143,
+[2025-03-06T05:38:46.496+0000] {subprocess.py:93} INFO -  'elapsed_time_seconds': 124.18594,
+[2025-03-06T05:38:46.496+0000] {subprocess.py:93} INFO -  'finish_reason': 'finished',
+[2025-03-06T05:38:46.496+0000] {subprocess.py:93} INFO -  'finish_time': datetime.datetime(2025, 3, 6, 5, 38, 46, 487036, tzinfo=datetime.timezone.utc),
+[2025-03-06T05:38:46.497+0000] {subprocess.py:93} INFO -  'httpcompression/response_bytes': 22966159,
+[2025-03-06T05:38:46.497+0000] {subprocess.py:93} INFO -  'httpcompression/response_count': 142,
+[2025-03-06T05:38:46.498+0000] {subprocess.py:93} INFO -  'items_per_minute': None,
+[2025-03-06T05:38:46.498+0000] {subprocess.py:93} INFO -  'log_count/INFO': 173,
+[2025-03-06T05:38:46.498+0000] {subprocess.py:93} INFO -  'memusage/max': 173592576,
+[2025-03-06T05:38:46.499+0000] {subprocess.py:93} INFO -  'memusage/startup': 173592576,
+[2025-03-06T05:38:46.499+0000] {subprocess.py:93} INFO -  'request_depth_max': 2,
+[2025-03-06T05:38:46.500+0000] {subprocess.py:93} INFO -  'response_received_count': 143,
+[2025-03-06T05:38:46.500+0000] {subprocess.py:93} INFO -  'responses_per_minute': None,
+[2025-03-06T05:38:46.500+0000] {subprocess.py:93} INFO -  'scheduler/dequeued': 143,
+[2025-03-06T05:38:46.501+0000] {subprocess.py:93} INFO -  'scheduler/dequeued/memory': 143,
+[2025-03-06T05:38:46.501+0000] {subprocess.py:93} INFO -  'scheduler/enqueued': 143,
+[2025-03-06T05:38:46.502+0000] {subprocess.py:93} INFO -  'scheduler/enqueued/memory': 143,
+[2025-03-06T05:38:46.502+0000] {subprocess.py:93} INFO -  'start_time': datetime.datetime(2025, 3, 6, 5, 36, 42, 301096, tzinfo=datetime.timezone.utc)}
+[2025-03-06T05:38:46.503+0000] {subprocess.py:93} INFO - 2025-03-06 05:38:46 [scrapy.core.engine] INFO: Spider closed (finished)
+[2025-03-06T05:38:46.560+0000] {subprocess.py:93} INFO - <module 'posixpath' from '/usr/local/lib/python3.9/posixpath.py'>
+[2025-03-06T05:38:46.561+0000] {subprocess.py:93} INFO - Tệp /app/crawler/tgdd_crawler/tgdd_crawler/crawler/tgdd_crawler/tgdd_crawler/metadata.json không tồn tại.
+[2025-03-06T05:38:46.736+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-06T05:38:46.737+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-06T05:38:46.776+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=crawl_thegioididong_daily, task_id=crawl, run_id=manual__2025-03-06T05:36:37.583042+00:00, execution_date=20250306T053637, start_date=20250306T053640, end_date=20250306T053846
+[2025-03-06T05:38:46.811+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-03-06T05:38:46.838+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-06T05:38:46.840+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

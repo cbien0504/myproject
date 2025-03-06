@@ -13,9 +13,7 @@ def upsert_normalized_table(
         table_df_key: str
         ):
     table = create_table_from_schema(spark, df, normalized_table_path)
-    
     merge_schema(spark, table, df)
-    
     table = DeltaTable.forPath(spark, normalized_table_path)
     table_df = table.toDF()
     
@@ -29,7 +27,6 @@ def upsert_normalized_table(
         if col == "created_at":
             continue 
         cols[col] = F.when(df[col].isNotNull(), df[col]).otherwise(table_df[col])
-    
     table.merge(
         df, table_df[table_df_key] == df[df_key]
     ).whenNotMatchedInsertAll().whenMatchedUpdate(

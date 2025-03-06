@@ -23,7 +23,7 @@ class MySpider(scrapy.Spider):
         self.daily = daily
         self.timenow = datetime.now().strftime('%Y-%m-%d')
         self.ingest_id = datetime.now().strftime('%Y%m%d')
-        self.output_dir = os.path.join('../../../warehouse', 'daily', 'tgdd', self.ingest_id)
+        self.output_dir = os.path.join('../../../data', 'tgdd', self.ingest_id)
         self.metadata_path = os.path.join(os.getcwd(), 'metadata.json')
         logging.info(self.metadata_path)
         if not os.path.exists(self.output_dir):
