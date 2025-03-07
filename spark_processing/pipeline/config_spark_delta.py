@@ -11,10 +11,17 @@ def config_spark_delta():
         .config("spark.hadoop.fs.s3a.path.style.access", "true") \
         .config("spark.hadoop.fs.s3a.connection.ssl.enabled", "false") \
         .config("spark.hadoop.fs.s3a.aws.credentials.provider", "org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider") \
-        .config("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem") \
         .config("spark.driver.maxResultSize", "16G") \
-        .config("spark.jars.packages", "io.delta:delta-spark_2.12:3.0.0,org.apache.hadoop:hadoop-aws:3.2.1") \
-        .config("spark.jars.repositories", "https://repo1.maven.org/maven2")
+        .config("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem") \
+        .config("spark.jars", "dependencies/jars/aws-java-sdk-core-1.12.150.jar,dependencies/jars/aws-java-sdk-dynamodb-1.12.187.jar,dependencies/jars/aws-java-sdk-s3-1.12.150.jar,dependencies/jars/hadoop-aws-3.2.1.jar") \
+        .config("spark.jars.repositories","https://repo1.maven.org/maven2")
     builder = configure_spark_with_delta_pip(builder)
     spark = builder.getOrCreate()
+    spark.sparkContext.setLogLevel("ERROR")
     return spark
+spark = config_spark_delta()
+data = [("Alice", 30), ("Bob", 25), ("Charlie", 35)]
+columns = ["name", "age"]
+df = spark.createDataFrame(data, columns)
+df.show()
+df.write.mode("overwrite").csv("s3a://data/data.csv")

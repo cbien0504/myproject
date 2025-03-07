@@ -20,7 +20,7 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/crawler:/app/crawler
     - ${AIRFLOW_PROJ_DIR:-.}/spark_processing:/app/spark_processing
     - ${AIRFLOW_PROJ_DIR:-.}/data:/app/data
-    # - shared_volumes:/opt/hadoop-3.2.1
+    - ${AIRFLOW_PROJ_DIR:-.}/dependencies/jars:/app/dependencies/jars
   user: root
 
   depends_on:
@@ -211,6 +211,8 @@ services:
       - "9001:9001"
     command: server /data --console-address ":9001"
     restart: always
+    networks:
+      - my_network
 
 volumes:
   minio-data:

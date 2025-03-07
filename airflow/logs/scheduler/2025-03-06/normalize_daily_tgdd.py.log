@@ -4498,3 +4498,12 @@
 [2025-03-06T05:59:17.625+0000] {logging_mixin.py:188} INFO - [2025-03-06T05:59:17.625+0000] {dag.py:3947} INFO - Setting next_dagrun for normalize_thegioididong_daily to None, run_after=None
 [2025-03-06T05:59:17.628+0000] {logging_mixin.py:188} INFO - [2025-03-06T05:59:17.627+0000] {dag.py:3947} INFO - Setting next_dagrun for upsert_by_categories_thegioididong_daily to None, run_after=None
 [2025-03-06T05:59:17.651+0000] {processor.py:183} INFO - Processing /app/airflow/dags/normalize_daily_tgdd.py took 0.111 seconds
+[2025-03-06T05:59:48.349+0000] {processor.py:161} INFO - Started process (PID=995) to work on /app/airflow/dags/normalize_daily_tgdd.py
+[2025-03-06T05:59:48.350+0000] {processor.py:830} INFO - Processing file /app/airflow/dags/normalize_daily_tgdd.py for tasks to queue
+[2025-03-06T05:59:48.352+0000] {logging_mixin.py:188} INFO - [2025-03-06T05:59:48.352+0000] {dagbag.py:545} INFO - Filling up the DagBag from /app/airflow/dags/normalize_daily_tgdd.py
+[2025-03-06T05:59:48.389+0000] {processor.py:840} INFO - DAG(s) 'normalize_thegioididong_daily', 'normalize_common_thegioididong_daily', 'upsert_by_categories_thegioididong_daily' retrieved from /app/airflow/dags/normalize_daily_tgdd.py
+[2025-03-06T05:59:48.418+0000] {logging_mixin.py:188} INFO - [2025-03-06T05:59:48.418+0000] {dag.py:3089} INFO - Sync 3 DAGs
+[2025-03-06T05:59:48.431+0000] {logging_mixin.py:188} INFO - [2025-03-06T05:59:48.430+0000] {dag.py:3947} INFO - Setting next_dagrun for normalize_common_thegioididong_daily to None, run_after=None
+[2025-03-06T05:59:48.435+0000] {logging_mixin.py:188} INFO - [2025-03-06T05:59:48.435+0000] {dag.py:3947} INFO - Setting next_dagrun for normalize_thegioididong_daily to None, run_after=None
+[2025-03-06T05:59:48.437+0000] {logging_mixin.py:188} INFO - [2025-03-06T05:59:48.437+0000] {dag.py:3947} INFO - Setting next_dagrun for upsert_by_categories_thegioididong_daily to None, run_after=None
+[2025-03-06T05:59:48.461+0000] {processor.py:183} INFO - Processing /app/airflow/dags/normalize_daily_tgdd.py took 0.120 seconds
